@@ -1,0 +1,20 @@
+{
+  "development": {
+    "source": "TermA train",
+    "n_sentences": 3000,
+    "purpose": "rule development, debugging, and tuning",
+    "locked": false
+  },
+  "final_test": {
+    "source": "TermA validation",
+    "n_sentences": 1000,
+    "purpose": "locked final local evaluation",
+    "locked": true
+  },
+  "official_test": {
+    "source": "TermA official test",
+    "purpose": "prediction only; labels are not used for local gold metrics",
+    "local_gold_metrics": false
+  },
+  "random_seed": 42
+}

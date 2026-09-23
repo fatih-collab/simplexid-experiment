@@ -1,0 +1,8 @@
+datasets>=2.19.0
+spacy>=3.7.0
+spacy-udpipe>=1.0.0
+scipy>=1.11.0
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
+gensim>=4.3.0
