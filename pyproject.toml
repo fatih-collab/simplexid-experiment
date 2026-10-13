@@ -7,6 +7,18 @@ name = "simplexid-experiment"
 version = "0.1.0"
 description = "SimplEx-ID ABSA experimental scaffold"
 requires-python = ">=3.10"
+dependencies = [
+    "ufal.udpipe>=1.3,<2",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "datasets>=2.19",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

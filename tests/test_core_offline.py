@@ -3,16 +3,15 @@ Uji logika inti (rules.py, dam.py, scoring.py) memakai ParsedSentence buatan
 tangan (mock), TANPA memerlukan UDPipe/koneksi internet -- untuk memverifikasi
 kebenaran logika sebelum dijalankan dengan parser & data sungguhan.
 
-Jalankan: python src/test_offline.py
+Jalankan: python -m pytest tests/test_core_offline.py -q
 """
 
-import sys, os
-sys.path.insert(0, os.path.dirname(__file__))
-
-from parser import ParsedSentence, Token, dependency_distance
-from rules import extract_explicit_pairs, expand_r3, expand_r4, find_orphan_opinions
-from dam import disambiguate, lookup
-from scoring import compute_factors
+from simplexid import config
+from simplexid.dam import disambiguate
+from simplexid.parser import ParsedSentence, Token
+from simplexid.pipeline import run_pipeline
+from simplexid.rules import extract_explicit_pairs, expand_r3, expand_r4, find_orphan_opinions
+from simplexid.scoring import compute_factors
 
 
 def mock_sentence(spec):
@@ -116,9 +115,6 @@ def test_pipeline_no_dict_collision():
     yang tersisa. Ini menjelaskan mengapa mengaktifkan R3 pada eksperimen
     pertama justru MENURUNKAN recall, padahal R3 seharusnya murni menambah.
     """
-    import config
-    from pipeline import run_pipeline
-
     sent = mock_sentence([
         ("Kecepatan", "kecepatan", "NOUN", "root", 0),
         ("dan", "dan", "CCONJ", "cc", 2),
@@ -138,12 +134,3 @@ def test_pipeline_no_dict_collision():
         f"BUG: pasangan hasil R3 (stabilitas,baik) tidak ditemukan! Hasil: {pairs_found}"
     print("test_pipeline_no_dict_collision: OK -> kedua pasangan tetap ada:", pairs_found)
 
-
-if __name__ == "__main__":
-    test_r0_amod()
-    test_r3_conj_expansion()
-    test_r4_conj_expansion_and_asym_scope()
-    test_dam_disambiguation()
-    test_orphan_detection()
-    test_pipeline_no_dict_collision()
-    print("\nSEMUA TES OFFLINE LOLOS.")

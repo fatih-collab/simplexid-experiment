@@ -8,24 +8,34 @@ tanpa duplikasi kode.
 ## Instalasi
 
 ```bash
-pip install -r requirements.txt
-python -m spacy_udpipe download id      # model UD Bahasa Indonesia
+python -m pip install -r requirements.txt
+python -m pip install -e .
+```
+
+Model UDPipe tidak disimpan di git. Unduh sesuai `resources/models/udpipe/SOURCE.md`
+dan verifikasi checksum-nya. Jangan memakai `spacy_udpipe.download("id")`: URL lamanya
+mati dan menghasilkan file HTML.
+
+```bash
+python -m pytest -q          # semua test harus lulus
 ```
 
 ## Struktur
 
 ```
-src/
-  config.py          # definisi 10 varian V0-V9 sebagai kombinasi flag
-  data_loader.py      # load TermA & HoASA dari HuggingFace datasets
-  parser.py            # wrapper UDPipe -> struktur token+dependensi
+src/simplexid/
+  config.py             # definisi varian ablation sebagai kombinasi flag
+  data.py               # loader & preprocessing TermA/HoASA (H1)
+  gold.py               # pembuatan & validasi gold data (H2)
+  parser.py             # UDPipe (ufal.udpipe) -> Token/ParsedSentence, CoNLL-U
   dam.py                # kamus Domain-Aspect Mapping + disambiguasi kontekstual
   rules.py              # R0,R1,R2,R5,R6,R7 (eksplisit) + R3,R4 (ekspansi konjungtif)
   scoring.py            # Neg/Int (statis maupun berbobot-jarak) + scope consistency
   pipeline.py           # orkestrasi: parse -> rules -> expand -> R8 -> scoring
-  evaluate.py           # P/R/F1/Accuracy vs ground truth TermA
-  secondary_tagging.py  # deteksi semi-otomatis kalimat COORD/IMPLICIT_AMBIG/ASYM_MOD
-  run_experiment.py     # loop V0-V9, k-fold CV, paired t-test -> results/
+  secondary_tagging.py  # kandidat COORD/IMPLICIT_AMBIG/ASYM_MOD
+experiments/run_h2.py   # runner gold data (H2)
+resources/models/udpipe # model parser + SOURCE.md (provenance, checksum, lisensi)
+reports/research_log.md # catatan tiap fase
 ```
 
 ## Alur kerja yang disarankan

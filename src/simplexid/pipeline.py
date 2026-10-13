@@ -9,11 +9,11 @@ TIDAK perlu diduplikasi/diedit per varian.
 from typing import List, Dict, Tuple
 from dataclasses import dataclass
 
-from parser import ParsedSentence, parse_tokens
-from rules import extract_explicit_pairs, expand_r3, expand_r4, find_orphan_opinions, Pair
-from dam import disambiguate, lookup
-from scoring import compute_factors, apply_scope_consistency, SentimentFactors
-from config import VariantConfig
+from .parser import ParsedSentence, parse_tokens
+from .rules import extract_explicit_pairs, expand_r3, expand_r4, find_orphan_opinions, Pair
+from .dam import disambiguate, lookup
+from .scoring import compute_factors, apply_scope_consistency, SentimentFactors
+from .config import VariantConfig
 
 
 @dataclass

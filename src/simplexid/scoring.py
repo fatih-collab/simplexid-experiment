@@ -7,8 +7,8 @@ import math
 from dataclasses import dataclass
 from typing import Optional
 
-from parser import ParsedSentence, dependency_distance, find_dependents
-import config
+from .parser import ParsedSentence, dependency_distance, find_dependents
+from . import config
 
 NEGATION_WORDS = {"tidak", "bukan", "belum", "tak", "jangan"}
 AMPLIFIER_WORDS = {"sangat", "sekali", "banget", "amat", "super"}

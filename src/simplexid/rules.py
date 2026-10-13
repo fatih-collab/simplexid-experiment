@@ -12,7 +12,7 @@ menghasilkan skema label yang sedikit berbeda (periksa dengan mencetak
 
 from dataclasses import dataclass
 from typing import List, Optional
-from parser import ParsedSentence, Token
+from .parser import ParsedSentence, Token
 
 UDPIPE_LABEL_MAP = {
     "dobj": "obj",          # Stanford -> UD v2
