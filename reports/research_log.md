@@ -61,3 +61,36 @@ PASS
 
 ### H3.1 Status
 PASS — 24 tests passing, package imports without legacy modules.
+
+
+## H3.2 — Parse Cache, Oracle Upper Bound, Parser Audit (2026-10-19)
+
+### Parse cache
+- All 5,000 TermA sentences parsed once (pretokenized, UDPipe id-gsd 2.5) into
+  `data/cache/parses/terma.conllu`; every row is exactly one tree (5,000 roots).
+- Cache is regenerable and not in git; provenance in `reports/h32/parse_cache_manifest.json`
+  (model SHA-256, input SHA-256, cache SHA-256). Loading fails if model, data, or cache change.
+
+### Label inventory (`reports/h32/parse_stats.json`)
+- `relcl` occurs 0 times (GSD 2.5 uses `acl`): **R7 can never fire** as written.
+- UD v2 has no `neg` label; negation ("tidak") is `advmod` + UPOS `PART`.
+- `nsubj:pass` (848) is not matched by R1, which checks `nsubj` exactly.
+
+### Oracle — development split only (`reports/h32/oracle_dev.md`)
+- 1,593 gold pairs (1,125 reviewed + 468 trivial 1-aspect-1-opinion, reported separately).
+- Recall upper bound by aspect-head↔opinion-head distance: ≤1 = 73.5%, ≤2 = 94.0%, ≤3 = 98.9%.
+- Current rules (R0–R7 + R3 + R4), head-match preview: **51.0%** → ~43 pts headroom within distance 2.
+- Pairs whose path uses `conj`: 195 (12.2%); current rules reach only 30.8% of them
+  (relevant to the R3/R4 claim).
+- Largest misses: opinion words tagged NOUN/NUM by the parser ("kotor", "oke", "bau")
+  attached via `compound`/`nummod` (≈180 pairs); `nsubj:pass` (37/40 missed); `acl` (28/29).
+  23.8% of opinion heads are not ADJ/VERB; 11.3% of aspect heads are not NOUN.
+- Validation-split oracle intentionally NOT computed (allowed only in H6 via `--allow-final`).
+
+### Parser audit
+- `data/annotation/parser_audit/parser_audit_sheet.csv`: 100 dev sentences (25 per stratum
+  COORD / NEGATION / MULTI_ASPECT / OTHER), 1,144 tokens; guide in the same folder.
+  Status: awaiting human annotation.
+
+### H3.2 Status
+PASS (automated parts) — 31 tests passing. Parser audit annotation pending.

@@ -1,0 +1,201 @@
+﻿pattern,count,share,cumulative
+NOUN vamod ADJ,528,0.3315,0.3315
+NOUN vcompound NOUN,118,0.0741,0.4055
+NOUN ^nsubj VERB,89,0.0559,0.4614
+NOUN ^obj VERB,76,0.0477,0.5091
+NOUN ^nsubj:pass VERB,40,0.0251,0.5342
+NOUN vamod vconj ADJ,36,0.0226,0.5568
+NOUN ^nsubj ADJ,32,0.0201,0.5769
+NOUN vacl VERB,29,0.0182,0.5951
+NOUN vcompound vcompound NOUN,27,0.0169,0.6121
+NOUN vcompound vamod ADJ,26,0.0163,0.6284
+NOUN vnummod NUM,19,0.0119,0.6403
+NOUN ^compound vamod ADJ,18,0.0113,0.6516
+NOUN ^compound NOUN,16,0.01,0.6616
+X vamod ADJ,15,0.0094,0.6711
+VERB vamod ADJ,13,0.0082,0.6792
+NOUN vconj ADJ,12,0.0075,0.6868
+NOUN vadvmod ADV,12,0.0075,0.6943
+NOUN ^conj vamod ADJ,11,0.0069,0.7012
+NOUN ^conj ^nsubj VERB,10,0.0063,0.7075
+X ^advmod ADJ,10,0.0063,0.7137
+NOUN vconj vamod ADJ,9,0.0056,0.7194
+PRON vamod ADJ,9,0.0056,0.725
+NOUN ^nsubj vamod ADJ,9,0.0056,0.7307
+NOUN vconj NOUN,8,0.005,0.7357
+NOUN ^conj vconj vamod ADJ,8,0.005,0.7407
+NOUN ^compound ^nsubj VERB,8,0.005,0.7458
+NOUN ^obl VERB,8,0.005,0.7508
+DET ^det NOUN,7,0.0044,0.7552
+NOUN vamod vamod ADJ,7,0.0044,0.7596
+NOUN ^nmod NOUN,6,0.0038,0.7633
+NOUN ^conj ^obj VERB,6,0.0038,0.7671
+ADJ vamod ADJ,5,0.0031,0.7702
+ADJ ^amod VERB,5,0.0031,0.7734
+NOUN vdet PRON,5,0.0031,0.7765
+NOUN vnmod NOUN,5,0.0031,0.7797
+ADJ ^amod vamod ADJ,4,0.0025,0.7822
+ADV ^advmod ADJ,4,0.0025,0.7847
+NOUN vconj vcompound NOUN,4,0.0025,0.7872
+NOUN ^nsubj vconj ADJ,4,0.0025,0.7897
+DET ^det ADJ,4,0.0025,0.7922
+NOUN ^nsubj NOUN,4,0.0025,0.7947
+NOUN vflat PROPN,4,0.0025,0.7972
+NOUN vamod vconj NOUN,4,0.0025,0.7997
+VERB vobj NOUN,4,0.0025,0.8023
+VERB vadvmod ADV,4,0.0025,0.8048
+NOUN vflat vamod ADJ,4,0.0025,0.8073
+NOUN ^nmod ADJ,4,0.0025,0.8098
+NOUN ^compound ^obl VERB,3,0.0019,0.8117
+NOUN ^conj ^obl VERB,3,0.0019,0.8136
+NOUN vcompound vamod vconj ADJ,3,0.0019,0.8154
+NOUN ^nsubj vconj VERB,3,0.0019,0.8173
+NOUN vcompound vcompound vcompound NOUN,3,0.0019,0.8192
+ADJ ^amod NOUN,3,0.0019,0.8211
+NOUN vappos NOUN,3,0.0019,0.823
+NOUN ^nmod ^nsubj VERB,3,0.0019,0.8249
+NOUN ^compound ^nsubj ADJ,3,0.0019,0.8267
+X vxcomp ADJ,3,0.0019,0.8286
+NOUN ^obj vamod ADJ,3,0.0019,0.8305
+NOUN ^conj vconj VERB,3,0.0019,0.8324
+NOUN vdep NOUN,3,0.0019,0.8343
+NOUN vacl NOUN,3,0.0019,0.8362
+NOUN ^nsubj vconj NOUN,3,0.0019,0.838
+NOUN ^compound vacl VERB,3,0.0019,0.8399
+NOUN ^obj ^xcomp VERB,3,0.0019,0.8418
+NOUN ^nsubj vadvmod ADV,3,0.0019,0.8437
+NOUN ^compound ADJ,2,0.0013,0.8449
+NOUN ^conj ^nsubj vamod ADJ,2,0.0013,0.8462
+NOUN vacl vamod ADJ,2,0.0013,0.8475
+NOUN ^conj NOUN,2,0.0013,0.8487
+NOUN vcompound vconj NOUN,2,0.0013,0.85
+NOUN vcompound PRON,2,0.0013,0.8512
+ADV ^advmod VERB,2,0.0013,0.8525
+PROPN ^flat PROPN,2,0.0013,0.8537
+NOUN ^compound PROPN,2,0.0013,0.855
+NOUN ^compound ^compound ^compound NOUN,2,0.0013,0.8562
+X ^advmod VERB,2,0.0013,0.8575
+NOUN ^compound ^conj vconj ADJ,2,0.0013,0.8588
+NOUN vcompound vcompound vamod ADJ,2,0.0013,0.86
+NOUN ^conj vacl VERB,2,0.0013,0.8613
+NOUN ^compound ^compound vamod ADJ,2,0.0013,0.8625
+NOUN ^nsubj vobj NOUN,2,0.0013,0.8638
+NOUN ^conj ^nmod NOUN,2,0.0013,0.865
+VERB vadvcl VERB,2,0.0013,0.8663
+NOUN vamod vcompound NOUN,2,0.0013,0.8675
+NOUN vamod NOUN,2,0.0013,0.8688
+VERB vxcomp ADJ,2,0.0013,0.8701
+VERB vobl NOUN,2,0.0013,0.8713
+SCONJ ^mark VERB,2,0.0013,0.8726
+ADJ ^amod ^nsubj:pass VERB,2,0.0013,0.8738
+ADJ vadvmod ADV,2,0.0013,0.8751
+NOUN ^compound vdep VERB,1,0.0006,0.8757
+NOUN ^nsubj:pass vxcomp ADJ,1,0.0006,0.8763
+NOUN vacl ADV,1,0.0006,0.877
+NOUN ^compound vamod vamod ADJ,1,0.0006,0.8776
+NOUN ^nsubj:pass vobj NOUN,1,0.0006,0.8782
+NOUN ^fixed vnummod NUM,1,0.0006,0.8788
+NOUN vappos vflat vflat PROPN,1,0.0006,0.8795
+NOUN ^compound ^compound ^obl vappos vconj NOUN,1,0.0006,0.8801
+NOUN vconj PRON,1,0.0006,0.8807
+NOUN ^conj vamod vconj ADJ,1,0.0006,0.8814
+NOUN ^conj vacl vnummod vconj ADJ,1,0.0006,0.882
+PROPN vflat PROPN,1,0.0006,0.8826
+SCONJ ^mark ADJ,1,0.0006,0.8832
+SCONJ ^mark vamod ADJ,1,0.0006,0.8839
+PRON vamod vconj ADJ,1,0.0006,0.8845
+NOUN ^appos vappos ADJ,1,0.0006,0.8851
+X ^advmod vconj ADJ,1,0.0006,0.8858
+NOUN vcompound vcompound vconj NOUN,1,0.0006,0.8864
+NOUN vcompound vflat PROPN,1,0.0006,0.887
+X ^cc vacl VERB,1,0.0006,0.8876
+ADJ vcompound NOUN,1,0.0006,0.8883
+NOUN ^compound ^compound vcompound vcompound NOUN,1,0.0006,0.8889
+ADJ ^amod ^nmod vadvmod ADV,1,0.0006,0.8895
+NOUN ^det NOUN,1,0.0006,0.8901
+ADJ ^amod ^acl VERB,1,0.0006,0.8908
+NOUN vadvcl vamod ADJ,1,0.0006,0.8914
+NOUN ^nmod ^nsubj vadvcl VERB,1,0.0006,0.892
+NOUN vamod vnmod vacl VERB,1,0.0006,0.8927
+ADJ vcompound vcompound NOUN,1,0.0006,0.8933
+ADJ ^nsubj VERB,1,0.0006,0.8939
+NOUN ^obl vconj NOUN,1,0.0006,0.8945
+NOUN ^compound ^compound ^compound ^compound vacl vamod ADJ,1,0.0006,0.8952
+NOUN ^compound ^compound ^compound ^compound vconj ADJ,1,0.0006,0.8958
+NOUN ^nsubj:pass vamod ADJ,1,0.0006,0.8964
+NOUN ^conj ^nmod ^amod ^nsubj:pass VERB,1,0.0006,0.897
+NOUN vacl PRON,1,0.0006,0.8977
+DET ^det vconj ADJ,1,0.0006,0.8983
+NOUN vappos PRON,1,0.0006,0.8989
+NOUN ^compound VERB,1,0.0006,0.8996
+PRON ^det vacl VERB,1,0.0006,0.9002
+VERB vobj vadvmod ADV,1,0.0006,0.9008
+VERB vobj vadvmod vconj ADJ,1,0.0006,0.9014
+NOUN vconj VERB,1,0.0006,0.9021
+NOUN ^conj ^compound vappos NOUN,1,0.0006,0.9027
+X ^nummod VERB,1,0.0006,0.9033
+X ^nummod vxcomp ADJ,1,0.0006,0.904
+X ^conj ^nsubj VERB,1,0.0006,0.9046
+NOUN ^compound ^conj ^amod ^compound vamod ADJ,1,0.0006,0.9052
+X ^conj vconj vamod ADJ,1,0.0006,0.9058
+NOUN vcompound vcompound vcompound vamod ADJ,1,0.0006,0.9065
+PROPN ^conj ^obj VERB,1,0.0006,0.9071
+NOUN ^compound vappos vamod ADJ,1,0.0006,0.9077
+SCONJ ^mark NOUN,1,0.0006,0.9083
+NOUN ^conj ^compound ^compound ^compound NOUN,1,0.0006,0.909
+NOUN ^conj ^compound NOUN,1,0.0006,0.9096
+PRON ^det ^nsubj:pass VERB,1,0.0006,0.9102
+NOUN vflat vnummod NUM,1,0.0006,0.9109
+NOUN ^obl vnsubj NOUN,1,0.0006,0.9115
+X ^advmod vobj vamod ADJ,1,0.0006,0.9121
+NOUN vamod vconj VERB,1,0.0006,0.9127
+NOUN ^obj vadvcl VERB,1,0.0006,0.9134
+NOUN ^conj ^amod ^nsubj VERB,1,0.0006,0.914
+ADJ ^advmod vcompound vamod ADJ,1,0.0006,0.9146
+NOUN ^obj vadvmod ADV,1,0.0006,0.9153
+NOUN ^nsubj:pass vnsubj:pass vamod ADJ,1,0.0006,0.9159
+NOUN ^compound ^obl vxcomp VERB,1,0.0006,0.9165
+NOUN vcompound vcompound vflat PROPN,1,0.0006,0.9171
+ADJ ^amod vadvmod ADV,1,0.0006,0.9178
+PRON ^det ^compound vnmod vadvmod ADV,1,0.0006,0.9184
+PRON vadvmod vnummod NUM,1,0.0006,0.919
+NOUN ^conj vadvmod ADV,1,0.0006,0.9196
+NOUN ^compound ^advmod VERB,1,0.0006,0.9203
+NUM ^nummod vamod ADJ,1,0.0006,0.9209
+ADV ^advmod ADV,1,0.0006,0.9215
+NOUN ^nsubj vdep ADJ,1,0.0006,0.9222
+NOUN ^conj vconj NOUN,1,0.0006,0.9228
+X vobl NOUN,1,0.0006,0.9234
+X vnmod vcompound NOUN,1,0.0006,0.924
+NOUN ^conj ^nmod ^nsubj vobj vadvcl VERB,1,0.0006,0.9247
+NOUN vcompound vnummod NUM,1,0.0006,0.9253
+NOUN ^nsubj vxcomp VERB,1,0.0006,0.9259
+NOUN vnmod vacl vxcomp ADJ,1,0.0006,0.9266
+NOUN vacl vxcomp ADJ,1,0.0006,0.9272
+NOUN ^compound vconj vadvmod ADV,1,0.0006,0.9278
+NOUN ^conj ^nsubj vconj VERB,1,0.0006,0.9284
+ADJ ^amod ^obj VERB,1,0.0006,0.9291
+NOUN vappos vappos NOUN,1,0.0006,0.9297
+NOUN vcompound vadvmod ADV,1,0.0006,0.9303
+NOUN ^nsubj ^dep NOUN,1,0.0006,0.9309
+NOUN ^conj ^nsubj:pass VERB,1,0.0006,0.9316
+NOUN ^nsubj:pass vadvcl VERB,1,0.0006,0.9322
+NOUN ^compound ^conj ^nmod vamod ADJ,1,0.0006,0.9328
+NOUN ^obl vxcomp vadvcl vadvmod ADV,1,0.0006,0.9335
+NOUN ^compound ^nsubj vxcomp VERB,1,0.0006,0.9341
+ADJ ^fixed ^amod ^nsubj:pass VERB,1,0.0006,0.9347
+ADJ ^amod ^advmod VERB,1,0.0006,0.9353
+ADJ ^amod ^obl vxcomp VERB,1,0.0006,0.936
+ADJ vnmod NOUN,1,0.0006,0.9366
+NOUN ^acl ^nsubj:pass VERB,1,0.0006,0.9372
+NOUN ^compound ^amod vadvmod ADV,1,0.0006,0.9379
+NOUN ^compound ^nmod ^amod VERB,1,0.0006,0.9385
+NOUN ^compound ^conj vamod ADJ,1,0.0006,0.9391
+NOUN ^conj ADJ,1,0.0006,0.9397
+NOUN ^obj vadvcl ADJ,1,0.0006,0.9404
+PRON ^nmod NOUN,1,0.0006,0.941
+PRON ^nmod vcompound vcompound NOUN,1,0.0006,0.9416
+PRON ^nmod vamod ADJ,1,0.0006,0.9422
+PRON ^nmod vamod vconj ADJ,1,0.0006,0.9429
+NOUN ^nsubj ^conj ADJ,1,0.0006,0.9435
+NOUN ^nsubj ^conj vconj ADJ,1,0.0006,0.9441

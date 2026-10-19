@@ -1,0 +1,70 @@
+{
+  "n_sentences": 5000,
+  "n_tokens_by_split": {
+    "train": 47734,
+    "validation": 16124,
+    "test": 15498
+  },
+  "roots_per_sentence": {
+    "1": 5000
+  },
+  "dep_labels": {
+    "punct": 14181,
+    "advmod": 9616,
+    "amod": 9047,
+    "compound": 8590,
+    "root": 5000,
+    "case": 4289,
+    "conj": 3799,
+    "nsubj": 3553,
+    "obj": 3445,
+    "cc": 2465,
+    "nmod": 2211,
+    "det": 1813,
+    "dep": 1603,
+    "mark": 1453,
+    "acl": 1440,
+    "obl": 1400,
+    "advcl": 1038,
+    "appos": 1009,
+    "nummod": 887,
+    "nsubj:pass": 848,
+    "xcomp": 604,
+    "flat": 411,
+    "ccomp": 241,
+    "parataxis": 221,
+    "fixed": 157,
+    "cop": 19,
+    "compound:plur": 14,
+    "csubj": 2
+  },
+  "upos": {
+    "NOUN": 24417,
+    "PUNCT": 14161,
+    "ADJ": 10814,
+    "ADV": 7324,
+    "VERB": 6546,
+    "ADP": 4302,
+    "PRON": 2950,
+    "CCONJ": 2486,
+    "PART": 2319,
+    "SCONJ": 1477,
+    "NUM": 925,
+    "DET": 713,
+    "PROPN": 633,
+    "X": 238,
+    "SYM": 32,
+    "AUX": 19
+  },
+  "rule_label_presence": {
+    "amod": 9047,
+    "nsubj": 3553,
+    "obj": 3445,
+    "obl": 1400,
+    "compound": 8590,
+    "relcl": 0,
+    "acl": 1440,
+    "conj": 3799,
+    "advmod": 9616
+  }
+}

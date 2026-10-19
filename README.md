@@ -28,12 +28,17 @@ src/simplexid/
   data.py               # loader & preprocessing TermA/HoASA (H1)
   gold.py               # pembuatan & validasi gold data (H2)
   parser.py             # UDPipe (ufal.udpipe) -> Token/ParsedSentence, CoNLL-U
+  parse_cache.py        # cache parse CoNLL-U + manifest/hash (H3.2)
+  oracle.py             # head span, jalur dependensi, oracle upper bound (H3.2)
   dam.py                # kamus Domain-Aspect Mapping + disambiguasi kontekstual
   rules.py              # R0,R1,R2,R5,R6,R7 (eksplisit) + R3,R4 (ekspansi konjungtif)
   scoring.py            # Neg/Int (statis maupun berbobot-jarak) + scope consistency
   pipeline.py           # orkestrasi: parse -> rules -> expand -> R8 -> scoring
   secondary_tagging.py  # kandidat COORD/IMPLICIT_AMBIG/ASYM_MOD
 experiments/run_h2.py   # runner gold data (H2)
+experiments/run_parse.py # cache | stats | oracle | audit-sheet (H3.2)
+data/annotation/       # lembar anotasi manual (audit parser, IAA)
+reports/h32/           # laporan otomatis H3.2 (oracle, statistik parse)
 resources/models/udpipe # model parser + SOURCE.md (provenance, checksum, lisensi)
 reports/research_log.md # catatan tiap fase
 ```

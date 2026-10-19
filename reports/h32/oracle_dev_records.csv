@@ -1,0 +1,1594 @@
+﻿sentence_id,source,aspect_text,opinion_text,aspect_head,opinion_head,aspect_head_pos,opinion_head_pos,distance,pattern,current_rules_head_match
+terma_train_00002,REVIEWED,ac nya,tidak bisa diatur,4,8,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00009,REVIEWED,layanan,sangat mengecewakan,6,3,NOUN,VERB,2,NOUN ^compound ^obl VERB,False
+terma_train_00009,REVIEWED,kebersihan kamar,sangat mengecewakan,8,3,NOUN,VERB,2,NOUN ^conj ^obl VERB,False
+terma_train_00010,REVIEWED,kamar,banyak semut,4,6,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00023,REVIEWED,kamarnya,nyaman banget,2,1,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_00023,REVIEWED,kamarnya,bersiih,2,4,NOUN,VERB,2,NOUN ^compound vdep VERB,False
+terma_train_00033,REVIEWED,properti nya,kurang diperlengkapi,5,8,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00033,REVIEWED,properti nya,kurang nyaman,5,11,NOUN,ADJ,2,NOUN ^nsubj:pass vxcomp ADJ,False
+terma_train_00034,REVIEWED,kamarnya,terlalu sempit,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00034,REVIEWED,pelayanan hotel,lumayan bagus,11,14,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00034,REVIEWED,pelayanan hotel,ramah,11,17,NOUN,ADJ,3,NOUN vcompound vamod vconj ADJ,False
+terma_train_00042,REVIEWED,tempat,terlalu kedalam,5,6,NOUN,ADV,1,NOUN vacl ADV,False
+terma_train_00053,REVIEWED,wifi,sangat baik,28,35,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00064,REVIEWED,keramahan pelayanan,baik,2,0,NOUN,ADJ,1,NOUN ^compound ADJ,False
+terma_train_00064,REVIEWED,desain bangunan,nyaman,5,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00064,REVIEWED,kebersihan kamar,lemah,11,9,NOUN,ADJ,3,NOUN ^compound vamod vamod ADJ,False
+terma_train_00064,REVIEWED,lantai,lengket,14,16,NOUN,NOUN,2,NOUN ^nsubj:pass vobj NOUN,False
+terma_train_00064,REVIEWED,ac,lambat,18,19,X,ADJ,1,X vamod ADJ,False
+terma_train_00068,REVIEWED,air,mati,6,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00068,REVIEWED,kamar mandi,sangat kotor,19,21,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_00068,REVIEWED,ranjang,baik,23,24,ADJ,ADJ,1,ADJ vamod ADJ,False
+terma_train_00068,REVIEWED,kebersihan kamar,lumayan,26,28,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_00068,REVIEWED,prncahayaan ruangan,kirang lampu,30,32,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_00072,REVIEWED,pelayanan,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00072,REVIEWED,fasilitas,memadai,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00072,REVIEWED,harga,bersahabat,6,7,NOUN,VERB,2,NOUN ^conj ^nsubj VERB,True
+terma_train_00081,REVIEWED,tempatnya,tidak susah mencarinya,25,28,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00084,REVIEWED,pelayanan,oke,2,4,NOUN,NUM,2,NOUN ^fixed vnummod NUM,False
+terma_train_00088,REVIEWED,hotelnya,nyaman banget,0,4,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00088,REVIEWED,hotelnya,recommended banget,0,8,NOUN,PROPN,3,NOUN vappos vflat vflat PROPN,False
+terma_train_00089,REVIEWED,penjaga,ramah,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00092,REVIEWED,ac nya,berisik banget,4,6,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00097,REVIEWED,room,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00097,REVIEWED,fasilitas,oke,3,4,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_00097,REVIEWED,alat mandi,tidak dapat,10,9,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00098,REVIEWED,kamar,kotor,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00098,REVIEWED,kamar,bau,0,2,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_00098,REVIEWED,ranjang,kotor,19,20,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00098,REVIEWED,kamar mandi,jorok,33,35,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_00098,REVIEWED,wifi,susah sinyal,49,41,NOUN,NOUN,5,NOUN ^compound ^compound ^obl vappos vconj NOUN,False
+terma_train_00108,REVIEWED,pelayanan,cukup oke,4,6,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_00109,REVIEWED,wifi,tidak ada,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00109,REVIEWED,pintu kamar mandi,tidak bisa terkunci,4,9,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00112,REVIEWED,air kamar mandi,kotor,0,3,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_00112,REVIEWED,ac,tidak dingin,5,7,ADJ,ADJ,2,ADJ ^amod vamod ADJ,False
+terma_train_00112,REVIEWED,seprai,kotor,9,10,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00112,REVIEWED,kamar,berbau,12,13,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00117,REVIEWED,tempatnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00117,REVIEWED,tempatnya,terjangkau,0,3,NOUN,PRON,1,NOUN vconj PRON,False
+terma_train_00121,REVIEWED,tempatnya,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00121,REVIEWED,tempatnya,tenang,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_00123,REVIEWED,pintu kamar mandi,tidak bisa dikunci,0,5,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00123,REVIEWED,acnya,gadingin,7,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00126,REVIEWED,kamarnya,keren,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00126,REVIEWED,kamarnya,rapi,0,3,NOUN,NOUN,1,NOUN vconj NOUN,False
+terma_train_00126,REVIEWED,kamarnya,bersih,0,5,NOUN,ADJ,1,NOUN vconj ADJ,False
+terma_train_00126,REVIEWED,kamarnya,mantap,0,7,NOUN,ADJ,1,NOUN vconj ADJ,False
+terma_train_00127,REVIEWED,suasana,tenang,4,5,NOUN,ADJ,2,NOUN ^conj vamod ADJ,False
+terma_train_00127,REVIEWED,suasana,nyaman,4,7,NOUN,ADJ,3,NOUN ^conj vamod vconj ADJ,False
+terma_train_00138,REVIEWED,kamar mandi,terlalu kecil,1,3,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_00138,REVIEWED,pintu kamar mandi,tidak dapat di kunci dengan baik,5,9,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00143,REVIEWED,harga,murah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00143,REVIEWED,pelayan,baik,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00143,REVIEWED,pelayan,ramah,3,6,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_00143,REVIEWED,kamar,bersih,22,23,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00143,REVIEWED,kamar,rapi,22,25,NOUN,NOUN,1,NOUN vconj NOUN,False
+terma_train_00143,REVIEWED,kamar,cukup luas,22,28,NOUN,ADJ,1,NOUN vconj ADJ,False
+terma_train_00143,REVIEWED,tv,mantap,32,33,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00143,REVIEWED,ac,kurang dingin,35,37,X,ADJ,1,X vamod ADJ,False
+terma_train_00143,REVIEWED,handuk,kecil,54,58,NOUN,ADJ,4,NOUN ^conj vacl vnummod vconj ADJ,False
+terma_train_00143,REVIEWED,air,lancar,60,61,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00143,REVIEWED,air,agak bau,60,64,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00145,REVIEWED,ac,kurang dingin,0,2,X,ADJ,1,X vamod ADJ,False
+terma_train_00145,REVIEWED,overall,oke,4,5,PROPN,PROPN,1,PROPN vflat PROPN,False
+terma_train_00149,REVIEWED,pelayanan,kurang ramah,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00149,REVIEWED,air,tidak ada,6,5,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00150,REVIEWED,pelayanannya,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00150,REVIEWED,pelayanannya,ramah,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_00152,REVIEWED,staf,ramah,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00153,REVIEWED,kamarnya,horor,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00153,REVIEWED,kamarnya,kurang bersih,0,4,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_00160,REVIEWED,staf,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00160,REVIEWED,kamar,bersih,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00161,REVIEWED,hotel,bersih,0,3,NOUN,ADJ,2,NOUN vconj vamod ADJ,False
+terma_train_00161,REVIEWED,kamar,bersih,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00164,REVIEWED,kamar,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00164,REVIEWED,suasana,tenang,3,4,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00170,REVIEWED,kamar,agak sempit,3,5,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00170,REVIEWED,kamar,bernyamuk,3,7,NOUN,VERB,2,NOUN ^nsubj vconj VERB,False
+terma_train_00197,REVIEWED,gordain,kurang lebar,0,2,SCONJ,ADJ,1,SCONJ ^mark ADJ,False
+terma_train_00197,REVIEWED,gordain,tipis,0,5,SCONJ,ADJ,2,SCONJ ^mark vamod ADJ,False
+terma_train_00202,REVIEWED,semuanya,baik,0,1,PRON,ADJ,1,PRON vamod ADJ,False
+terma_train_00202,REVIEWED,semuanya,bagus,0,3,PRON,ADJ,2,PRON vamod vconj ADJ,False
+terma_train_00208,REVIEWED,tempat,nyaman,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00208,REVIEWED,crewnya,baik,10,12,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00208,REVIEWED,crewnya,ramah,10,14,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_00208,REVIEWED,keset kamar mndinya,tidak terlalu menyerap,18,23,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00211,REVIEWED,wastafel,bocor,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00211,REVIEWED,handuk,bau tidak enak,3,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00211,REVIEWED,handuk,tidak bersih,3,9,NOUN,ADJ,2,NOUN ^appos vappos ADJ,False
+terma_train_00211,REVIEWED,lemari,kotor,12,13,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00237,REVIEWED,kamarnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00237,REVIEWED,kamarnya,nyaman,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_00237,REVIEWED,ac nya,dingin,5,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00237,REVIEWED,sarapannya,enak,9,11,ADV,ADJ,1,ADV ^advmod ADJ,False
+terma_train_00241,REVIEWED,tv,agak mengecewakan,4,7,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00250,REVIEWED,kamarnya,terlalu remang remang,0,2,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00250,REVIEWED,klosetnya,tersumbat,5,7,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_00263,REVIEWED,tisu toiletnya,tidak ada,6,5,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00273,REVIEWED,tempat,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00273,REVIEWED,tempat,nyaman,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00273,REVIEWED,tempat,canggih,0,6,NOUN,ADJ,1,NOUN vconj ADJ,False
+terma_train_00285,REVIEWED,fasilitas,berfungsi,4,5,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00285,REVIEWED,orang nya,ramah,7,9,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00316,REVIEWED,pelayanan,baik,0,3,NOUN,ADJ,1,NOUN vconj ADJ,False
+terma_train_00316,REVIEWED,segalanya,baik,2,3,ADV,ADJ,1,ADV ^advmod ADJ,False
+terma_train_00325,REVIEWED,fasilitas,istimewa,0,14,NOUN,ADJ,2,NOUN vconj vamod ADJ,False
+terma_train_00325,REVIEWED,kamar,istimewa,2,14,NOUN,ADJ,3,NOUN ^conj vconj vamod ADJ,False
+terma_train_00325,REVIEWED,kebersihan,istimewa,4,14,NOUN,ADJ,3,NOUN ^conj vconj vamod ADJ,False
+terma_train_00325,REVIEWED,wi fi,istimewa,6,14,NOUN,ADJ,3,NOUN ^conj vconj vamod ADJ,False
+terma_train_00325,REVIEWED,bathroom,istimewa,9,14,NOUN,ADJ,3,NOUN ^conj vconj vamod ADJ,False
+terma_train_00325,REVIEWED,lokasi,istimewa,11,14,NOUN,ADJ,3,NOUN ^conj vconj vamod ADJ,False
+terma_train_00325,REVIEWED,semuanya,istimewa,13,14,PRON,ADJ,1,PRON vamod ADJ,False
+terma_train_00336,REVIEWED,tempat tidur nya,tolong di perhatikan,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00336,REVIEWED,selebihnya,lumayan,7,8,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00340,REVIEWED,wc,kurang bagus,7,9,X,ADJ,1,X ^advmod ADJ,False
+terma_train_00340,REVIEWED,wc,kurang bersih,7,12,X,ADJ,2,X ^advmod vconj ADJ,False
+terma_train_00345,REVIEWED,lokasi,strategis,2,3,NOUN,ADJ,2,NOUN ^conj vamod ADJ,False
+terma_train_00346,REVIEWED,kamarnya,besih banget,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00346,REVIEWED,kamarnya,luas,0,4,NOUN,NOUN,3,NOUN vcompound vcompound vconj NOUN,False
+terma_train_00346,REVIEWED,kamar mandi,oke,6,8,NOUN,PROPN,2,NOUN vcompound vflat PROPN,False
+terma_train_00346,REVIEWED,poolnya,ada,11,10,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00346,REVIEWED,pelayanannya,bagus sekali,13,15,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00348,REVIEWED,lampunya,agak redup,6,5,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00358,REVIEWED,toilet,kurang bersih,3,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00361,REVIEWED,tempatnya,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00361,REVIEWED,tempatnya,bersih,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_00361,REVIEWED,sarapan,belum tersedia,15,14,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00376,REVIEWED,kualitas kamar,baik,0,4,NOUN,ADJ,2,NOUN vconj vamod ADJ,False
+terma_train_00376,REVIEWED,pelayanan,baik,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00383,REVIEWED,ruangan,bagus,9,10,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00383,REVIEWED,ruangan,nyaman,9,12,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00384,REVIEWED,ac,berfungsi,0,4,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00384,REVIEWED,ac,sangat baik,0,6,NOUN,ADJ,2,NOUN ^nsubj vamod ADJ,False
+terma_train_00384,REVIEWED,air panas,berfungsi,2,4,NOUN,VERB,2,NOUN ^conj ^nsubj VERB,True
+terma_train_00384,REVIEWED,air panas,sangat baik,2,6,NOUN,ADJ,3,NOUN ^conj ^nsubj vamod ADJ,False
+terma_train_00396,REVIEWED,ac nya,bocor,0,7,X,VERB,2,X ^cc vacl VERB,False
+terma_train_00396,REVIEWED,selebihnya,nyaman,11,12,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00396,REVIEWED,ac nya,bocor,24,26,ADJ,NOUN,1,ADJ vcompound NOUN,False
+terma_train_00398,REVIEWED,alas kaki,tidak ada,5,4,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00399,REVIEWED,kamar,bersih,0,4,NOUN,ADJ,2,NOUN ^nsubj vamod ADJ,False
+terma_train_00399,REVIEWED,kamar mandi,bersih,3,4,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_00404,REVIEWED,bantal,bau keringat,3,15,NOUN,NOUN,4,NOUN ^compound ^compound vcompound vcompound NOUN,False
+terma_train_00411,REVIEWED,kamar,tidak sesuai gambar,0,6,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00411,REVIEWED,hot shower nya,tidak ada,8,13,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00412,REVIEWED,hotelnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00412,REVIEWED,hotelnya,nyaman,0,3,NOUN,ADJ,2,NOUN vacl vamod ADJ,False
+terma_train_00412,REVIEWED,hotelnya,tidak berisik,0,5,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00418,REVIEWED,tempat,nyaman banget,2,1,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_00418,REVIEWED,suasananya,nyaman banget,4,1,NOUN,NOUN,1,NOUN ^conj NOUN,True
+terma_train_00422,REVIEWED,selimut,bau,0,3,NOUN,NOUN,2,NOUN vconj vcompound NOUN,False
+terma_train_00422,REVIEWED,bantal,bau,2,3,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00425,REVIEWED,toiletnya,harus diperbaiki,9,12,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00426,REVIEWED,hotelnya,suram,9,10,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00426,REVIEWED,kamar,oke,12,13,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00429,REVIEWED,sarapan,oke,2,3,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_00445,REVIEWED,kamar mandi,jorok,0,2,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_00445,REVIEWED,kamar mandi,ada cicak mati,0,4,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00452,REVIEWED,tempat,nyaman,6,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00452,REVIEWED,tempat,bersih,6,9,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_00456,REVIEWED,pelayanan servicenya,diperbaiki lagi,0,2,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00456,REVIEWED,breakfast,selalu terlambat,7,8,ADJ,ADV,3,ADJ ^amod ^nmod vadvmod ADV,False
+terma_train_00459,REVIEWED,pelayananya,puas,7,5,NOUN,NOUN,1,NOUN ^det NOUN,False
+terma_train_00465,REVIEWED,parkiran,kurang memadai,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00465,REVIEWED,breakfast,tidak ada,6,5,ADJ,VERB,2,ADJ ^amod ^acl VERB,False
+terma_train_00470,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00470,REVIEWED,kamar,baik,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00470,REVIEWED,kamar,nyaman,0,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00470,REVIEWED,kamar,sesuai,0,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00471,REVIEWED,pelayanan,terbaik,4,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00475,REVIEWED,kamar,lumayan enak,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00475,REVIEWED,kamar,kurang kerawat,0,7,NOUN,ADJ,2,NOUN vadvcl vamod ADJ,False
+terma_train_00480,REVIEWED,kamar,rapi,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00489,REVIEWED,kamar,seram,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00489,REVIEWED,kamar,kotor,0,3,NOUN,NOUN,2,NOUN vcompound vconj NOUN,False
+terma_train_00489,REVIEWED,badcovernya,bercak noda,6,12,NOUN,VERB,3,NOUN ^nmod ^nsubj vadvcl VERB,False
+terma_train_00495,REVIEWED,tempatnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00495,REVIEWED,tempatnya,nyaman,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_00495,REVIEWED,tempatnya,memuaskan,0,8,NOUN,VERB,3,NOUN vamod vnmod vacl VERB,False
+terma_train_00495,REVIEWED,harga,terjangkau,5,6,NOUN,PRON,1,NOUN vcompound PRON,False
+terma_train_00500,REVIEWED,selimut,agak kotor,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00500,REVIEWED,hot shower,mati,4,6,ADJ,NOUN,2,ADJ vcompound vcompound NOUN,False
+terma_train_00500,REVIEWED,hot shower,rusak,4,7,ADJ,VERB,1,ADJ ^nsubj VERB,False
+terma_train_00500,REVIEWED,fasilitas kamar mandi,tidak baik,9,14,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00500,REVIEWED,pipa bawah wastafel,bocor,16,19,NOUN,NOUN,3,NOUN vcompound vcompound vcompound NOUN,False
+terma_train_00504,REVIEWED,pelayanan,ramah,2,4,NOUN,ADJ,2,NOUN ^conj vamod ADJ,False
+terma_train_00509,REVIEWED,kasur,kurang bersih,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00509,REVIEWED,kamar,bau pengap,7,9,NOUN,NOUN,2,NOUN ^obl vconj NOUN,False
+terma_train_00509,REVIEWED,makanan sarapan,tidak kebagian,13,18,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00512,REVIEWED,air,bau,0,2,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00512,REVIEWED,kamar,kusam,11,13,NOUN,ADJ,6,NOUN ^compound ^compound ^compound ^compound vacl vamod ADJ,False
+terma_train_00512,REVIEWED,kamar,gelap,11,15,NOUN,ADJ,5,NOUN ^compound ^compound ^compound ^compound vconj ADJ,False
+terma_train_00515,REVIEWED,air,sangat kecil,5,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00525,REVIEWED,kamarnya,terlalu sempit,0,2,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00525,REVIEWED,kamarnya,nyaman,0,5,NOUN,ADJ,2,NOUN ^nsubj:pass vamod ADJ,False
+terma_train_00534,REVIEWED,harga,mahal,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00534,REVIEWED,internet,lambat,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00534,REVIEWED,kunci kamar hotel,kurang aman,6,10,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_00537,REVIEWED,koridor ruangan,kumuh,0,2,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_00537,REVIEWED,shower,perlu diperbaiki,7,9,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00547,REVIEWED,air,sangat kecil,5,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00547,REVIEWED,air,tidak maksimal,5,14,NOUN,ADJ,3,NOUN ^conj ^nsubj vamod ADJ,False
+terma_train_00552,REVIEWED,pelayanan,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00552,REVIEWED,tempatnya,strategis,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00553,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00553,REVIEWED,kamar,nyaman,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00553,REVIEWED,layanan air panas,perlu ditingkatkan,7,6,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00557,REVIEWED,hotel,sangat nyaman,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00557,REVIEWED,hotel,bersih,0,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00557,REVIEWED,letaknya,strategis,7,9,NOUN,ADJ,2,NOUN ^conj vamod ADJ,False
+terma_train_00558,REVIEWED,kamar,tidak sesuai dengan foto,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00558,REVIEWED,air,tidak bisa dirubah,6,9,NOUN,VERB,4,NOUN ^conj ^nmod ^amod ^nsubj:pass VERB,False
+terma_train_00564,REVIEWED,hotel,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00564,REVIEWED,pelayanan,bagus,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00598,REVIEWED,hotelnya,nyaman,23,24,NOUN,ADJ,1,NOUN ^nsubj ADJ,False
+terma_train_00598,REVIEWED,hotelnya,aman,23,26,NOUN,ADJ,2,NOUN ^nsubj vamod ADJ,False
+terma_train_00598,REVIEWED,hotelnya,tenang,23,28,NOUN,ADJ,2,NOUN ^nsubj vconj ADJ,False
+terma_train_00600,REVIEWED,kamar,bersih,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00600,REVIEWED,kamar mandi,bersih,7,9,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_00600,REVIEWED,wifi,lancar,11,12,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00607,REVIEWED,peralatan,berantakan,0,1,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00607,REVIEWED,selebihnya,oke banget,3,4,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00609,REVIEWED,seprainya,agak demek,7,9,NOUN,VERB,2,NOUN ^compound ^nsubj VERB,False
+terma_train_00614,REVIEWED,tempat,bagus,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00614,REVIEWED,harga,terjangkau,4,6,NOUN,PRON,1,NOUN vacl PRON,False
+terma_train_00618,REVIEWED,kamar nya,nyaman banget,2,1,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_00618,REVIEWED,wifi nya,bermasalah,7,10,NOUN,VERB,2,NOUN ^compound ^nsubj VERB,False
+terma_train_00619,REVIEWED,semua,nyaman,0,1,DET,ADJ,1,DET ^det ADJ,False
+terma_train_00619,REVIEWED,semua,bersih,0,3,DET,ADJ,2,DET ^det vconj ADJ,False
+terma_train_00623,REVIEWED,penerima tamu,kurang bagus,1,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00623,REVIEWED,keset,tidak ada,13,12,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00623,REVIEWED,keamanan,oke,21,22,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00623,REVIEWED,petugas kebersihannya,baik,25,28,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00650,REVIEWED,kamar,tidak sesuai,1,3,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_00650,REVIEWED,tirainya,kelihatan lusuh,8,9,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00650,REVIEWED,tirainya,kotor,8,12,NOUN,ADJ,3,NOUN vcompound vamod vconj ADJ,False
+terma_train_00650,REVIEWED,handuk,tidak di ganti,15,18,NOUN,VERB,2,NOUN ^conj ^nsubj VERB,False
+terma_train_00650,REVIEWED,lokasi,strategis,28,29,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00650,REVIEWED,transportasinya,mudah,31,32,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00661,REVIEWED,lokasi,sangat strategis,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00661,REVIEWED,parkir,luas,4,5,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00661,REVIEWED,air hangat,berfungsi dengan baik,8,9,ADV,VERB,1,ADV ^advmod VERB,True
+terma_train_00661,REVIEWED,selimut,agak bau,16,18,ADJ,NOUN,1,ADJ ^amod NOUN,False
+terma_train_00661,REVIEWED,tv kabel,tidak berfungsi,21,24,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00671,REVIEWED,airnya,agak asin,5,8,NOUN,NOUN,1,NOUN ^nsubj NOUN,False
+terma_train_00683,REVIEWED,harga,terjangkau,6,7,NOUN,PRON,1,NOUN vappos PRON,False
+terma_train_00684,REVIEWED,kamar mandi,berisik,8,10,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00684,REVIEWED,colokan,cuma ada 1,16,18,NOUN,VERB,1,NOUN ^compound VERB,False
+terma_train_00687,REVIEWED,seprai,di perbaiki lagi,1,8,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00687,REVIEWED,bed nya,di perbaiki lagi,4,8,PRON,VERB,2,PRON ^det vacl VERB,False
+terma_train_00700,REVIEWED,menu makanan,cukup banyak,1,4,VERB,ADV,2,VERB vobj vadvmod ADV,False
+terma_train_00700,REVIEWED,menu makanan,enak enak,1,6,VERB,ADJ,3,VERB vobj vadvmod vconj ADJ,False
+terma_train_00700,REVIEWED,kolam renangnya,ada,10,9,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00706,REVIEWED,fasilitas,lengkap,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00706,REVIEWED,harga,murah,8,12,NOUN,ADJ,2,NOUN vacl vamod ADJ,False
+terma_train_00706,REVIEWED,stafnya,helpfull,14,15,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00706,REVIEWED,shower,perlu di perbaiki,18,19,NOUN,VERB,2,NOUN ^compound ^nsubj VERB,False
+terma_train_00711,REVIEWED,kamar,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00711,REVIEWED,kamar,lumayan,0,3,NOUN,NOUN,1,NOUN vappos NOUN,False
+terma_train_00713,REVIEWED,pelayanan nya,ramah,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00713,REVIEWED,pelayanan nya,sangat memuaskan,0,5,NOUN,VERB,1,NOUN vconj VERB,False
+terma_train_00715,REVIEWED,snacknya,kurang,0,1,NOUN,ADV,1,NOUN vadvmod ADV,False
+terma_train_00715,REVIEWED,kompor listrik,tidak ada,5,4,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00725,REVIEWED,tempatnya,agak sulit ditemukan,5,8,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00733,REVIEWED,kamar,bersih,1,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00733,REVIEWED,pelayanan nya,baik,3,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00733,REVIEWED,pelayanan nya,ramah,3,7,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_00740,REVIEWED,hotelnya,mewah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00740,REVIEWED,hotelnya,bersih,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_00740,REVIEWED,makanannya,enak,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00740,REVIEWED,akses,sangat mudah,8,14,NOUN,ADJ,2,NOUN vconj vamod ADJ,False
+terma_train_00742,REVIEWED,layanan,kecewa,3,1,NOUN,NOUN,1,NOUN ^nmod NOUN,False
+terma_train_00742,REVIEWED,layanan,sangat ribet,3,9,NOUN,VERB,2,NOUN ^nmod ^nsubj VERB,False
+terma_train_00747,REVIEWED,kamar,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00747,REVIEWED,pelayanan,bagus,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00751,REVIEWED,pelayanan,ramah sekali,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00757,REVIEWED,kamarnya,cukup luas,0,2,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_00757,REVIEWED,sarung bantal,agak kotor,4,7,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00757,REVIEWED,ruangan,agak bau,9,11,NOUN,NOUN,3,NOUN ^conj ^compound vappos NOUN,False
+terma_train_00757,REVIEWED,ac,berfungsi dengan,13,14,X,VERB,1,X ^nummod VERB,False
+terma_train_00757,REVIEWED,ac,baik,13,16,X,ADJ,2,X ^nummod vxcomp ADJ,False
+terma_train_00771,REVIEWED,masmasnya,galak,13,14,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00781,REVIEWED,pelayanan nya,bagus,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00781,REVIEWED,pelayanan nya,ramah,1,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00783,REVIEWED,kamar,tidak terlalu besar,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00783,REVIEWED,kamar,cukup bersih,0,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00784,REVIEWED,the price,super worth,2,1,PROPN,PROPN,1,PROPN ^flat PROPN,False
+terma_train_00784,REVIEWED,kamar,baru,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00784,REVIEWED,kamar,bersih,5,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00784,REVIEWED,air panas,ada,10,12,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00784,REVIEWED,ac,ada,14,15,X,VERB,2,X ^conj ^nsubj VERB,False
+terma_train_00789,REVIEWED,perlengakapannya,good,1,0,NOUN,PROPN,1,NOUN ^compound PROPN,False
+terma_train_00789,REVIEWED,perlengakapannya,cukup lengkap,1,4,NOUN,ADJ,2,NOUN ^compound ^nsubj ADJ,False
+terma_train_00817,REVIEWED,segala sesuatunya,oke,1,2,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00817,REVIEWED,kunci kamar mandinya,perlu di perbaiki,4,7,NOUN,VERB,2,NOUN ^conj ^nsubj VERB,True
+terma_train_00820,REVIEWED,overal,bagus,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00820,REVIEWED,overal,nyaman,2,5,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_00820,REVIEWED,playann,baik,6,8,NOUN,ADJ,5,NOUN ^compound ^conj ^amod ^compound vamod ADJ,False
+terma_train_00820,REVIEWED,seprai,ada bekas noda,14,15,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00820,REVIEWED,harga,mantap,21,23,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00821,REVIEWED,tempat,nyaman,6,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00821,REVIEWED,tempat,aman,6,9,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_00824,REVIEWED,kamar,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00824,REVIEWED,tempat,strategis,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00833,REVIEWED,snack box nya,tidak dapat,10,9,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00842,REVIEWED,kamar mandi,kotor,0,2,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_00842,REVIEWED,jaringan tv,kurang bagus,4,7,NOUN,ADJ,2,NOUN ^conj vamod ADJ,True
+terma_train_00848,REVIEWED,ac nya,kurang dingin,0,3,X,ADJ,1,X vxcomp ADJ,False
+terma_train_00848,REVIEWED,pelayananya,oke,6,7,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_00851,REVIEWED,fasilitas,sebanding,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00851,REVIEWED,desain pembuangan air kamar mandi,perlu di perhatikan,7,4,NOUN,VERB,2,NOUN ^compound ^obl VERB,False
+terma_train_00856,REVIEWED,fasilitas,lengkap,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00856,REVIEWED,seprainya,terasa gatal,4,5,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00868,REVIEWED,stafnya,ramah,6,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00874,REVIEWED,kamarnya,nyaman,0,1,NOUN,ADJ,2,NOUN vcompound vamod ADJ,False
+terma_train_00874,REVIEWED,kamarnya,terlalu sempit,0,5,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00896,REVIEWED,ac,baik,5,11,X,ADJ,3,X ^conj vconj vamod ADJ,False
+terma_train_00896,REVIEWED,tv,baik,7,11,NOUN,ADJ,3,NOUN ^conj vconj vamod ADJ,False
+terma_train_00896,REVIEWED,westafel,baik,9,11,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00920,REVIEWED,kulkasnya,mati,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00929,REVIEWED,pelayanan,oke,2,3,NOUN,PROPN,1,NOUN vflat PROPN,False
+terma_train_00930,REVIEWED,tempat,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00930,REVIEWED,pelayann,sangat baik,3,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00938,REVIEWED,hotel,sangat bagus,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00938,REVIEWED,kamar mandi saluran airnya,tersumbat harap di perbaiki,7,12,NOUN,ADJ,4,NOUN vcompound vcompound vcompound vamod ADJ,True
+terma_train_00939,REVIEWED,tv,error,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00940,REVIEWED,ventilasi,kurang,1,0,NOUN,ADV,1,NOUN vadvmod ADV,False
+terma_train_00943,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00943,REVIEWED,kamar mandi,bersih,4,6,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_00943,REVIEWED,semua,oke,8,9,DET,NOUN,1,DET ^det NOUN,False
+terma_train_00956,REVIEWED,air panas,tidak ada,8,7,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00956,REVIEWED,wifi,tidak ada,11,7,PROPN,VERB,2,PROPN ^conj ^obj VERB,False
+terma_train_00957,REVIEWED,kamar,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00964,REVIEWED,lokasinya,strategis,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00964,REVIEWED,papan namanya,agak diperbesar,4,7,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_00965,REVIEWED,bangunan,bagus,0,3,NOUN,ADJ,2,NOUN vconj vamod ADJ,False
+terma_train_00965,REVIEWED,ruangan,bagus,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00974,REVIEWED,kamar,agak sedikit kurang bersih,6,11,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00974,REVIEWED,kamar,bau,6,13,NOUN,NOUN,2,NOUN vamod vconj NOUN,False
+terma_train_00976,REVIEWED,meja,tidak ada,7,6,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00976,REVIEWED,air panas,tidak ada,9,6,NOUN,VERB,2,NOUN ^conj ^obj VERB,True
+terma_train_00989,REVIEWED,wifi,kencang,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00989,REVIEWED,kamarnya,nyaman,4,3,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_00992,REVIEWED,karyawan,kurang ramah,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00992,REVIEWED,karyawan,kurang baik,0,5,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01004,REVIEWED,pelayanan,cepat,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01004,REVIEWED,sarapan,tidak tersedia,6,5,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01004,REVIEWED,overall,puas,15,18,NOUN,ADJ,3,NOUN ^compound vappos vamod ADJ,False
+terma_train_01014,REVIEWED,harga,worth,3,0,NOUN,NOUN,1,NOUN ^nmod NOUN,False
+terma_train_01014,REVIEWED,harga,super murah,3,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01024,REVIEWED,gang,sangat sempit,9,11,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_01034,REVIEWED,makanan,sederhana,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01034,REVIEWED,makanan,enak,2,5,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01036,REVIEWED,pelayanan,good bgtz,12,11,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01045,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01045,REVIEWED,kamar,nyaman,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01051,REVIEWED,semua,oke,1,0,DET,NOUN,1,DET ^det NOUN,False
+terma_train_01051,REVIEWED,selimutnya,bau,7,8,SCONJ,NOUN,1,SCONJ ^mark NOUN,False
+terma_train_01074,REVIEWED,pelayanan,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01074,REVIEWED,kamar,bersih,3,5,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_01074,REVIEWED,pelayanan,ramah,7,9,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01080,REVIEWED,kebersihan seprai,tingkatkan,1,0,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_01080,REVIEWED,kasur,tingkatkan,3,0,NOUN,NOUN,3,NOUN ^compound ^compound ^compound NOUN,False
+terma_train_01080,REVIEWED,bantal,tingkatkan,5,0,NOUN,NOUN,4,NOUN ^conj ^compound ^compound ^compound NOUN,False
+terma_train_01080,REVIEWED,selimut,tingkatkan,7,0,NOUN,NOUN,2,NOUN ^conj ^compound NOUN,False
+terma_train_01088,REVIEWED,kamar,mantap,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01088,REVIEWED,pelayanan,mantap,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01088,REVIEWED,posisi,agak jauh,7,9,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01089,REVIEWED,sabun,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01089,REVIEWED,sampo,tidak ada,4,1,NOUN,VERB,2,NOUN ^conj ^obj VERB,True
+terma_train_01096,REVIEWED,selimut nya,tidak diganti,12,14,PRON,VERB,2,PRON ^det ^nsubj:pass VERB,False
+terma_train_01097,REVIEWED,kamar,terbaik,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01097,REVIEWED,kebersihanya,terbaik,3,0,NOUN,ADJ,2,NOUN ^conj vamod ADJ,True
+terma_train_01114,REVIEWED,kamar,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01114,REVIEWED,cs,tidak 24,4,6,NOUN,NUM,2,NOUN vflat vnummod NUM,False
+terma_train_01120,REVIEWED,suasana,nyaman,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01120,REVIEWED,pelayanannya,sangat baik,4,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01122,REVIEWED,hotelnya,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01122,REVIEWED,hotelnya,kurang bersih,0,4,NOUN,ADJ,2,NOUN vamod vamod ADJ,False
+terma_train_01124,REVIEWED,pelayannya,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01124,REVIEWED,menu,lumayan,3,4,VERB,NOUN,1,VERB vobj NOUN,False
+terma_train_01140,REVIEWED,kamar,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01140,REVIEWED,kamar,rapi,0,3,NOUN,NOUN,2,NOUN ^obl vnsubj NOUN,False
+terma_train_01140,REVIEWED,pelayanan,memuaskan,5,6,NOUN,VERB,2,NOUN ^compound ^nsubj VERB,False
+terma_train_01140,REVIEWED,petugas,ramah,7,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01157,REVIEWED,ac,bisa di ganti,0,4,X,VERB,1,X ^advmod VERB,False
+terma_train_01157,REVIEWED,ac,kurang dingin,0,8,X,ADJ,3,X ^advmod vobj vamod ADJ,False
+terma_train_01159,REVIEWED,airnya,bau,4,5,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01165,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01165,REVIEWED,stafnya,ramah,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01165,REVIEWED,stafnya,sangat membantu,3,7,NOUN,VERB,2,NOUN vamod vconj VERB,False
+terma_train_01166,REVIEWED,kamarnya,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01166,REVIEWED,kamarnya,bersih,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01167,REVIEWED,hotelnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01167,REVIEWED,hotelnya,nyaman,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01175,REVIEWED,pelayanannya,tidak ramah,2,4,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_01175,REVIEWED,kamar,panas,6,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01175,REVIEWED,ac,tidak dingin,9,11,X,ADJ,1,X vamod ADJ,False
+terma_train_01175,REVIEWED,kamar,kotor,13,14,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01175,REVIEWED,sarapan,gaada,17,16,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_01177,REVIEWED,spring bednya,lembek,7,10,NOUN,VERB,2,NOUN ^obj vadvcl VERB,False
+terma_train_01186,REVIEWED,seprai,tidak bersih,0,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01186,REVIEWED,bed cover,tidak bersih,2,5,NOUN,ADJ,2,NOUN ^conj vamod ADJ,True
+terma_train_01186,REVIEWED,air panas,tidak menyala,7,10,NOUN,VERB,3,NOUN ^conj ^amod ^nsubj VERB,False
+terma_train_01186,REVIEWED,wifi,tidak tersedia,12,16,NOUN,ADJ,2,NOUN ^obj vamod ADJ,False
+terma_train_01187,REVIEWED,pelayanan,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01187,REVIEWED,liftnya,seram,9,10,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_01187,REVIEWED,cat hotel,kusam,12,14,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_01187,REVIEWED,cat,terkelupas,16,17,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_01187,REVIEWED,wifi,no,28,27,PROPN,PROPN,1,PROPN ^flat PROPN,False
+terma_train_01190,REVIEWED,kamarnya,tidak terlalu besar,4,7,ADJ,ADJ,1,ADJ vamod ADJ,False
+terma_train_01194,REVIEWED,ac,bocor,2,3,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01199,REVIEWED,kamar,kotor,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01199,REVIEWED,tempat sampah,tidak ada,5,4,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01199,REVIEWED,sabun,habis,8,12,ADJ,ADJ,3,ADJ ^advmod vcompound vamod ADJ,False
+terma_train_01199,REVIEWED,shower,tidak mengalir kencang,14,16,ADJ,VERB,1,ADJ ^amod VERB,False
+terma_train_01202,REVIEWED,harga,terjangkau,3,4,NOUN,PRON,1,NOUN vdet PRON,False
+terma_train_01202,REVIEWED,snack,dapat,6,5,VERB,ADV,1,VERB vadvmod ADV,False
+terma_train_01202,REVIEWED,mnum,dapat,8,5,NOUN,ADV,2,NOUN ^obj vadvmod ADV,False
+terma_train_01203,REVIEWED,air panas,kurang berfungsi,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01203,REVIEWED,handuk,lembab,5,6,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01205,REVIEWED,lokasi,sangat strategis,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01205,REVIEWED,resepsionis,gesit,4,5,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01205,REVIEWED,harga,sangat terjangkau,7,9,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01205,REVIEWED,sarapan paginya,enak,11,13,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_01208,REVIEWED,kamar,sempit,3,4,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01211,REVIEWED,pelayanan,mantap,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01211,REVIEWED,kamar,mantap,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01211,REVIEWED,kebersihan,mantap,4,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01211,REVIEWED,lokasi,tenang,6,7,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_01223,REVIEWED,toilet flash - nya,bocor,0,4,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_01223,REVIEWED,air panas,menunggu lama,6,11,NOUN,VERB,1,NOUN ^nsubj VERB,False
+terma_train_01223,REVIEWED,bed nya,kurang bersih,14,18,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01224,REVIEWED,lokasi,suka,2,0,NOUN,VERB,1,NOUN ^obl VERB,False
+terma_train_01224,REVIEWED,fasilitas,suka,4,0,NOUN,VERB,2,NOUN ^conj ^obl VERB,False
+terma_train_01224,REVIEWED,kamarnya,suka,7,0,NOUN,VERB,2,NOUN ^conj ^obl VERB,False
+terma_train_01239,REVIEWED,cek in,cepat,0,2,NOUN,ADJ,2,NOUN vflat vamod ADJ,False
+terma_train_01239,REVIEWED,staf,ramah,4,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01239,REVIEWED,sarapan,enak,7,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01242,REVIEWED,hotelnya,bagus,0,2,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_01242,REVIEWED,hotelnya,luas,0,4,NOUN,ADJ,2,NOUN ^nsubj vamod ADJ,False
+terma_train_01242,REVIEWED,kolam renang,bersih,14,19,NOUN,ADJ,3,NOUN ^nsubj:pass vnsubj:pass vamod ADJ,False
+terma_train_01242,REVIEWED,manajemennya,berantakan,26,31,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01242,REVIEWED,check - in,menunggu hampir sejam,39,42,NOUN,VERB,3,NOUN ^compound ^obl vxcomp VERB,False
+terma_train_01242,REVIEWED,seprai,kotor,46,50,NOUN,NOUN,3,NOUN vcompound vcompound vcompound NOUN,False
+terma_train_01242,REVIEWED,kamar mandi,kotor,48,50,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_01242,REVIEWED,complimentary airy box,good,52,55,NOUN,PROPN,3,NOUN vcompound vcompound vflat PROPN,False
+terma_train_01242,REVIEWED,snacks,banyak,63,64,ADJ,ADV,2,ADJ ^amod vadvmod ADV,False
+terma_train_01249,REVIEWED,pelayanan,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01249,REVIEWED,pelayanan,baik,0,3,NOUN,ADJ,2,NOUN vconj vamod ADJ,False
+terma_train_01249,REVIEWED,pelayanan,hati banget,0,5,NOUN,NOUN,1,NOUN vconj NOUN,False
+terma_train_01249,REVIEWED,gedung,bagus,7,10,NOUN,ADJ,3,NOUN ^compound ^conj vconj ADJ,False
+terma_train_01249,REVIEWED,gedung,bersih,7,12,NOUN,ADJ,3,NOUN ^compound ^conj vconj ADJ,False
+terma_train_01259,REVIEWED,lokasi,terjangkau,4,5,NOUN,PRON,1,NOUN vdet PRON,False
+terma_train_01260,REVIEWED,kebersihannya,tolong di tingkatkan,0,1,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01260,REVIEWED,kebersihannya,ada kecoak,0,5,NOUN,VERB,2,NOUN ^nsubj vconj VERB,False
+terma_train_01266,REVIEWED,lokasinya,strategis,8,9,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01266,REVIEWED,makanannya,enak,12,14,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01266,REVIEWED,overall,bagus,16,17,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01267,REVIEWED,lokasi,agak susah dicari,4,7,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_01282,REVIEWED,tempatnya,nyaman,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01282,REVIEWED,air panas nya,tidak bisa,6,8,PRON,ADV,4,PRON ^det ^compound vnmod vadvmod ADV,False
+terma_train_01282,REVIEWED,keseluruhan,oke,11,12,PRON,NUM,2,PRON vadvmod vnummod NUM,False
+terma_train_01293,REVIEWED,kasur,terlalu besar,4,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01317,REVIEWED,kamar,luas,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01317,REVIEWED,free snack,tidak ada,8,7,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01324,REVIEWED,kloset otomatisnya,tidak bisa jalan,8,12,NOUN,VERB,1,NOUN ^nsubj VERB,False
+terma_train_01325,REVIEWED,kamarnya,sangat luas,0,2,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_01325,REVIEWED,kamarnya,bersih,0,4,NOUN,ADJ,2,NOUN ^nsubj vconj ADJ,True
+terma_train_01325,REVIEWED,kamar mandi,oke,6,8,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_01325,REVIEWED,semuanya,oke,10,11,DET,NOUN,1,DET ^det NOUN,False
+terma_train_01325,REVIEWED,snack,dapat,15,14,NOUN,ADV,1,NOUN vadvmod ADV,False
+terma_train_01325,REVIEWED,perlengkapan sanitasi,dapat,17,14,NOUN,ADV,2,NOUN ^conj vadvmod ADV,False
+terma_train_01327,REVIEWED,yang jaga,ramah,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01336,REVIEWED,pelayanannya,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01336,REVIEWED,roomnya,bersih,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01336,REVIEWED,letaknya,strategis,6,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01351,REVIEWED,air shower nya,kurang kencang mengalirnya,6,11,NOUN,VERB,2,NOUN ^compound ^advmod VERB,False
+terma_train_01352,REVIEWED,shower nya,rusak,8,10,NOUN,VERB,2,NOUN ^compound ^nsubj VERB,False
+terma_train_01353,REVIEWED,tempatnya,sangat nyaman,0,2,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_01353,REVIEWED,pemanas air,kurang panas,5,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01360,REVIEWED,kamar nya,bersih,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01360,REVIEWED,kamar nya,nyaman,0,4,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01363,REVIEWED,penjagax,sangat baik,4,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01363,REVIEWED,penjagax,ramah,4,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01378,REVIEWED,alat nya,rusak,6,8,NOUN,VERB,2,NOUN ^nmod ^nsubj VERB,False
+terma_train_01378,REVIEWED,jendel,rusak,12,13,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01378,REVIEWED,kebersihanya,kurang baik,15,17,NUM,ADJ,2,NUM ^nummod vamod ADJ,False
+terma_train_01378,REVIEWED,pelayanan resepsionis,baik,19,21,NOUN,ADJ,2,NOUN vamod vamod ADJ,False
+terma_train_01378,REVIEWED,sarapan pagi nya,cukup baik,23,28,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01413,REVIEWED,kulkasnya,kotor,8,9,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01416,REVIEWED,hotelnya,mantap,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01416,REVIEWED,hotelnya,baik,1,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01423,REVIEWED,fasilitas kamar,memuaskan,1,4,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01423,REVIEWED,air shower nya,kurang kencang,7,12,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01427,REVIEWED,acnya,tidak dingin,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01427,REVIEWED,tissunya,tidak ada,6,5,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01427,REVIEWED,handuknya,cuma dapat 1,12,13,ADV,ADV,1,ADV ^advmod ADV,False
+terma_train_01433,REVIEWED,tempatnya,enak,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01433,REVIEWED,tempatnya,mantap,0,10,NOUN,ADJ,2,NOUN ^nsubj vdep ADJ,False
+terma_train_01435,REVIEWED,kamarnya,beesih,3,4,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01435,REVIEWED,staf,ramah,6,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01435,REVIEWED,staf,helpful,6,9,NOUN,NOUN,2,NOUN ^conj vconj NOUN,False
+terma_train_01446,REVIEWED,kamar,nyaman,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01446,REVIEWED,pelayanan,ramah,4,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01446,REVIEWED,pelayanan,sopan,4,8,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01447,REVIEWED,ac nya,per 30 menit mati,0,4,X,NOUN,1,X vobl NOUN,False
+terma_train_01447,REVIEWED,kamar mandi nya,agak seram,25,29,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_01465,REVIEWED,tempat,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01465,REVIEWED,tempat,sangat bagus,0,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01472,REVIEWED,tempatnya,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01472,REVIEWED,handuk,bersih,9,10,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01474,REVIEWED,harga,ekonomis,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01474,REVIEWED,hotel nya,sangat bagus,3,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01474,REVIEWED,hotel nya,nyaman,3,8,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01475,REVIEWED,resepsionis,sangat ramah,0,2,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_01475,REVIEWED,resepsionis,baik,0,4,NOUN,ADJ,2,NOUN ^nsubj vconj ADJ,True
+terma_train_01476,REVIEWED,petugasnya,baik,7,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01476,REVIEWED,petugasnya,ramah,7,9,NOUN,ADJ,2,NOUN vamod vamod ADJ,False
+terma_train_01478,REVIEWED,tempatnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01478,REVIEWED,tempatnya,tenang,0,3,NOUN,NOUN,1,NOUN vappos NOUN,False
+terma_train_01492,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01492,REVIEWED,kamar,luas,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01492,REVIEWED,kamar,sesuai,0,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01506,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01506,REVIEWED,karyawan,ramahramah,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01508,REVIEWED,kamar,bersih,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01508,REVIEWED,kamar,nyaman,0,4,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01520,REVIEWED,ac,bocor,0,3,X,NOUN,2,X vnmod vcompound NOUN,False
+terma_train_01520,REVIEWED,kloset,mengucur,5,12,NOUN,VERB,5,NOUN ^conj ^nmod ^nsubj vobj vadvcl VERB,False
+terma_train_01520,REVIEWED,sarapan,terlalu sederhana,14,17,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01520,REVIEWED,pelayanan,kurang memuaskan,19,22,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01543,REVIEWED,pelayanan,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01543,REVIEWED,complimentary snacks,dapat,3,2,VERB,ADV,1,VERB vadvmod ADV,False
+terma_train_01560,REVIEWED,tempat,bagus,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01560,REVIEWED,tempat,sunyi,1,3,NOUN,NOUN,1,NOUN vconj NOUN,False
+terma_train_01562,REVIEWED,tempatnya,sangat nyaman,0,2,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_01562,REVIEWED,tempatnya,enak,0,4,NOUN,ADJ,2,NOUN ^nsubj vamod ADJ,False
+terma_train_01567,REVIEWED,pelayanan,ramah,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01572,REVIEWED,kamar,enak,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01572,REVIEWED,kamar mandi,banyak kecoak,6,13,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01577,REVIEWED,pelayanan,baik,4,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01580,REVIEWED,air dikamar,mati,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01580,REVIEWED,petugas malam,kurang ramah,8,11,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01580,REVIEWED,petugas malam,tidak ringan tangan,8,14,NOUN,ADJ,1,NOUN vconj ADJ,False
+terma_train_01581,REVIEWED,pegawainya,ramah,4,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01594,REVIEWED,fasilitas,baik,1,3,NOUN,ADJ,2,NOUN ^nsubj vamod ADJ,False
+terma_train_01594,REVIEWED,camilan,tidak ada,9,8,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01594,REVIEWED,harga,terjangkau,27,28,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01618,REVIEWED,kolam renangnya,oke,0,2,NOUN,NUM,2,NOUN vcompound vnummod NUM,False
+terma_train_01627,REVIEWED,tempatnya,sepi,0,1,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01627,REVIEWED,pegawai,tidak rewel,7,10,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01642,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01642,REVIEWED,kamar,nyaman,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01642,REVIEWED,lokasi,strategis,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01645,REVIEWED,kamar,luas,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01645,REVIEWED,kamar,bersih,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01645,REVIEWED,makanan,kurang,5,6,NOUN,ADV,1,NOUN vadvmod ADV,False
+terma_train_01657,REVIEWED,penjaganya,ramah,17,19,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01658,REVIEWED,pelayanan,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01658,REVIEWED,kamarnya,kurang bersih,4,7,ADV,ADJ,1,ADV ^advmod ADJ,False
+terma_train_01665,REVIEWED,kamarnya,bagus,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01665,REVIEWED,kamarnya,bersih,1,3,NOUN,NOUN,1,NOUN vconj NOUN,False
+terma_train_01665,REVIEWED,sarapan,enak,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01665,REVIEWED,sarapan,lengkap,5,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01665,REVIEWED,fasilitas,oke,9,10,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01665,REVIEWED,staf,ramah,12,13,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01673,REVIEWED,pelayanan,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01673,REVIEWED,lokasi,strategis,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01684,REVIEWED,ranjangnya,rusak,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01684,REVIEWED,ranjangnya,kurang nyaman ditiduri,0,5,NOUN,VERB,2,NOUN ^nsubj vxcomp VERB,False
+terma_train_01688,REVIEWED,tempatnya,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01688,REVIEWED,tempatnya,enak,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01688,REVIEWED,tempatnya,bersih,0,5,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01688,REVIEWED,tempatnya,murah banget,0,8,NOUN,NOUN,2,NOUN vamod vconj NOUN,False
+terma_train_01692,REVIEWED,ac,dingin,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01692,REVIEWED,pelayanan,oke,5,6,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_01700,REVIEWED,kamar,sangat rapi,2,1,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_01700,REVIEWED,kamar,terlalu kecil,2,4,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_01710,REVIEWED,kamar,sempit,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01710,REVIEWED,air,tidak keluar,3,8,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01717,REVIEWED,tempat nya,oke,6,8,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01717,REVIEWED,kebersihan nya,perlu ditingkatkan,18,17,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01717,REVIEWED,selain itu,oke,22,23,DET,NOUN,1,DET ^det NOUN,False
+terma_train_01719,REVIEWED,air,tidak ada,4,3,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01731,REVIEWED,harga,sangat tidak sesuai,0,7,NOUN,ADJ,3,NOUN vnmod vacl vxcomp ADJ,False
+terma_train_01731,REVIEWED,fasilitas,sangat tidak sesuai,2,7,NOUN,ADJ,2,NOUN vacl vxcomp ADJ,False
+terma_train_01731,REVIEWED,handuk,tidak ada,13,15,NOUN,VERB,2,NOUN ^nmod ^nsubj VERB,False
+terma_train_01731,REVIEWED,kebersihan,sungguh jauh dari kata bersih,23,27,NOUN,NOUN,1,NOUN vnmod NOUN,True
+terma_train_01731,REVIEWED,kamar mandi,berbau tidak sedap,51,53,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01739,REVIEWED,mas nya,mantabss,1,0,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_01739,REVIEWED,mas nya,ramaahh,1,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01749,REVIEWED,lokasi,menyenangkan,0,5,NOUN,ADJ,2,NOUN vconj vamod ADJ,False
+terma_train_01749,REVIEWED,pelayanan,menyenangkan,2,5,NOUN,ADJ,3,NOUN ^conj vconj vamod ADJ,False
+terma_train_01749,REVIEWED,fasilitas,menyenangkan,4,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01783,REVIEWED,seprai,ada noda,0,1,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01783,REVIEWED,plafon,bocor,4,7,NOUN,NOUN,3,NOUN vcompound vcompound vcompound NOUN,False
+terma_train_01784,REVIEWED,lokasi,strategis,2,4,NOUN,ADJ,2,NOUN ^conj vamod ADJ,False
+terma_train_01794,REVIEWED,tempat nya,bagus banget,0,3,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01794,REVIEWED,tempat nya,bersih,0,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01794,REVIEWED,karyawan,ramah,6,8,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01798,REVIEWED,kamarnya,lumayan nyaman,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01798,REVIEWED,kamarnya,bersih,0,5,NOUN,ADJ,1,NOUN vconj ADJ,False
+terma_train_01799,REVIEWED,kamar,kecil,1,2,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_01799,REVIEWED,kamar,cukup,1,4,NOUN,ADV,3,NOUN ^compound vconj vadvmod ADV,False
+terma_train_01799,REVIEWED,wifi,rusak,7,10,NOUN,VERB,2,NOUN ^conj ^nsubj VERB,True
+terma_train_01799,REVIEWED,sinyal,sangat susah,12,14,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01799,REVIEWED,kebersihan,baik,20,21,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01799,REVIEWED,ac,dingin,23,24,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01799,REVIEWED,tv,ada,26,27,NOUN,VERB,2,NOUN ^conj ^nsubj VERB,True
+terma_train_01799,REVIEWED,tv,berfungsi,26,29,NOUN,VERB,3,NOUN ^conj ^nsubj vconj VERB,False
+terma_train_01799,REVIEWED,selimut,disediakan,31,39,NOUN,VERB,2,NOUN ^conj vconj VERB,False
+terma_train_01799,REVIEWED,handuk,disediakan,33,39,NOUN,VERB,2,NOUN ^conj vconj VERB,False
+terma_train_01799,REVIEWED,snack,disediakan,35,39,NOUN,VERB,2,NOUN ^conj vconj VERB,False
+terma_train_01799,REVIEWED,air mineral,disediakan,37,39,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_01799,REVIEWED,pelayanan bapak kosnya,cukup baik,41,45,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01799,REVIEWED,pelayanan bapak kosnya,helpful,41,47,NOUN,NOUN,2,NOUN vamod vconj NOUN,False
+terma_train_01802,REVIEWED,kesed,tidak ada,5,4,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01802,REVIEWED,sandal,tidak ada,8,4,ADJ,VERB,2,ADJ ^amod ^obj VERB,False
+terma_train_01803,REVIEWED,wifi,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01803,REVIEWED,air panas,tidak ada,8,7,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01817,REVIEWED,tempatnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01817,REVIEWED,tempatnya,nyaman,0,3,NOUN,ADJ,2,NOUN vamod vamod ADJ,False
+terma_train_01817,REVIEWED,tempatnya,rekomen banget,0,8,NOUN,NOUN,2,NOUN vappos vappos NOUN,False
+terma_train_01817,REVIEWED,pemiliknya,ramah,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01824,REVIEWED,bangunan,lama,10,11,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01824,REVIEWED,pemandangan,bagus,13,14,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01824,REVIEWED,kolamnya,kotor,22,23,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01824,REVIEWED,kamarnya penerangan,sangat kurang,25,28,NOUN,ADV,2,NOUN vcompound vadvmod ADV,False
+terma_train_01824,REVIEWED,kamarnya penerangan,remang - remang,25,30,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01824,REVIEWED,kasur,keras,34,35,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01824,REVIEWED,channel tv gambarnya,jelek,37,40,NOUN,ADJ,3,NOUN vcompound vcompound vamod ADJ,True
+terma_train_01824,REVIEWED,ac,dingin,42,43,X,ADJ,1,X vamod ADJ,False
+terma_train_01824,REVIEWED,air panas,tidak fungsi,45,48,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01824,REVIEWED,wc,bagus,50,51,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01824,REVIEWED,overall,sesuai,53,54,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01824,REVIEWED,harga,tidak terlalu mahal,56,60,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01849,REVIEWED,kamar nya,lumayan nyaman,4,0,NOUN,NOUN,2,NOUN ^nsubj ^dep NOUN,False
+terma_train_01849,REVIEWED,kamar nya,agak sempit,4,7,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01856,REVIEWED,kebersihan,dipermantap,0,4,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_01856,REVIEWED,alat elektronik,dipermantap,2,4,NOUN,VERB,2,NOUN ^conj ^nsubj:pass VERB,False
+terma_train_01862,REVIEWED,pelayanan,memuaskan,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01865,REVIEWED,pelayanan,oke,1,2,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01865,REVIEWED,tempat parkir,sering ramai,4,10,NOUN,VERB,2,NOUN ^nsubj:pass vadvcl VERB,False
+terma_train_01875,REVIEWED,kamar mandinya,kurang bersih,8,12,NOUN,ADJ,4,NOUN ^compound ^conj ^nmod vamod ADJ,False
+terma_train_01883,REVIEWED,pelayanan,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01883,REVIEWED,pelayanan,ramah,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01883,REVIEWED,pelayanan,excellent,0,5,NOUN,NOUN,1,NOUN vdep NOUN,False
+terma_train_01885,REVIEWED,handuk,cuma 1,0,1,NOUN,ADV,1,NOUN vadvmod ADV,False
+terma_train_01885,REVIEWED,snack,tidak ada,12,11,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01885,REVIEWED,minum botol,tidak ada,14,11,NOUN,VERB,2,NOUN ^conj ^obj VERB,True
+terma_train_01885,REVIEWED,kasur per nya,turun,19,23,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01893,REVIEWED,resepsionis,tidak tanggap,3,5,NOUN,VERB,2,NOUN ^conj vacl VERB,False
+terma_train_01895,REVIEWED,handuk,tidak dikasih,6,5,ADJ,VERB,1,ADJ ^amod VERB,False
+terma_train_01895,REVIEWED,kebersihan,tidak terjaga,22,25,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_01896,REVIEWED,pelayanan,selalu oke,2,4,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_01914,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01914,REVIEWED,sarapan,tidak dapat,6,5,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01921,REVIEWED,ac nya,kurang dingin,5,8,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_01921,REVIEWED,ac nya,bocor,5,11,NOUN,VERB,2,NOUN ^nsubj vconj VERB,False
+terma_train_01929,REVIEWED,kasur,rusak,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01929,REVIEWED,seprai,kotor,3,4,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01931,REVIEWED,kamar mandi,menggenang,3,6,NOUN,VERB,1,NOUN ^obl VERB,False
+terma_train_01931,REVIEWED,wifinya,kencang,31,32,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01931,REVIEWED,wifinya,lumayan,31,33,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_01931,REVIEWED,wifinya,tidak bisa apaapa,31,41,NOUN,ADV,4,NOUN ^obl vxcomp vadvcl vadvmod ADV,False
+terma_train_01931,REVIEWED,penjaga keamanan,membuat tidak nyaman,54,60,NOUN,VERB,3,NOUN ^compound ^nsubj vxcomp VERB,False
+terma_train_01935,REVIEWED,karpetnya,kurang terang,0,4,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_01935,REVIEWED,lampunya,kurang terang,2,4,ADJ,VERB,3,ADJ ^fixed ^amod ^nsubj:pass VERB,False
+terma_train_01957,REVIEWED,room,bagus,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01957,REVIEWED,room,agak berisik,1,8,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_01959,REVIEWED,tombol lampu,tidak berfungsi,0,4,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01959,REVIEWED,air panas,kurang bagus,10,13,NOUN,ADJ,3,NOUN ^compound ^compound vamod ADJ,False
+terma_train_01964,REVIEWED,snak,tidak ada,6,9,ADJ,VERB,2,ADJ ^amod ^advmod VERB,False
+terma_train_01966,REVIEWED,bantal,basah,0,4,NOUN,ADJ,3,NOUN vcompound vcompound vamod ADJ,False
+terma_train_01966,REVIEWED,tidurnya,basah,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01966,REVIEWED,lantainya,basah,6,9,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01966,REVIEWED,ac nya,tidak dingin,11,14,ADJ,ADJ,1,ADJ vamod ADJ,False
+terma_train_01978,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01978,REVIEWED,kamar,lebar,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_01978,REVIEWED,kamar,memuaskan,0,5,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01984,REVIEWED,kamar,oke,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01984,REVIEWED,ac,dingin,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01984,REVIEWED,kamar mandi,perlu diperhatikan,5,8,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_01984,REVIEWED,airnya,bagus,11,12,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01984,REVIEWED,airnya,deras,11,13,NOUN,ADJ,2,NOUN vamod vamod ADJ,False
+terma_train_01984,REVIEWED,genangannya,lama mengalir,15,17,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01984,REVIEWED,overall,oklah,21,22,ADJ,VERB,3,ADJ ^amod ^obl vxcomp VERB,False
+terma_train_01986,REVIEWED,wifi,kencang,2,3,NOUN,NOUN,1,NOUN vappos NOUN,False
+terma_train_01999,REVIEWED,kamarnya,tidak kedap suara,6,9,ADJ,NOUN,1,ADJ vnmod NOUN,False
+terma_train_02007,REVIEWED,tempat nya,nyaman,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,False
+terma_train_02007,REVIEWED,fasilitas,oke,3,4,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_02010,REVIEWED,kualitas,sangat baik,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02010,REVIEWED,kamar,nyaman,4,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02010,REVIEWED,kamar,bagus,4,7,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_02010,REVIEWED,peralatan mandi,tidak diberikan,12,15,NOUN,VERB,2,NOUN ^acl ^nsubj:pass VERB,False
+terma_train_02010,REVIEWED,parkir mandiri,tidak ada,19,18,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02011,REVIEWED,seprai,tidak bersih,1,3,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_02011,REVIEWED,lingkungan,kotor,6,7,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02011,REVIEWED,pelayanan,kurang ramah,24,26,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02021,REVIEWED,airy room,nyaman banget,5,1,NOUN,NOUN,3,NOUN ^compound ^compound ^compound NOUN,False
+terma_train_02021,REVIEWED,airy room,top,5,3,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_02039,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02039,REVIEWED,kamu mandi,bersih,4,5,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_02039,REVIEWED,air,lancar,6,7,NOUN,ADV,3,NOUN ^compound ^amod vadvmod ADV,False
+terma_train_02039,REVIEWED,perlaatan mandi,ada,10,9,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02039,REVIEWED,snack,ada,13,9,NOUN,VERB,2,NOUN ^conj ^obj VERB,True
+terma_train_02039,REVIEWED,air mineral,ada,15,9,NOUN,VERB,2,NOUN ^conj ^obj VERB,True
+terma_train_02044,REVIEWED,privasi,kurang terjaga,6,8,NOUN,VERB,3,NOUN ^compound ^nmod ^amod VERB,False
+terma_train_02045,REVIEWED,kamar,tidak sesuai,2,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02045,REVIEWED,kamar,agak kecewa,2,7,NOUN,NOUN,1,NOUN vdep NOUN,False
+terma_train_02050,REVIEWED,pelayanan,sangat baik,0,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02050,REVIEWED,hotel,sangat baik,3,5,NOUN,ADJ,3,NOUN ^compound ^conj vamod ADJ,False
+terma_train_02066,REVIEWED,wc,sering tersumbat,0,4,X,ADJ,1,X vamod ADJ,False
+terma_train_02066,REVIEWED,toilet,sering tersumbat,2,4,NOUN,ADJ,2,NOUN ^obj vamod ADJ,False
+terma_train_02067,REVIEWED,pelanya,ramah,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02082,REVIEWED,kamar,nyaman,2,0,NOUN,ADJ,1,NOUN ^conj ADJ,False
+terma_train_02082,REVIEWED,kamar,bersih,2,3,NOUN,ADJ,2,NOUN ^conj vamod ADJ,False
+terma_train_02085,REVIEWED,pelayanan nya,di tingkatkan,3,6,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_02093,REVIEWED,kebersihan,lumayan,1,3,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02093,REVIEWED,ac,lumayan dingin,5,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02093,REVIEWED,seprai,baru,17,19,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02093,REVIEWED,seprai,bersih,17,21,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_02093,REVIEWED,selimutnya,perlu diganti,25,29,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_02093,REVIEWED,selimutnya,agak buras,25,33,NOUN,ADJ,2,NOUN ^obj vadvcl ADJ,False
+terma_train_02093,REVIEWED,barang dikamar,agak berdebu,36,45,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02098,REVIEWED,harga,sesuai,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02106,REVIEWED,air showernya,lamalama dingin,4,8,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02107,REVIEWED,pelayanan,memuaskan,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02119,REVIEWED,kamar,rapi,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02119,REVIEWED,kamar,bersih,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,False
+terma_train_02119,REVIEWED,kamar,wangi,0,3,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02119,REVIEWED,bli nya,ramah,5,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02119,REVIEWED,bli nya,baik,5,9,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_02138,REVIEWED,kamar,tidak sesuai gambar,4,2,NOUN,NOUN,1,NOUN ^conj NOUN,True
+terma_train_02138,REVIEWED,kamar,sempit,4,5,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02138,REVIEWED,selimut,bau,7,8,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02138,REVIEWED,kamar,bau tidak sedap,10,11,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02150,REVIEWED,sarapan,bervariasi,26,28,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02162,REVIEWED,servis nya,oke banget,5,0,PRON,NOUN,1,PRON ^nmod NOUN,False
+terma_train_02162,REVIEWED,servis nya,suka,5,2,PRON,NOUN,3,PRON ^nmod vcompound vcompound NOUN,False
+terma_train_02162,REVIEWED,servis nya,sopan,5,7,PRON,ADJ,2,PRON ^nmod vamod ADJ,False
+terma_train_02162,REVIEWED,servis nya,memuaskan,5,9,PRON,ADJ,3,PRON ^nmod vamod vconj ADJ,False
+terma_train_02164,REVIEWED,fasilitas semuanya,bagus,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,False
+terma_train_02164,REVIEWED,fasilitas semuanya,lengkap,0,4,NOUN,ADJ,3,NOUN vcompound vamod vconj ADJ,False
+terma_train_02171,REVIEWED,wifi,ter suspended,7,8,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02185,REVIEWED,petugas,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02185,REVIEWED,kamar,bersih,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02185,REVIEWED,fasilitas,oke,6,7,NOUN,PROPN,1,NOUN vflat PROPN,False
+terma_train_02185,REVIEWED,wifinya,kadang tidak nyantol,10,13,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02196,REVIEWED,kunci,rusak,0,4,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02198,REVIEWED,fasilitas,lengkap,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02198,REVIEWED,pelayanan,baik,27,28,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02198,REVIEWED,pelayanan,ramah,27,30,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_02198,REVIEWED,respons,cepat,33,35,ADJ,ADJ,1,ADJ vamod ADJ,False
+terma_train_02201,REVIEWED,kamar,sangat bersih,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02201,REVIEWED,karyawan,ramah,4,6,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_02209,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02209,REVIEWED,kamar,agak bau,0,4,NOUN,NOUN,1,NOUN vacl NOUN,False
+terma_train_02216,REVIEWED,pintu kamar mandinya,tidak bisa ditutup,0,5,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02216,REVIEWED,remote - nya,tidak ada,12,11,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02216,REVIEWED,handuknya,tidak ada,18,17,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02218,REVIEWED,tempatnya,enak,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02218,REVIEWED,tempatnya,nyaman,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_02224,REVIEWED,pelayannya,cukup ramah,6,8,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_02224,REVIEWED,tempat,nyaman,10,0,NOUN,ADJ,2,NOUN ^nsubj ^conj ADJ,False
+terma_train_02224,REVIEWED,tempat,bersih,10,2,NOUN,ADJ,3,NOUN ^nsubj ^conj vconj ADJ,False
+terma_train_02224,REVIEWED,tempat,wangi,10,4,NOUN,NOUN,3,NOUN ^nsubj ^conj vconj NOUN,False
+terma_train_02224,REVIEWED,tempat,sempit,10,12,NOUN,NOUN,2,NOUN ^nsubj vobj NOUN,False
+terma_train_02224,REVIEWED,harga,terjangkau,23,25,NOUN,PRON,1,NOUN vnmod PRON,False
+terma_train_02224,REVIEWED,handuknya,tidak tersedia,29,31,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_02230,REVIEWED,tempatnya,standar sekali,6,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02238,REVIEWED,harga,lumayan sesuai,3,0,NOUN,NOUN,1,NOUN ^nmod NOUN,False
+terma_train_02238,REVIEWED,fasilitasnya,lumayan sesuai,5,0,NOUN,NOUN,2,NOUN ^conj ^nmod NOUN,False
+terma_train_02245,REVIEWED,hotel,bersih,6,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02245,REVIEWED,hotel,nyaman,6,10,NOUN,ADJ,3,NOUN ^conj vappos vamod ADJ,False
+terma_train_02245,REVIEWED,sarapannya,nikmat,12,13,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02257,REVIEWED,pelayanan,memuaskan,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02257,REVIEWED,kamarnya,bersih,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02257,REVIEWED,kamar mandi,bersih,7,4,VERB,ADJ,3,VERB vnsubj vconj vamod ADJ,False
+terma_train_02279,REVIEWED,minum,tidak ada,8,7,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02279,REVIEWED,cemilan,tidak ada,10,7,NOUN,VERB,2,NOUN ^conj ^obj VERB,True
+terma_train_02285,REVIEWED,kebersihsn,cukup baik,0,4,NOUN,ADJ,2,NOUN vconj vamod ADJ,False
+terma_train_02285,REVIEWED,pelyanan,cukup baik,2,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02291,REVIEWED,wc,tersumbat,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02291,REVIEWED,air,tidak lancar keluarnya,3,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02291,REVIEWED,air panas,tidak ada,10,9,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02291,REVIEWED,selebihnya,sangat baik,13,15,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02297,REVIEWED,overall,memuaskan,12,13,ADJ,VERB,1,ADJ ^amod VERB,False
+terma_train_02299,REVIEWED,shower closet nya,rusak,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02299,REVIEWED,lemarinya,jebol,4,5,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02303,REVIEWED,semuanya,oke,0,1,DET,NOUN,1,DET ^det NOUN,False
+terma_train_02303,REVIEWED,kamar mandinya gagang pintunya,agak rusak,7,10,VERB,VERB,1,VERB vadvcl VERB,False
+terma_train_02303,REVIEWED,selebihnya,bagus,15,16,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02309,REVIEWED,kamar,sangat bagus,5,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02309,REVIEWED,seprai,sedikit kusam,11,13,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_02309,REVIEWED,seprai,ada sedikit noda,11,15,NOUN,VERB,3,NOUN ^nsubj ^ccomp vconj VERB,False
+terma_train_02309,REVIEWED,shower,kurang berfungsi,19,21,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02309,REVIEWED,lantai,berdebu,24,25,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02331,REVIEWED,kamar mandii,bauu,2,4,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_02332,REVIEWED,kamarnya,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02332,REVIEWED,jendela,tidak ada,6,5,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02334,REVIEWED,kamar,puas,3,1,NOUN,ADJ,2,NOUN ^nmod vamod ADJ,False
+terma_train_02334,REVIEWED,pelayanan,puas,5,1,NOUN,ADJ,3,NOUN ^conj ^nmod vamod ADJ,False
+terma_train_02335,REVIEWED,kamar mandi,tidak memuaskan,0,5,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_02335,REVIEWED,airnya,tidak memuaskan,3,5,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02335,REVIEWED,kamar mandi,terlalu kecil,0,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02342,REVIEWED,pelayanan,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02342,REVIEWED,water heater nya,lebih diperhatikan,8,7,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02342,REVIEWED,selebihnya,oke,12,14,NOUN,NOUN,1,NOUN vconj NOUN,False
+terma_train_02348,REVIEWED,ruangan,luas,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02348,REVIEWED,ruangan,cukup bersih,0,4,NOUN,ADJ,1,NOUN vconj ADJ,False
+terma_train_02349,REVIEWED,kamar,oke,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02349,REVIEWED,pelayanan,lumayan,3,4,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02353,REVIEWED,kamar,lumayan baik,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02353,REVIEWED,tempat,strategis,4,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02382,REVIEWED,ac,kurang,0,1,X,ADV,2,X ^advmod vadvmod ADV,False
+terma_train_02382,REVIEWED,ac,tidak dingin,0,3,X,ADJ,1,X ^advmod ADJ,False
+terma_train_02382,REVIEWED,kamar mandinya,bau,8,9,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02382,REVIEWED,snack komplimen,tidak di refill,25,30,NOUN,NOUN,1,NOUN vnmod NOUN,False
+terma_train_02386,REVIEWED,fasilitasnya,bagus,3,5,PROPN,ADJ,2,PROPN ^det vamod ADJ,False
+terma_train_02393,REVIEWED,tempatnya,lapang,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02393,REVIEWED,tempatnya,bersih,0,3,NOUN,ADJ,1,NOUN vconj ADJ,False
+terma_train_02393,REVIEWED,fasilitas olahraga,baik,6,9,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02402,REVIEWED,ruangan,terbaik,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02402,REVIEWED,fasilitas,terbaik,3,0,NOUN,ADJ,2,NOUN ^appos vamod ADJ,False
+terma_train_02402,REVIEWED,servis nya,terbaik,6,0,PRON,ADJ,3,PRON ^det ^appos vamod ADJ,False
+terma_train_02407,REVIEWED,kasur,agak kotor,0,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02407,REVIEWED,selimut,agak kotor,2,4,NOUN,ADJ,2,NOUN ^conj vamod ADJ,True
+terma_train_02411,REVIEWED,kamarnya,kuranf bagus,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02411,REVIEWED,kamarnya,sangat petang,0,10,NOUN,ADJ,2,NOUN ^nsubj vamod ADJ,False
+terma_train_02411,REVIEWED,lampunya,tidak semuanya menyala,4,7,ADJ,VERB,1,ADJ ^amod VERB,False
+terma_train_02411,REVIEWED,ruangannya,sangat bau,12,14,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02411,REVIEWED,kamar mandinya,kotor,16,18,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_02413,REVIEWED,pelayanannya,ramah,4,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02422,REVIEWED,overall kamarnya,bersih banget,6,9,NOUN,NOUN,2,NOUN vamod vcompound NOUN,False
+terma_train_02422,REVIEWED,overall kamarnya,nyaman,6,11,NOUN,NOUN,1,NOUN vconj NOUN,False
+terma_train_02422,REVIEWED,fasilitas,lengkap,13,14,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02422,REVIEWED,ac,dingin,16,17,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02422,REVIEWED,letaknya,cukup,29,30,NOUN,ADV,2,NOUN vamod vadvmod ADV,False
+terma_train_02422,REVIEWED,letaknya,jauh,29,31,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02429,REVIEWED,lokasinya,susah ditemukan,3,5,NOUN,VERB,1,NOUN ^nsubj:pass VERB,True
+terma_train_02435,REVIEWED,pelayan,buruk,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02435,REVIEWED,pelayan,sangat kecewa,1,6,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02439,REVIEWED,tempatnya,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02439,REVIEWED,tempatnya,bersih,0,3,NOUN,ADJ,2,NOUN vamod vamod ADJ,False
+terma_train_02442,REVIEWED,pelayanan,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02442,REVIEWED,pelayanan,bagus,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02447,REVIEWED,hotelnya,nyaman,2,0,NOUN,ADJ,2,NOUN ^nsubj ^nummod ADJ,False
+terma_train_02447,REVIEWED,hotelnya,bagus,2,3,NOUN,ADJ,2,NOUN vcompound vamod ADJ,False
+terma_train_02447,REVIEWED,wifi nya,kurang oke,5,7,PRON,NUM,2,PRON ^det ^nsubj NUM,False
+terma_train_02459,REVIEWED,kamarnya,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02459,REVIEWED,overall,cukup puas,24,27,PROPN,ADJ,2,PROPN ^conj ^nummod ADJ,False
+terma_train_02468,REVIEWED,kamar nya,parah banget,5,8,NOUN,NOUN,1,NOUN vcompound NOUN,True
+terma_train_02468,REVIEWED,kamar nya,lembab,5,9,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_02468,REVIEWED,selimut,kotor,10,11,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02472,REVIEWED,ac,panas,3,4,X,ADJ,1,X vamod ADJ,False
+terma_train_02472,REVIEWED,wifi,tidak bisa,6,8,NOUN,ADV,4,NOUN ^conj ^acl ^nsubj vadvmod ADV,False
+terma_train_02472,REVIEWED,kamarnya,luas sekali,16,17,NOUN,ADJ,3,NOUN ^compound ^compound vamod ADJ,False
+terma_train_02502,REVIEWED,tempatnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02502,REVIEWED,tempatnya,nyaman,0,3,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_02502,REVIEWED,tempatnya,lengkap,0,5,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_02507,REVIEWED,fasilitas kamar,puas,2,0,NOUN,NOUN,1,NOUN ^nmod NOUN,False
+terma_train_02507,REVIEWED,pelayanannya,puas,5,0,NOUN,NOUN,3,NOUN ^conj ^compound ^nmod NOUN,False
+terma_train_02509,REVIEWED,pelayannya,kurang baik,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02509,REVIEWED,pelayannya,kurang sopan,0,5,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_02513,REVIEWED,kamar,cukup bagus,0,3,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_02513,REVIEWED,kamar,luas,0,5,NOUN,ADJ,2,NOUN ^nsubj vconj ADJ,True
+terma_train_02513,REVIEWED,ac,cukup lama baru dingin,7,11,X,ADJ,1,X vamod ADJ,False
+terma_train_02513,REVIEWED,air kamar mandi,agak bau,15,16,VERB,ADV,2,VERB ^conj vadvmod ADV,False
+terma_train_02515,REVIEWED,kamar,cukup luas,3,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02515,REVIEWED,staf,ramah,7,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02515,REVIEWED,sarapan,enak,10,11,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02515,REVIEWED,air kamar mandi,baunya tidak enak,19,23,NOUN,NOUN,1,NOUN vamod NOUN,False
+terma_train_02523,REVIEWED,dilayani,baik,8,10,VERB,ADJ,1,VERB vxcomp ADJ,False
+terma_train_02525,REVIEWED,fasilitas,baik,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02528,REVIEWED,snack,cuma satu kali,11,9,VERB,NOUN,1,VERB vobl NOUN,False
+terma_train_02528,REVIEWED,toiletris,cuma satu kali,13,9,ADJ,NOUN,2,ADJ ^conj vobl NOUN,False
+terma_train_02530,REVIEWED,check in,cukup lama,5,11,VERB,ADV,3,VERB vxcomp vnsubj vadvmod ADV,False
+terma_train_02531,REVIEWED,kamar,luas,2,3,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02531,REVIEWED,kamar,nyaman,2,4,NOUN,ADJ,2,NOUN vcompound vamod ADJ,False
+terma_train_02534,REVIEWED,kamar,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02534,REVIEWED,kamar,nyaman,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02540,REVIEWED,harganya,murah,1,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02540,REVIEWED,harganya,cukup memuaskan,1,5,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02547,REVIEWED,pelayanannya,kurang ramah,9,8,NOUN,ADJ,1,NOUN ^compound ADJ,False
+terma_train_02548,REVIEWED,kebersihan,oke,25,28,NOUN,NOUN,2,NOUN vconj vcompound NOUN,False
+terma_train_02548,REVIEWED,sarapan,oke,27,28,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02553,REVIEWED,kamar mandi,bau,0,2,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_02553,REVIEWED,airnya,bau,4,5,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02554,REVIEWED,tidur,nyaman,0,1,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_02556,REVIEWED,suasana,berisik,1,0,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02556,REVIEWED,kamar mandi,sempit,5,7,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_02573,REVIEWED,tempatnya,sesuai,0,6,NOUN,ADJ,2,NOUN vconj vamod ADJ,False
+terma_train_02573,REVIEWED,harga,sesuai,2,6,NOUN,ADJ,3,NOUN ^conj vconj vamod ADJ,False
+terma_train_02573,REVIEWED,pelayanan,sesuai,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02579,REVIEWED,ac nya,tidak full dingin,38,42,X,ADJ,1,X vxcomp ADJ,False
+terma_train_02579,REVIEWED,lampu tidur,tidak bisa di hidupkan,45,52,VERB,NOUN,1,VERB vobj NOUN,False
+terma_train_02588,REVIEWED,overall,oke,19,20,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02590,REVIEWED,tempat,cukup memuaskan,0,4,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02590,REVIEWED,pelayanan,cukup memuaskan,2,4,NOUN,VERB,2,NOUN ^conj ^nsubj VERB,True
+terma_train_02591,REVIEWED,kamarnya,luar biasa,1,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02591,REVIEWED,kamarnya,bagus banget,1,6,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02603,REVIEWED,pelayanan,terbaik,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02618,REVIEWED,kamar mandi,kurang baik,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02618,REVIEWED,kamar mandi,bau rokok,0,6,NOUN,NOUN,2,NOUN vamod vcompound NOUN,False
+terma_train_02634,REVIEWED,tempat,sangat puas,3,1,NOUN,ADJ,1,NOUN ^nmod ADJ,False
+terma_train_02634,REVIEWED,pelayanannya,sangat puas,5,1,NOUN,ADJ,2,NOUN ^conj ^nmod ADJ,False
+terma_train_02636,REVIEWED,tempat parkir,tidak disediakan,8,7,NOUN,VERB,2,NOUN ^nsubj ^xcomp VERB,False
+terma_train_02636,REVIEWED,kamarnya,sangat sempit,11,13,NOUN,VERB,2,NOUN ^conj ^nsubj VERB,True
+terma_train_02643,REVIEWED,hot shower,tidak ada,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02643,REVIEWED,kamarnya,kotor,5,6,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02643,REVIEWED,kamarnya,bau amis,5,8,NOUN,NOUN,2,NOUN vcompound vconj NOUN,False
+terma_train_02647,REVIEWED,bau,kurang wangi,0,3,SCONJ,VERB,1,SCONJ ^mark VERB,False
+terma_train_02647,REVIEWED,kamarnya,kurang wangi,1,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02656,REVIEWED,pelayanannya,tidak baik,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,False
+terma_train_02656,REVIEWED,ventilasi udara,tidak ada,11,9,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02656,REVIEWED,kaca,tidak ada,16,15,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02656,REVIEWED,kamar mandi,kotor,21,22,VERB,NOUN,1,VERB vobj NOUN,False
+terma_train_02659,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02659,REVIEWED,kamar,sesuai,0,3,NOUN,ADJ,2,NOUN vappos vamod ADJ,False
+terma_train_02667,REVIEWED,seprai,kurangp bersih,0,5,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02667,REVIEWED,kasur,kurangp bersih,1,5,NOUN,VERB,2,NOUN ^compound ^nsubj VERB,False
+terma_train_02667,REVIEWED,handuk,kurangp bersih,3,5,NOUN,VERB,2,NOUN ^conj ^nsubj VERB,True
+terma_train_02668,REVIEWED,kamarnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02668,REVIEWED,kamarnya,nyaman,0,4,NOUN,ADJ,1,NOUN vconj ADJ,False
+terma_train_02673,REVIEWED,sarapan,oklah,18,19,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02674,REVIEWED,kamarnya,nyaman,4,3,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_02674,REVIEWED,kamarnya,adem,4,6,NOUN,NOUN,2,NOUN ^compound vconj NOUN,False
+terma_train_02683,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02683,REVIEWED,tempat tidur,nyaman,4,6,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_02683,REVIEWED,toilet,tersumbat,14,16,NOUN,NOUN,1,NOUN vnmod NOUN,False
+terma_train_02683,REVIEWED,kamar,terlalu sempit,18,20,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02683,REVIEWED,kamar,terlalu pas pasan,18,23,NOUN,NOUN,2,NOUN ^nsubj vconj NOUN,False
+terma_train_02683,REVIEWED,sarapan,kurang bervariasi,26,29,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02695,REVIEWED,pelayanannya,baik,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02704,REVIEWED,ruanganya,sangat bersih,0,2,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_02704,REVIEWED,ruanganya,rapi,0,4,NOUN,NOUN,2,NOUN ^nsubj vconj NOUN,False
+terma_train_02704,REVIEWED,ruanganya,sangat rekomended,0,18,NOUN,NOUN,2,NOUN ^nsubj vdep NOUN,False
+terma_train_02706,REVIEWED,semua,bagus,0,1,DET,ADJ,1,DET ^det ADJ,False
+terma_train_02706,REVIEWED,semua,nyaman,0,4,DET,ADJ,3,DET ^det ^amod vamod ADJ,False
+terma_train_02706,REVIEWED,petugas,kurang sigap,7,9,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02722,REVIEWED,petugas,ramah,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02724,REVIEWED,listrik,sempat mati,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02724,REVIEWED,kasur,bau,4,5,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02736,REVIEWED,tempat,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02736,REVIEWED,tempat,bersih,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02736,REVIEWED,tempat,recomended,0,5,NOUN,PROPN,1,NOUN vappos PROPN,False
+terma_train_02754,REVIEWED,lokasi,strategis,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02755,REVIEWED,kamarnya,nyaman,0,1,NOUN,ADJ,2,NOUN ^nsubj vamod ADJ,False
+terma_train_02755,REVIEWED,kamarnya,bersih,0,3,NOUN,ADJ,3,NOUN ^nsubj vamod vamod ADJ,False
+terma_train_02755,REVIEWED,colokan,minim sekali,6,7,VERB,NOUN,1,VERB vobj NOUN,False
+terma_train_02755,REVIEWED,gordennya,sangat tipis,10,12,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02755,REVIEWED,semuanya,baik,19,20,PRON,ADJ,1,PRON vamod ADJ,False
+terma_train_02762,REVIEWED,kamar mandi,sedikit berbau,9,12,NOUN,VERB,1,NOUN ^nsubj VERB,False
+terma_train_02763,REVIEWED,kamar,bersih,4,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02763,REVIEWED,kamar,kecil banget,4,8,NOUN,NOUN,2,NOUN vamod vconj NOUN,False
+terma_train_02764,REVIEWED,servis,oke,6,11,ADJ,NOUN,4,ADJ ^amod vappos vconj vcompound NOUN,False
+terma_train_02764,REVIEWED,lokasi,oke,8,11,NOUN,NOUN,2,NOUN vconj vcompound NOUN,False
+terma_train_02764,REVIEWED,kamar,oke,10,11,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02785,REVIEWED,harga,ekonomis,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02785,REVIEWED,kualitas,cukup baik,4,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02789,REVIEWED,kamar,berisik,2,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02789,REVIEWED,kamar,kurang bersih,2,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02789,REVIEWED,yang lainnya,lumayanlah,8,9,ADJ,VERB,2,ADJ ^amod ^nsubj:pass VERB,False
+terma_train_02820,REVIEWED,shower,mati,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02820,REVIEWED,keran,ada,4,3,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02820,REVIEWED,overall,bagus,6,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02823,REVIEWED,kamar,kecil,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02823,REVIEWED,kamar,sempit,0,3,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_02827,REVIEWED,pelayanan,very,2,0,NOUN,PROPN,2,NOUN ^compound ^flat PROPN,False
+terma_train_02827,REVIEWED,pelayanan,good,2,1,NOUN,PROPN,1,NOUN ^compound PROPN,False
+terma_train_02837,REVIEWED,ownernya,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02842,REVIEWED,pengelola,tidak komunikatif,0,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02842,REVIEWED,kamar mandi,kotor,7,9,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_02842,REVIEWED,ac,kurang dingin,17,19,X,ADJ,1,X vamod ADJ,False
+terma_train_02842,REVIEWED,channel tv,terbatas,21,23,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_02842,REVIEWED,pengelola,jarang di tempat,25,29,NOUN,NOUN,1,NOUN vnmod NOUN,False
+terma_train_02844,REVIEWED,kamar,nyaman,2,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02844,REVIEWED,kamar,luas,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02844,REVIEWED,kamar,bersih,2,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02849,REVIEWED,snack nya,tidak ada,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02849,REVIEWED,kamar nya,bagus,12,14,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02853,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02853,REVIEWED,pelayanan,ramah,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02853,REVIEWED,harga,terjangkau,6,7,NOUN,PRON,1,NOUN vcompound PRON,False
+terma_train_02855,REVIEWED,fasilitas,bagus,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02859,REVIEWED,pelayanan,buruk,4,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02859,REVIEWED,petugas resepsionis,sombong,7,9,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_02859,REVIEWED,fasilitas,kurang,30,31,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02859,REVIEWED,pelayanan,sangat jelek,37,34,NOUN,ADJ,2,NOUN ^compound ^nmod ADJ,False
+terma_train_02859,REVIEWED,fasilitas,sangat jelek,39,34,NOUN,ADJ,2,NOUN ^conj vconj ADJ,False
+terma_train_02861,REVIEWED,ac,dingin,2,3,NOUN,ADJ,2,NOUN ^conj vamod ADJ,False
+terma_train_02868,REVIEWED,kamarnya,sempit,1,2,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_02868,REVIEWED,ruangnya,cukup nyaman,4,6,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_02869,REVIEWED,hotel nya,bersih,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02869,REVIEWED,hotel nya,rapi,0,4,NOUN,NOUN,1,NOUN vconj NOUN,False
+terma_train_02869,REVIEWED,hotel nya,aman,0,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02869,REVIEWED,hotel nya,nyaman,0,8,NOUN,ADJ,1,NOUN vconj ADJ,False
+terma_train_02883,REVIEWED,kualitas,oke banget,20,24,NOUN,NOUN,2,NOUN vconj vcompound NOUN,False
+terma_train_02883,REVIEWED,pelayanan hotel,oke banget,22,24,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02886,REVIEWED,kamarnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02886,REVIEWED,acnya,dingin,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02886,REVIEWED,servis,ramah,6,7,ADJ,ADJ,1,ADJ vamod ADJ,False
+terma_train_02886,REVIEWED,proses check in,mudah,9,12,NOUN,ADJ,2,NOUN vflat vamod ADJ,False
+terma_train_02886,REVIEWED,harga,bersahabat,14,15,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_02887,REVIEWED,wi - fi,tidak ada,4,8,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_02888,REVIEWED,pelayanan nya,ramah,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02888,REVIEWED,pelayanan nya,baik sekali,0,5,NOUN,ADV,1,NOUN vadvmod ADV,True
+terma_train_02889,REVIEWED,air panasnya,tidak bisa di setting,0,5,NOUN,NOUN,1,NOUN ^nsubj NOUN,False
+terma_train_02889,REVIEWED,air panas,agak susah,14,17,NOUN,ADJ,4,NOUN ^compound ^compound ^obj vxcomp ADJ,False
+terma_train_02900,REVIEWED,fasilitas,oke,7,8,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_02900,REVIEWED,resepsionis,sering tidak ada,11,14,VERB,VERB,1,VERB vadvcl VERB,False
+terma_train_02905,REVIEWED,tempatnya,nyaman,0,1,NOUN,ADJ,2,NOUN vcompound vamod ADJ,False
+terma_train_02905,REVIEWED,tempatnya,enak banget,0,3,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02907,REVIEWED,air,kecil,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02907,REVIEWED,kolam,kotor,3,4,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02907,REVIEWED,ac,tidak dingin,6,8,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_02907,REVIEWED,petugasnya,baik,15,16,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02913,REVIEWED,pegawainya,baik,1,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02916,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02916,REVIEWED,kamar,nyaman,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02916,REVIEWED,kamar,besar,0,5,NOUN,ADJ,2,NOUN vamod vconj ADJ,True
+terma_train_02926,REVIEWED,sabun,bekas,0,5,NOUN,NOUN,3,NOUN vconj vcompound vcompound NOUN,False
+terma_train_02926,REVIEWED,sikat gigi nya,bekas,2,5,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_02926,REVIEWED,handuk nya,bau,15,17,PRON,NOUN,1,PRON vcompound NOUN,False
+terma_train_02927,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02927,REVIEWED,kamar,nyaman,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02927,REVIEWED,fasilitas,lumayan lengkap,5,6,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02928,REVIEWED,kamar mandi,kotor,0,2,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_02928,REVIEWED,bed cover,kotor,4,6,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_02928,REVIEWED,seprai,tidak diganti,20,25,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_02928,REVIEWED,bed cover,tidak diganti,23,25,ADJ,VERB,2,ADJ ^amod ^nsubj:pass VERB,False
+terma_train_02928,REVIEWED,tempat sampah,tidak ada,29,28,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02928,REVIEWED,selang shower,bocor,39,41,ADV,NOUN,2,ADV vcompound vcompound NOUN,False
+terma_train_02928,REVIEWED,lantainya,sangat berdebu,60,62,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02928,REVIEWED,tarif,hemat,83,84,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02928,REVIEWED,kebersihan,tidak jadi prioritas,87,91,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02931,REVIEWED,breakfast,pas,0,4,VERB,ADV,3,VERB vobl vacl vadvmod ADV,False
+terma_train_02942,REVIEWED,wifi,kurang bagus,4,7,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_02945,REVIEWED,fasilitasnya,baik,9,10,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02949,REVIEWED,pemiliknya,sangat ramah,3,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02950,REVIEWED,tempat,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02950,REVIEWED,pemandangan,indah,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02950,REVIEWED,pelayanan,ramah,6,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02951,REVIEWED,kamar,bersih,35,36,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02951,REVIEWED,parkiran,harus diperluas,38,40,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_02966,REVIEWED,hotel,bersih,5,0,NOUN,ADJ,1,NOUN ^nmod ADJ,False
+terma_train_02966,REVIEWED,hotel,cukup nyaman,5,3,NOUN,ADJ,2,NOUN ^nmod vconj ADJ,False
+terma_train_02967,REVIEWED,ac,kurang dingin,2,4,X,ADJ,1,X vxcomp ADJ,False
+terma_train_02968,REVIEWED,seprai,perlu di ganti,0,7,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02968,REVIEWED,seprai,aga usang,0,13,NOUN,NOUN,3,NOUN ^nsubj vadvcl vobj NOUN,False
+terma_train_02968,REVIEWED,bed cover nya,perlu di ganti,2,7,NOUN,VERB,2,NOUN ^conj ^nsubj VERB,True
+terma_train_02968,REVIEWED,bed cover nya,aga usang,2,13,NOUN,NOUN,4,NOUN ^conj ^nsubj vadvcl vobj NOUN,False
+terma_train_02970,REVIEWED,kebersihan kamar,perlu di perbaiki,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02970,REVIEWED,kebersihan kamar,bau pesing,0,6,NOUN,NOUN,2,NOUN ^nsubj vconj NOUN,False
+terma_train_02973,REVIEWED,lokasi,strategis,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02973,REVIEWED,tempatnya,cukup bagus,3,5,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_02973,REVIEWED,ruangannya,terlalu sempit,8,10,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02994,REVIEWED,kamar,cukup bersih,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02994,REVIEWED,kamar,sempit,0,5,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_02998,REVIEWED,kamar,sangat kecewa,3,1,NOUN,NOUN,1,NOUN ^nmod NOUN,False
+terma_train_02998,REVIEWED,pelayanan stafnya,sangat kecewa,5,1,NOUN,NOUN,2,NOUN ^conj ^nmod NOUN,False
+terma_train_00024,REVIEWED,tempat tdr,kurang bersih,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00050,REVIEWED,kamar mandi,tetap bau,12,14,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00055,REVIEWED,makanan ringan gratis,ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00171,REVIEWED,tempat parkir mobil,terbatas,0,4,NOUN,VERB,2,NOUN vcompound vacl VERB,False
+terma_train_00327,REVIEWED,kebersihan,kurang,0,1,NOUN,ADV,1,NOUN vadvmod ADV,False
+terma_train_00406,REVIEWED,handuk nya,kurang halus,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00449,REVIEWED,wifinya,lambat,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00462,REVIEWED,wifi,lebih di tingkatkan lagi,2,5,NOUN,VERB,2,NOUN ^compound vacl VERB,False
+terma_train_00483,REVIEWED,tempatnya,enak,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00539,REVIEWED,semuanya,baik,0,1,PRON,ADJ,1,PRON vamod ADJ,False
+terma_train_00694,REVIEWED,letak hotel,strategis,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_00811,REVIEWED,servis,baik,1,3,ADJ,ADJ,2,ADJ ^amod vamod ADJ,False
+terma_train_00933,REVIEWED,lokasi,strategis,17,18,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00950,REVIEWED,sandal,takdee,0,2,ADJ,PROPN,1,ADJ vflat PROPN,False
+terma_train_00969,REVIEWED,air,kurang panas,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01012,REVIEWED,ruangan,cukup baik,1,3,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_01043,REVIEWED,kamar,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01060,REVIEWED,saluran ac,tolong diperbaiki,0,7,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_01073,REVIEWED,tempat,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01141,REVIEWED,airnya,asin,7,9,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01163,REVIEWED,kamar,luas,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01189,REVIEWED,sarung bantal,agak bau,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01240,REVIEWED,pelayanan,oke banget,4,8,NOUN,VERB,3,NOUN ^compound ^nmod ^advcl VERB,False
+terma_train_01263,REVIEWED,air panas,kurang berasa,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01297,REVIEWED,air panasnya,tidak berfungsi,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01411,REVIEWED,breakfastnya,tidak ada,3,2,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01455,REVIEWED,hotel,nyaman,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01469,REVIEWED,lokasi,terjangkau,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01607,REVIEWED,fasilitas kamar mandi,perlu diremajakan lagi,0,4,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01612,REVIEWED,suasananya,sepi,24,25,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01659,REVIEWED,pelyanannya,lengkap,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01734,REVIEWED,pelayanannya,puas,2,0,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_01772,REVIEWED,televisi nyaa,buram,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_01775,REVIEWED,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01880,REVIEWED,pemiliknya,baik,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01942,REVIEWED,peralatan kamar mandi,kurang lengkap,0,4,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_01946,REVIEWED,tempat nya,susah dicari,0,3,NOUN,VERB,1,NOUN vacl VERB,True
+terma_train_01975,REVIEWED,ac,kurang dingin,0,2,X,ADJ,1,X ^advmod ADJ,False
+terma_train_02014,REVIEWED,overall,bagus,9,12,NOUN,NOUN,3,NOUN ^compound ^compound vappos NOUN,False
+terma_train_02087,REVIEWED,air hangat,kadang mati,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02134,REVIEWED,semuax,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02179,REVIEWED,snack,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02242,REVIEWED,kebersihan,harap di tingkatkan,0,3,NOUN,NOUN,1,NOUN vnmod NOUN,True
+terma_train_02387,REVIEWED,ac,kurang dingin,0,2,X,ADJ,1,X ^advmod ADJ,False
+terma_train_02587,REVIEWED,lift,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02769,REVIEWED,menu breakfast,kurang bagus,0,3,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_02833,REVIEWED,parkirnya,luas,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02940,REVIEWED,kebersihan,tidak diperhatikan,8,6,NOUN,VERB,2,NOUN ^compound ^obj VERB,False
+terma_train_02947,REVIEWED,wifi,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02975,REVIEWED,hotelnya,bagus,0,1,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_02985,REVIEWED,rasa makanan,standar,10,12,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_02999,REVIEWED,air panasnya,tidak terlalu panas,2,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00003,AUTO_1A1O,pintu geser,kurang rapat,0,3,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_00005,AUTO_1A1O,snack,tidak dapat,2,1,VERB,ADV,1,VERB vadvmod ADV,False
+terma_train_00006,AUTO_1A1O,pelayanan,lumayan baik,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00012,AUTO_1A1O,pelayanan nya,sangat ramah,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00013,AUTO_1A1O,kamarnya,oke,0,1,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_00016,AUTO_1A1O,wifi,tidak bagus,1,3,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_00025,AUTO_1A1O,kamarnya,beda,7,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00029,AUTO_1A1O,semuanya,baik,0,2,PRON,ADJ,1,PRON vamod ADJ,False
+terma_train_00062,AUTO_1A1O,lampu tidur,tidak terdapat,9,8,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00066,AUTO_1A1O,sarapan,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00073,AUTO_1A1O,wifi,buruk,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00074,AUTO_1A1O,over all,baik,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00085,AUTO_1A1O,fasilatas,sesuia,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00093,AUTO_1A1O,kelengkapan kamarnya,tolong di perhatikan lagi,4,0,NOUN,VERB,2,NOUN ^obj ^xcomp VERB,True
+terma_train_00095,AUTO_1A1O,suasananya,kurang nyaman,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00100,AUTO_1A1O,air hangat,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00110,AUTO_1A1O,kamar,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00114,AUTO_1A1O,pelayanannya,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00122,AUTO_1A1O,pelayanan kamar,perlu di tingkatkan,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00124,AUTO_1A1O,nasi gorengnya,enak,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_00128,AUTO_1A1O,tempat penginapan nya,sangat rekomended sekali,3,1,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_00132,AUTO_1A1O,air panas,sering tidak mengalir,0,4,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00135,AUTO_1A1O,ac,kurang dingin,0,2,X,ADJ,1,X ^advmod ADJ,False
+terma_train_00142,AUTO_1A1O,kamarnya,butuh perbaikan,0,1,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00165,AUTO_1A1O,pelayanan,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00168,AUTO_1A1O,air panas,bullshit,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00169,AUTO_1A1O,pelayanannya,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00188,AUTO_1A1O,kamar,memadai,5,7,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00190,AUTO_1A1O,lampu,kurang terang,1,6,ADJ,VERB,1,ADJ vacl VERB,False
+terma_train_00194,AUTO_1A1O,harga,murah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00200,AUTO_1A1O,kamar,bocor,0,2,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_00207,AUTO_1A1O,air panas nya,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00209,AUTO_1A1O,lokasi kamar,terpencil,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_00219,AUTO_1A1O,kamar mandi,diperbaiki,0,3,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00220,AUTO_1A1O,air panas kamar mandi,kurang panas,3,5,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_00227,AUTO_1A1O,tempatnya,nyaman,0,1,NOUN,ADJ,1,NOUN vconj ADJ,False
+terma_train_00228,AUTO_1A1O,pelayanannya,sangat baik,9,11,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00243,AUTO_1A1O,resepsionis,tidak sopan,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00247,AUTO_1A1O,overall,oke,0,2,PROPN,PROPN,2,PROPN vflat vflat PROPN,False
+terma_train_00252,AUTO_1A1O,kamar,pengap,0,2,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_00257,AUTO_1A1O,makanannya,biasa ajah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00262,AUTO_1A1O,seprai nya,tidak terlalu kotor,6,5,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_00268,AUTO_1A1O,kamar,lumayan luas,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00281,AUTO_1A1O,tempatnya,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00288,AUTO_1A1O,ac,kurang dingin,0,2,X,ADJ,1,X ^advmod ADJ,False
+terma_train_00290,AUTO_1A1O,kebersihan kamar,jelek,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00292,AUTO_1A1O,selebihnya,mantap,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00293,AUTO_1A1O,pelayanan nya,sangat baik,2,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00305,AUTO_1A1O,cemilan,hanya setengah,17,22,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00315,AUTO_1A1O,tisu,kurang,1,0,ADJ,ADV,1,ADJ vadvmod ADV,False
+terma_train_00324,AUTO_1A1O,sarapan,kurang,3,0,NOUN,ADV,2,NOUN ^nmod vadvmod ADV,False
+terma_train_00329,AUTO_1A1O,tisu,tidak disediakan,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00330,AUTO_1A1O,parkirnya,susah,5,6,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_00347,AUTO_1A1O,pelayan nya,tidak sopan,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00359,AUTO_1A1O,makanan,kurang memuaskan,0,3,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_00366,AUTO_1A1O,kebersihan,ditingkatkan lagi,0,1,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00372,AUTO_1A1O,kebersihan,perlu di tingkatkan,0,1,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00377,AUTO_1A1O,petunjuk lokasi,harus diperbaiki,0,3,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00381,AUTO_1A1O,air panas,tidak terdapat,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00389,AUTO_1A1O,check out,menunggu lama,13,10,NOUN,VERB,2,NOUN ^obj ^xcomp VERB,False
+terma_train_00394,AUTO_1A1O,tempatnya,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00397,AUTO_1A1O,staf,ramah sekali,0,2,NOUN,ADV,1,NOUN vadvmod ADV,True
+terma_train_00405,AUTO_1A1O,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00407,AUTO_1A1O,air panasnya,tidak ada,4,9,NOUN,VERB,3,NOUN ^obj ^acl ^obl VERB,False
+terma_train_00414,AUTO_1A1O,check in,cepat,5,7,NOUN,ADJ,2,NOUN vflat vamod ADJ,False
+terma_train_00416,AUTO_1A1O,handuk,belum ada,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00423,AUTO_1A1O,kamar,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00424,AUTO_1A1O,kamar,tidak sesuai,1,5,NOUN,ADJ,2,NOUN ^compound ^nsubj ADJ,False
+terma_train_00437,AUTO_1A1O,fasilitas akomodasi ke bandara,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00439,AUTO_1A1O,ruangan,terlalu sempit,2,4,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00441,AUTO_1A1O,saluran air kamar mandi,sering tersumbat,5,7,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_00442,AUTO_1A1O,kamar mandi nya,tolong di tingkatkan,3,0,NOUN,VERB,2,NOUN ^compound ^obl VERB,False
+terma_train_00447,AUTO_1A1O,harga,terjangkau,0,1,NOUN,PRON,1,NOUN vdet PRON,False
+terma_train_00453,AUTO_1A1O,semuanya,bagus,0,1,PRON,ADJ,1,PRON vamod ADJ,False
+terma_train_00454,AUTO_1A1O,sarapan,enak,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00457,AUTO_1A1O,air,tidak keluar,0,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00461,AUTO_1A1O,suasana penginapannya,suka,2,0,NOUN,VERB,1,NOUN ^obl VERB,False
+terma_train_00469,AUTO_1A1O,seprainya,kotor,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00474,AUTO_1A1O,pelayanannya,perlu ditingkatkan lagi,0,2,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00479,AUTO_1A1O,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00481,AUTO_1A1O,pelayanan nya,baik,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00482,AUTO_1A1O,lokasi,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00526,AUTO_1A1O,kamar,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00532,AUTO_1A1O,pintu,tidak bisa di kunci,0,4,NOUN,NOUN,1,NOUN vacl NOUN,False
+terma_train_00546,AUTO_1A1O,kamar,tidak terlalu bersih,0,5,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_00549,AUTO_1A1O,ruang nya,agak besar,2,4,NOUN,ADV,1,NOUN vadvmod ADV,False
+terma_train_00559,AUTO_1A1O,bantal,tidak layak,0,5,ADJ,ADJ,2,ADJ ^amod vamod ADJ,False
+terma_train_00562,AUTO_1A1O,sarapan,tidak ada,1,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00572,AUTO_1A1O,ac nya,tidak dingin,0,3,X,ADJ,1,X vamod ADJ,False
+terma_train_00580,AUTO_1A1O,pelayanan,baik,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00581,AUTO_1A1O,sarapan,lumayan enak,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00587,AUTO_1A1O,ac nya,kurang dingin,0,3,X,ADJ,1,X vamod ADJ,False
+terma_train_00610,AUTO_1A1O,keramahan staf hotel,ditingkatkan lagi,0,3,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00615,AUTO_1A1O,pelayanannya,baik,2,1,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_00621,AUTO_1A1O,kamar,bau apek,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00622,AUTO_1A1O,harga,terjangkau,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00632,AUTO_1A1O,manajemennya,tidak bagus,0,2,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_00641,AUTO_1A1O,sirkulasi udara,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00643,AUTO_1A1O,kamarnya,jorok,11,12,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00649,AUTO_1A1O,exhaust nya,tidak ada,4,3,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00654,AUTO_1A1O,acnya,kurang dingin,0,2,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_00660,AUTO_1A1O,resepsionis,selalu ada,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00665,AUTO_1A1O,hotel,kurang nyaman,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00673,AUTO_1A1O,breakfastnya,ditiadakan,2,4,SCONJ,VERB,1,SCONJ ^mark VERB,False
+terma_train_00679,AUTO_1A1O,semua,cukup baik,0,3,DET,ADJ,1,DET ^det ADJ,False
+terma_train_00681,AUTO_1A1O,wifi,terbatas,4,6,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00690,AUTO_1A1O,snack,kurang,1,0,NOUN,ADV,1,NOUN vadvmod ADV,False
+terma_train_00696,AUTO_1A1O,kamar,bersih,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00704,AUTO_1A1O,lampu kamar,terlalu redup,0,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00717,AUTO_1A1O,akses,gampang,12,13,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00720,AUTO_1A1O,keseluruhan,good,0,1,DET,NOUN,1,DET ^det NOUN,False
+terma_train_00722,AUTO_1A1O,kamar,sangat sempit,9,11,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00724,AUTO_1A1O,telepon,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00737,AUTO_1A1O,tempat,oke,0,1,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_00744,AUTO_1A1O,kamar nya,sempit,0,2,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00750,AUTO_1A1O,tempatnya,oke,1,2,NOUN,NUM,1,NOUN ^nsubj NUM,False
+terma_train_00755,AUTO_1A1O,air panasnya,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00763,AUTO_1A1O,harga,sangat murah,3,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00764,AUTO_1A1O,snack,ada,1,0,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00772,AUTO_1A1O,pelayanannya,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00777,AUTO_1A1O,room,bersih,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00796,AUTO_1A1O,pelayanan,buruk,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00798,AUTO_1A1O,tempat parkir,sedikit dirapikan,0,3,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_00802,AUTO_1A1O,hot waternya,mati,1,3,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_00805,AUTO_1A1O,wifi nya,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00807,AUTO_1A1O,pelayanan,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00813,AUTO_1A1O,parkiran,cukup luas,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00819,AUTO_1A1O,kamar mandi,agak redup,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00822,AUTO_1A1O,kamar mandinya,kurang bersih,0,3,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_00829,AUTO_1A1O,pelayanannya,ramah,2,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00840,AUTO_1A1O,breakfast,di tiadakan,1,3,VERB,NOUN,1,VERB vobl NOUN,False
+terma_train_00846,AUTO_1A1O,kamar,biasa saja,0,2,NOUN,ADV,1,NOUN vadvmod ADV,True
+terma_train_00858,AUTO_1A1O,kualitas,sesuai,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00862,AUTO_1A1O,parkir,sempit,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_00872,AUTO_1A1O,lokasinya,tidak terlalu jauh,0,3,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_00880,AUTO_1A1O,ac nya,dingin,0,2,X,ADJ,1,X vamod ADJ,False
+terma_train_00883,AUTO_1A1O,hanger nya,tidak adda,2,1,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_00889,AUTO_1A1O,papan plang,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_00897,AUTO_1A1O,keseluruhan,bagus,0,1,PRON,ADJ,1,PRON vconj ADJ,False
+terma_train_00900,AUTO_1A1O,tempatnya,sangat bersih,3,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00907,AUTO_1A1O,ac,tidak dingin,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00936,AUTO_1A1O,ac nya,agak kurang dingin,1,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00952,AUTO_1A1O,airnya,mati,0,4,NOUN,ADJ,3,NOUN ^nsubj vcompound vamod ADJ,False
+terma_train_00954,AUTO_1A1O,tempat nya,nyaman,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00973,AUTO_1A1O,wifi,jelek,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00977,AUTO_1A1O,pelayanan,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_00981,AUTO_1A1O,air,tidak mengalir,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_00984,AUTO_1A1O,pelayanannya,cepat,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01000,AUTO_1A1O,semua,bagus,1,0,DET,ADJ,1,DET ^det ADJ,False
+terma_train_01001,AUTO_1A1O,lokasi,mudah di cari,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01006,AUTO_1A1O,tempatnya,nyaman,7,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01010,AUTO_1A1O,resepsionis,perlu di perbaiki,1,2,NOUN,VERB,1,NOUN ^obl VERB,False
+terma_train_01025,AUTO_1A1O,tempatnya,sangat strategis,1,3,NOUN,ADJ,2,NOUN ^compound ^nsubj ADJ,False
+terma_train_01039,AUTO_1A1O,harga,terjangkau,5,6,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01041,AUTO_1A1O,kolam renangnya,ada,1,0,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01042,AUTO_1A1O,tempatnya,bagus,2,0,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_01044,AUTO_1A1O,semuanya,bagus,0,1,PRON,ADJ,1,PRON vamod ADJ,False
+terma_train_01048,AUTO_1A1O,tempatnya,nyaman,1,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01057,AUTO_1A1O,lokasi,strategis,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01065,AUTO_1A1O,ac,kurang dingin,0,2,X,ADJ,1,X ^advmod ADJ,False
+terma_train_01066,AUTO_1A1O,dilayani,baik,0,2,VERB,ADJ,1,VERB vxcomp ADJ,False
+terma_train_01071,AUTO_1A1O,parkiran,perlu di perbaiki,4,1,NOUN,VERB,2,NOUN ^obj ^xcomp VERB,True
+terma_train_01076,AUTO_1A1O,overall,puas,0,2,ADJ,NOUN,3,ADJ ^amod ^nsubj vnsubj NOUN,False
+terma_train_01083,AUTO_1A1O,ac,kurang dingin,0,2,X,ADJ,1,X ^advmod ADJ,False
+terma_train_01098,AUTO_1A1O,kebersihannya,perlu ditingkatkan,0,2,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_01100,AUTO_1A1O,pelayanan,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01106,AUTO_1A1O,selimut/sprey,kurang bersih,0,2,X,ADJ,1,X ^advmod ADJ,False
+terma_train_01110,AUTO_1A1O,pelayanan,oke,0,1,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_01118,AUTO_1A1O,penjaganya,kurang ramah,0,2,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_01121,AUTO_1A1O,wifi,tolong di perbaiki,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01132,AUTO_1A1O,kamar mandinya,jorok,0,2,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_01134,AUTO_1A1O,sarapan nya,kurang banyak pilihan,0,4,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01135,AUTO_1A1O,kamarnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01142,AUTO_1A1O,airy,oke,0,1,X,VERB,1,X ^advmod VERB,False
+terma_train_01143,AUTO_1A1O,hotel,lumayan bersih,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01144,AUTO_1A1O,resepsionisnya,cantik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01146,AUTO_1A1O,pintu kamar bawahnya,kurang rapat,0,4,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01148,AUTO_1A1O,rooms,senang,3,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01150,AUTO_1A1O,tempatnya,bagus,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01153,AUTO_1A1O,lokasi,oke,0,1,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_01154,AUTO_1A1O,air panas,tidaj jalan,0,2,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01155,AUTO_1A1O,kamar mandi,tergenang,0,2,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_01158,AUTO_1A1O,air panas,lancar,6,8,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01173,AUTO_1A1O,semuanya,baik,1,2,PRON,ADJ,2,PRON ^det vamod ADJ,False
+terma_train_01176,AUTO_1A1O,pelayanan,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01179,AUTO_1A1O,kamar mandi,bau,1,3,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_01180,AUTO_1A1O,semuanya,oke,0,1,PRON,NUM,1,PRON vnummod NUM,False
+terma_train_01182,AUTO_1A1O,lampunya,kurang terang,0,2,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_01188,AUTO_1A1O,kamarnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01192,AUTO_1A1O,petugas,tidak ada,58,57,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01196,AUTO_1A1O,lokasinya,sulit ditemukan,0,3,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_01204,AUTO_1A1O,ac,kurang dingin,0,2,X,ADJ,1,X ^advmod ADJ,False
+terma_train_01216,AUTO_1A1O,termos air panas,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01220,AUTO_1A1O,tilet,kurang bersih,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01231,AUTO_1A1O,keran toilet,rusak,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01234,AUTO_1A1O,resepsionianya,kurang ramah,2,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01243,AUTO_1A1O,airnya,agak bau,3,6,NOUN,VERB,1,NOUN ^nsubj VERB,False
+terma_train_01252,AUTO_1A1O,ac,tidak dingin,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01261,AUTO_1A1O,kamar,sangat baik,1,6,NOUN,ADJ,2,NOUN vnmod vamod ADJ,False
+terma_train_01264,AUTO_1A1O,ruangan kamar,gelap,2,4,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_01271,AUTO_1A1O,proses cek in,tidak ribet,0,4,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01272,AUTO_1A1O,over all,nyaman,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01277,AUTO_1A1O,kamar nya,agak lega,0,3,NOUN,NOUN,1,NOUN ^nsubj NOUN,False
+terma_train_01294,AUTO_1A1O,tv,harus ditingkatkan lagi,7,4,NOUN,VERB,1,NOUN ^obl VERB,False
+terma_train_01300,AUTO_1A1O,kamar,excelent,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01301,AUTO_1A1O,airy room,paling bagus,0,3,X,ADJ,1,X vamod ADJ,False
+terma_train_01306,AUTO_1A1O,bantal,bau,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01311,AUTO_1A1O,pelayanan,sangat mengecewakan,0,3,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_01314,AUTO_1A1O,hotel,bagus,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01339,AUTO_1A1O,kamar,seram banget,0,4,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01341,AUTO_1A1O,harga,murah,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01343,AUTO_1A1O,kamar mandinya,kurang bersih,8,11,NOUN,ADJ,2,NOUN ^obj vamod ADJ,False
+terma_train_01348,AUTO_1A1O,perlengkapan mandi,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01356,AUTO_1A1O,kebersihan,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01361,AUTO_1A1O,parkirannya,tidak aman,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01367,AUTO_1A1O,kebersihan,sangat memuaskan,9,11,NOUN,VERB,2,NOUN ^conj vacl VERB,False
+terma_train_01371,AUTO_1A1O,pintu kamar mandi,rusak,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01373,AUTO_1A1O,harga,terjangkau,8,9,NOUN,PRON,1,NOUN vdet PRON,False
+terma_train_01374,AUTO_1A1O,pelayan,sangat kecewa,3,1,NOUN,NOUN,1,NOUN ^nmod NOUN,False
+terma_train_01379,AUTO_1A1O,pelayan nya,galak parah,4,7,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01383,AUTO_1A1O,pelayanan,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01404,AUTO_1A1O,air mineral,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01406,AUTO_1A1O,tempatnya,nyaman,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01407,AUTO_1A1O,sarapannya,tidak datang,4,8,NOUN,VERB,4,NOUN ^obj ^ccomp ^det ^nsubj VERB,False
+terma_train_01417,AUTO_1A1O,over all,suka,0,2,NOUN,ADJ,2,NOUN vamod vamod ADJ,False
+terma_train_01441,AUTO_1A1O,tv,buremm,0,3,NOUN,NUM,2,NOUN ^nsubj vnummod NUM,False
+terma_train_01443,AUTO_1A1O,suasana,hangat,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01467,AUTO_1A1O,pelayanan,kurang mudah senyum,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01473,AUTO_1A1O,balkon,tidak bisa dibuka,1,5,NOUN,VERB,2,NOUN ^obj vconj VERB,False
+terma_train_01480,AUTO_1A1O,kamar mandi,agak menggenang,1,4,NOUN,VERB,2,NOUN ^compound ^nsubj VERB,False
+terma_train_01483,AUTO_1A1O,kamar mandinya klosetnya,kotor,0,4,NOUN,NOUN,1,NOUN ^nsubj NOUN,False
+terma_train_01493,AUTO_1A1O,staf,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01498,AUTO_1A1O,tempatnya,luas,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01504,AUTO_1A1O,kamar,cukup luas,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01545,AUTO_1A1O,tv,tidak bisa,0,2,NOUN,ADV,2,NOUN vacl vadvmod ADV,False
+terma_train_01550,AUTO_1A1O,kamarnya,tidak terlalu besar,0,4,ADV,ADJ,1,ADV ^advmod ADJ,False
+terma_train_01554,AUTO_1A1O,lift,perlu ditambah,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01556,AUTO_1A1O,overall,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01559,AUTO_1A1O,keseluruhan,baik,1,0,PRON,ADJ,1,PRON vamod ADJ,False
+terma_train_01561,AUTO_1A1O,wifinya,tersendattersendat,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01566,AUTO_1A1O,keran kamar mandi,rusak,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01568,AUTO_1A1O,kebersihan kamar,tolong diperbaiki lagi,0,3,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_01573,AUTO_1A1O,fasilitas,tidak sesuai,10,12,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01583,AUTO_1A1O,pelayanan,sesuai,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01591,AUTO_1A1O,kasurnya,berdebu,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01592,AUTO_1A1O,kamar,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01606,AUTO_1A1O,kolam renangnya,bersih,15,17,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_01608,AUTO_1A1O,harga,murce,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01610,AUTO_1A1O,pintu kamar mandi nya,agak susah ditutup,2,8,NOUN,VERB,2,NOUN ^compound ^nsubj:pass VERB,False
+terma_train_01614,AUTO_1A1O,air,sering mati,0,5,NOUN,ADJ,2,NOUN ^nsubj vamod ADJ,False
+terma_train_01615,AUTO_1A1O,kamar mandi,kurang baik,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01621,AUTO_1A1O,air hangat kamar mandi,tidak aktif,0,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01622,AUTO_1A1O,tempat,nyaman,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01628,AUTO_1A1O,wifi,tidak jalan,13,15,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01629,AUTO_1A1O,kamar,tidak standar,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01630,AUTO_1A1O,kamarnya,agak sempit,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01632,AUTO_1A1O,cat tembok nya,ngelupas sedikit,1,7,NOUN,ADV,2,NOUN ^obl vadvmod ADV,False
+terma_train_01638,AUTO_1A1O,pelayanan,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01648,AUTO_1A1O,pelayanan,oke,7,8,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01660,AUTO_1A1O,airy,sangat berkesan,0,3,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_01664,AUTO_1A1O,kamar,luas sekali,0,2,NOUN,ADV,1,NOUN vadvmod ADV,True
+terma_train_01668,AUTO_1A1O,kamar mandi nya,kotor banget,0,3,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_01671,AUTO_1A1O,seprainya,kotor,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01705,AUTO_1A1O,petugas yang berjaga,tidak ada,8,7,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_01712,AUTO_1A1O,kamarnya,terlalu keciil,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01715,AUTO_1A1O,pelayanannya,oke,0,1,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_01720,AUTO_1A1O,pelayanan,buruk,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01728,AUTO_1A1O,tempatnya,enak,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01736,AUTO_1A1O,semuanya,oke,0,1,DET,NOUN,1,DET ^det NOUN,False
+terma_train_01738,AUTO_1A1O,air,kotor,0,3,NOUN,NOUN,2,NOUN vnmod vcompound NOUN,False
+terma_train_01740,AUTO_1A1O,pelayanan,sangat baik,3,1,NOUN,ADJ,1,NOUN ^nmod ADJ,False
+terma_train_01741,AUTO_1A1O,kamar,kurang bersih,0,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01744,AUTO_1A1O,tempatnya,lumayan bersih,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_01774,AUTO_1A1O,tempatnya,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01782,AUTO_1A1O,that's a cheap room,bersih,2,5,VERB,ADJ,2,VERB vobj vconj ADJ,False
+terma_train_01805,AUTO_1A1O,lokasi,sulit sekali dicari,0,3,NOUN,VERB,1,NOUN ^nsubj:pass VERB,True
+terma_train_01816,AUTO_1A1O,pelayanan,oke,0,1,NOUN,PROPN,1,NOUN vflat PROPN,False
+terma_train_01818,AUTO_1A1O,servis,bisa ditingkatkan,10,12,ADJ,VERB,1,ADJ ^amod VERB,False
+terma_train_01823,AUTO_1A1O,si mbaknya,baik,1,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01825,AUTO_1A1O,kamar mandinya,tidak bisa di sentor,0,5,NOUN,NOUN,1,NOUN vacl NOUN,False
+terma_train_01832,AUTO_1A1O,pelayanan,baik,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01835,AUTO_1A1O,ac,tidak dingin,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01841,AUTO_1A1O,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01851,AUTO_1A1O,airnya,berbau,0,1,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01854,AUTO_1A1O,overall,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01857,AUTO_1A1O,tempatnya,tidak sesuai,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01861,AUTO_1A1O,kamar,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01863,AUTO_1A1O,lokasi,strategis,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01876,AUTO_1A1O,fasilitas,masih top markotop,7,9,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01881,AUTO_1A1O,staf nya,ramah,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01886,AUTO_1A1O,pelayan nya,kurang memuaskan,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01889,AUTO_1A1O,sarapan pagi,seharusnya ada,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_01890,AUTO_1A1O,kamar,tidak seperti biasanya,0,3,NOUN,ADV,2,NOUN ^nsubj vadvmod ADV,False
+terma_train_01906,AUTO_1A1O,pelayanan,kurang baik,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01909,AUTO_1A1O,kamar mandi,kurang bersih,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01915,AUTO_1A1O,kamarnya,luas,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01944,AUTO_1A1O,sarapan,biasa,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01949,AUTO_1A1O,lemari,lumayan besar,0,3,NOUN,NOUN,2,NOUN vacl vobj NOUN,False
+terma_train_01950,AUTO_1A1O,kualitas tv,di perbaiki,4,7,NOUN,NOUN,3,NOUN ^compound ^conj vnmod NOUN,False
+terma_train_01951,AUTO_1A1O,fasilitas,sangat memuaskan,3,1,NOUN,VERB,1,NOUN ^obl VERB,False
+terma_train_01956,AUTO_1A1O,pelayanan,kurang baik,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_01969,AUTO_1A1O,temapatnya,oke,0,1,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_01971,AUTO_1A1O,kenyamanan tempat tidur,kurang nyaman,0,4,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_01977,AUTO_1A1O,desain kamar,briliant,0,2,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_01987,AUTO_1A1O,handuknya,tidak dapat,4,3,VERB,ADV,1,VERB vadvmod ADV,False
+terma_train_01990,AUTO_1A1O,kamar,tidak sesuai,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02000,AUTO_1A1O,over all,enak,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,False
+terma_train_02004,AUTO_1A1O,pelayanan,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02009,AUTO_1A1O,air panas nya,tidak banget panas,0,4,NOUN,NOUN,1,NOUN vamod NOUN,False
+terma_train_02023,AUTO_1A1O,airnya,kotor,3,4,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_02033,AUTO_1A1O,lokasi,susah sekali didapat,6,9,NOUN,VERB,1,NOUN ^nsubj:pass VERB,True
+terma_train_02034,AUTO_1A1O,acnya,kurang dingin,0,2,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_02038,AUTO_1A1O,kamar,nyaman,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02041,AUTO_1A1O,kamar mandi,lebih dirawat kenyamanannya,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02047,AUTO_1A1O,handuk,kotor,3,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02051,AUTO_1A1O,kamar,terlalu sempit,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02053,AUTO_1A1O,pelayanan,good,1,0,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_02054,AUTO_1A1O,ac nya,tidak dingin,0,3,X,ADJ,1,X vamod ADJ,False
+terma_train_02058,AUTO_1A1O,snack,tidak ada,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02062,AUTO_1A1O,pelayanan nya,cukup baik,0,3,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02079,AUTO_1A1O,kamar,kurang bersih,3,5,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02083,AUTO_1A1O,over all,best,0,3,NOUN,NOUN,2,NOUN ^nsubj vobj NOUN,False
+terma_train_02084,AUTO_1A1O,lokasi,strategis,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02099,AUTO_1A1O,ac,berisik,0,5,X,ADJ,3,X ^dep vobj vamod ADJ,False
+terma_train_02101,AUTO_1A1O,handuk,tidak tersedia,4,3,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02104,AUTO_1A1O,hotel,terbaik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02105,AUTO_1A1O,yang layanin,baik,1,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02109,AUTO_1A1O,kamar,tidak bersih,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02111,AUTO_1A1O,pelayannya,ramah sekali,2,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02113,AUTO_1A1O,lokasi,strategis banget,0,5,NOUN,NOUN,1,NOUN vdep NOUN,False
+terma_train_02130,AUTO_1A1O,password wifi,tidak dikasih,3,2,PROPN,VERB,1,PROPN ^obj VERB,False
+terma_train_02137,AUTO_1A1O,pelayanan,oke,0,1,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_02140,AUTO_1A1O,keramahan,agak kurang,3,6,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02146,AUTO_1A1O,kulkas,tidak ada,8,7,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02155,AUTO_1A1O,hanger,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02159,AUTO_1A1O,kamarnya,tampan,1,0,ADJ,NOUN,1,ADJ ^amod NOUN,False
+terma_train_02165,AUTO_1A1O,pelayanan,bagud,0,2,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_02169,AUTO_1A1O,secara keseluruhan semuanya,baik,1,4,PRON,ADJ,1,PRON ^nmod ADJ,False
+terma_train_02174,AUTO_1A1O,pelayanan,sangat ramah,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02178,AUTO_1A1O,wangi kamar,perlu ditingkatkan lagi,0,3,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_02181,AUTO_1A1O,ibunya,sangat ramah,0,2,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_02191,AUTO_1A1O,guests house nya,tidak terlalu sulit dicari,4,2,NOUN,ADJ,2,NOUN ^obj ^advcl ADJ,True
+terma_train_02193,AUTO_1A1O,kebersihan seprai dan selimut,perlu lebih diperhatikan,0,6,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_02211,AUTO_1A1O,kamar mandi,kotor,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_02212,AUTO_1A1O,pelayanan,ramah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02215,AUTO_1A1O,shower holder,tidak bisa,0,3,NOUN,ADV,2,NOUN ^nsubj vadvmod ADV,False
+terma_train_02219,AUTO_1A1O,makan pagi,kurang,0,2,VERB,ADV,3,VERB vobj vcompound vadvmod ADV,False
+terma_train_02223,AUTO_1A1O,kamar,tidak recommended,1,4,NOUN,PROPN,1,NOUN vdet PROPN,False
+terma_train_02227,AUTO_1A1O,pelayanannya,kurang,0,1,NOUN,ADV,1,NOUN ^nsubj ADV,False
+terma_train_02229,AUTO_1A1O,loksinya,sangat menarik,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02233,AUTO_1A1O,ac,tidak berfungsi sempurna,0,2,X,VERB,1,X ^nsubj VERB,False
+terma_train_02244,AUTO_1A1O,tempat tidur,kotor,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_02254,AUTO_1A1O,kolam,lumayan recomemded,0,4,NOUN,VERB,1,NOUN vacl VERB,False
+terma_train_02264,AUTO_1A1O,bangunannya,belum siap,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02266,AUTO_1A1O,lokasi,strategis,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02267,AUTO_1A1O,resepsionis hotel nya,tidak ramah,10,14,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02277,AUTO_1A1O,air hangat,tidak hidup,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02278,AUTO_1A1O,wifi,kurang kencang,1,3,NOUN,NOUN,2,NOUN ^compound ^compound NOUN,False
+terma_train_02284,AUTO_1A1O,pelayanan,memuaakan,4,6,NOUN,VERB,2,NOUN ^compound vacl VERB,False
+terma_train_02287,AUTO_1A1O,per,bagus,0,1,ADP,NOUN,1,ADP ^case NOUN,False
+terma_train_02294,AUTO_1A1O,wifi,sangat buruk sekali,1,3,NOUN,ADJ,2,NOUN ^compound vamod ADJ,False
+terma_train_02301,AUTO_1A1O,respons,kurang,1,0,ADJ,ADV,1,ADJ vadvmod ADV,False
+terma_train_02308,AUTO_1A1O,pelayanannya,selalu suka,3,1,NOUN,VERB,1,NOUN ^obl VERB,False
+terma_train_02319,AUTO_1A1O,kamar,jarang dibersihkan,0,2,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_02320,AUTO_1A1O,kamar mandi,bau,0,2,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_02321,AUTO_1A1O,handuk,tidak tersedia,5,4,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02327,AUTO_1A1O,fasilitas hotel,lebih diperhatikan,0,4,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_02329,AUTO_1A1O,air nya,sempat mati,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02344,AUTO_1A1O,kamar mandi,kotor,13,16,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02347,AUTO_1A1O,front office,sangat tidak ramah,0,7,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_02350,AUTO_1A1O,makanan,enak,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02360,AUTO_1A1O,lokasi,strategis,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02364,AUTO_1A1O,kunci pintu,kurang oke,0,3,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_02374,AUTO_1A1O,sarapan,enak,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02391,AUTO_1A1O,harga,terjangkau,1,2,NOUN,PRON,1,NOUN vdet PRON,False
+terma_train_02392,AUTO_1A1O,listrik,sering mati,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02399,AUTO_1A1O,hotelnya,nyaman,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02403,AUTO_1A1O,pelayanannya,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02410,AUTO_1A1O,hotel nya,bersih,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02419,AUTO_1A1O,lokasi,sangat strategis,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02423,AUTO_1A1O,pelayanan cek in,lama,0,3,NOUN,ADJ,2,NOUN vflat vamod ADJ,False
+terma_train_02426,AUTO_1A1O,pelayanan,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02457,AUTO_1A1O,kamar,pewe banget,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02458,AUTO_1A1O,sarapan,lebih beragam,0,3,NOUN,VERB,1,NOUN vadvcl VERB,False
+terma_train_02465,AUTO_1A1O,kebersihan nya,perlu di tingkat kan lagi,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02467,AUTO_1A1O,pelayanan,sangat baik,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02478,AUTO_1A1O,kamar,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02479,AUTO_1A1O,kamar nya,tidak rapi,0,3,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02487,AUTO_1A1O,ac nya,tidak dingin,0,7,X,ADJ,3,X ^nsubj vobj vamod ADJ,False
+terma_train_02488,AUTO_1A1O,fasilitas kamarnya,sangat senang,3,1,NOUN,ADJ,1,NOUN ^nmod ADJ,False
+terma_train_02492,AUTO_1A1O,kamar mandi,jorok banget,0,2,NOUN,NOUN,2,NOUN vcompound vcompound NOUN,False
+terma_train_02498,AUTO_1A1O,bau toilet,menyengat,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02503,AUTO_1A1O,hotel,terbaik,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,False
+terma_train_02505,AUTO_1A1O,tempatnya,bagus,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02511,AUTO_1A1O,kamar,luas,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02527,AUTO_1A1O,lokasi,strategis,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02529,AUTO_1A1O,kamar,kurang bersih,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02533,AUTO_1A1O,bantal kecil airy,tidak dapat,22,21,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02541,AUTO_1A1O,keamanan hotel,mengecewakan,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02543,AUTO_1A1O,closet duduk,tidak lancaf,3,5,VERB,ADJ,1,VERB vamod ADJ,False
+terma_train_02544,AUTO_1A1O,sarapan pagi,standar,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,True
+terma_train_02558,AUTO_1A1O,keamanan,terjaga,0,1,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_02560,AUTO_1A1O,fasilitas,oke,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02567,AUTO_1A1O,wifi,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02574,AUTO_1A1O,pembuangan air,tersumbat,0,5,NOUN,ADJ,3,NOUN vnmod vcompound vamod ADJ,False
+terma_train_02580,AUTO_1A1O,kamarnya,bersih,5,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02582,AUTO_1A1O,harga,cucokk,12,13,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02583,AUTO_1A1O,listriknya,sering padam nyala,3,1,ADJ,NOUN,2,ADJ ^amod ^compound NOUN,False
+terma_train_02592,AUTO_1A1O,hotel,sangat nyaman,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02594,AUTO_1A1O,kasurnya,agak reot,0,2,NOUN,NOUN,2,NOUN ^compound vnsubj NOUN,False
+terma_train_02599,AUTO_1A1O,romm nya,bagus,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02601,AUTO_1A1O,compliment,suka,11,9,NOUN,VERB,1,NOUN ^obl VERB,False
+terma_train_02602,AUTO_1A1O,kamar,tidak sesuai,1,3,NOUN,ADJ,3,NOUN ^compound ^nsubj vadvmod ADJ,False
+terma_train_02604,AUTO_1A1O,semuanya,bagus sekali,2,0,PRON,ADJ,1,PRON vamod ADJ,False
+terma_train_02609,AUTO_1A1O,wifi nya,jelek,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02619,AUTO_1A1O,pelayanannya,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02620,AUTO_1A1O,kebersihan nya,perlu di tingkat kan lagi,0,2,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02624,AUTO_1A1O,airnya,bocor,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02626,AUTO_1A1O,tempatnya,kurang baik,1,3,NOUN,ADJ,3,NOUN ^compound ^nsubj:pass vamod ADJ,False
+terma_train_02627,AUTO_1A1O,desain,minimalis,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02633,AUTO_1A1O,resepsionis,kurang ramah,2,6,NOUN,ADJ,2,NOUN vacl vobj ADJ,False
+terma_train_02640,AUTO_1A1O,hot showernya,tidak ada,3,6,NOUN,VERB,2,NOUN ^obj vccomp VERB,False
+terma_train_02642,AUTO_1A1O,ac,tidak dingin,12,15,ADJ,ADJ,2,ADJ ^amod vamod ADJ,False
+terma_train_02646,AUTO_1A1O,tempat nya,nyaman,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02687,AUTO_1A1O,lokasi,strategis,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02701,AUTO_1A1O,kamar nya,bersih,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02702,AUTO_1A1O,acnya,lumayan dingin,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02718,AUTO_1A1O,air shower,kecil,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02719,AUTO_1A1O,pegawai,kurang ramah,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02721,AUTO_1A1O,fasilitas tempat sampah,masih kurang,0,4,NOUN,ADV,2,NOUN ^nsubj vadvmod ADV,False
+terma_train_02741,AUTO_1A1O,pintunya,kadang susah dikunci,11,14,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_02747,AUTO_1A1O,kamar,tidak nyaman,0,9,NOUN,ADJ,2,NOUN vacl vconj ADJ,False
+terma_train_02749,AUTO_1A1O,fasilitas,oke,0,1,NOUN,NUM,1,NOUN vnummod NUM,False
+terma_train_02750,AUTO_1A1O,harga,sesuai,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02751,AUTO_1A1O,ac,cukup oke,0,2,X,NUM,1,X vnummod NUM,False
+terma_train_02760,AUTO_1A1O,lift,tidak bekerja,1,3,NOUN,VERB,2,NOUN ^compound ^nsubj VERB,False
+terma_train_02766,AUTO_1A1O,sarapan,standar,0,2,NOUN,ADJ,2,NOUN vcompound vamod ADJ,False
+terma_train_02775,AUTO_1A1O,kamar,kurang menarik,1,4,NOUN,VERB,2,NOUN ^compound vacl VERB,False
+terma_train_02790,AUTO_1A1O,kamarnya,seram,1,0,ADJ,NOUN,1,ADJ ^amod NOUN,False
+terma_train_02795,AUTO_1A1O,kamarnya,luas,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02797,AUTO_1A1O,semua,sangat baik sekali,4,1,DET,ADV,2,DET ^det ^nmod ADV,False
+terma_train_02798,AUTO_1A1O,sandalnya,tidak ada,0,2,ADV,VERB,1,ADV ^advmod VERB,False
+terma_train_02806,AUTO_1A1O,tempat,amat baik,4,6,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02810,AUTO_1A1O,resepsionis,friendly,0,1,NOUN,PROPN,1,NOUN vflat PROPN,False
+terma_train_02813,AUTO_1A1O,sistem dan management hotel,tolong diperbaiki,42,41,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02815,AUTO_1A1O,penjaganya,kecewa,1,0,NOUN,NOUN,1,NOUN ^compound NOUN,False
+terma_train_02819,AUTO_1A1O,wc,agak kotor,0,2,X,ADJ,1,X vamod ADJ,False
+terma_train_02822,AUTO_1A1O,fasilitas,perlu ditingkatkan,0,2,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_02851,AUTO_1A1O,air,tidak ada,0,5,NOUN,VERB,1,NOUN ^nsubj VERB,True
+terma_train_02857,AUTO_1A1O,harga,murah,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02863,AUTO_1A1O,kamarnya,sesuai,0,3,NOUN,ADJ,1,NOUN vxcomp ADJ,False
+terma_train_02865,AUTO_1A1O,makanannya,enak,3,4,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02867,AUTO_1A1O,ruang,cukup nyaman,0,2,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02873,AUTO_1A1O,layanannya,sangat sangat baik,3,6,NOUN,ADJ,1,NOUN ^nsubj ADJ,True
+terma_train_02884,AUTO_1A1O,lift,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02891,AUTO_1A1O,kamar,bersih,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02897,AUTO_1A1O,tempatnya,enak,1,0,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02933,AUTO_1A1O,hotelnya,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02936,AUTO_1A1O,kebersihan kamar,perlu ditingkatkan lagi,0,6,NOUN,VERB,1,NOUN ^nsubj:pass VERB,False
+terma_train_02944,AUTO_1A1O,kamar,kotor,0,1,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02952,AUTO_1A1O,lokasi,bagus,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02953,AUTO_1A1O,air hangat,tidak ada,2,1,NOUN,VERB,1,NOUN ^obj VERB,True
+terma_train_02962,AUTO_1A1O,tempat,enak,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02971,AUTO_1A1O,makanan,selalu habis,6,8,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02976,AUTO_1A1O,tempatnya,nyaman,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02992,AUTO_1A1O,wifi,kurang joss,0,2,NOUN,NOUN,1,NOUN vcompound NOUN,False
+terma_train_02993,AUTO_1A1O,pelayanan,baik,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True
+terma_train_02995,AUTO_1A1O,kasurnya,keras,0,1,NOUN,ADJ,1,NOUN vamod ADJ,True

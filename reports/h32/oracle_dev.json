@@ -1,0 +1,577 @@
+{
+  "split": "train",
+  "all": {
+    "n_pairs": 1593,
+    "aspect_head_pos": {
+      "NOUN": 1413,
+      "X": 44,
+      "ADJ": 39,
+      "VERB": 35,
+      "PRON": 25,
+      "DET": 14,
+      "PROPN": 8,
+      "ADV": 8,
+      "SCONJ": 5,
+      "NUM": 1,
+      "ADP": 1
+    },
+    "opinion_head_pos": {
+      "ADJ": 865,
+      "VERB": 349,
+      "NOUN": 278,
+      "ADV": 45,
+      "NUM": 28,
+      "PROPN": 17,
+      "PRON": 11
+    },
+    "distance_distribution": {
+      "1": 1171,
+      "2": 326,
+      "3": 78,
+      "4": 13,
+      "5": 4,
+      "6": 1
+    },
+    "recall_upper_bound_by_distance": {
+      "<=1": 0.7351,
+      "<=2": 0.9397,
+      "<=3": 0.9887,
+      "<=4": 0.9969
+    },
+    "top_patterns": [
+      {
+        "pattern": "NOUN vamod ADJ",
+        "count": 528,
+        "share": 0.3315,
+        "cumulative": 0.3315
+      },
+      {
+        "pattern": "NOUN vcompound NOUN",
+        "count": 118,
+        "share": 0.0741,
+        "cumulative": 0.4055
+      },
+      {
+        "pattern": "NOUN ^nsubj VERB",
+        "count": 89,
+        "share": 0.0559,
+        "cumulative": 0.4614
+      },
+      {
+        "pattern": "NOUN ^obj VERB",
+        "count": 76,
+        "share": 0.0477,
+        "cumulative": 0.5091
+      },
+      {
+        "pattern": "NOUN ^nsubj:pass VERB",
+        "count": 40,
+        "share": 0.0251,
+        "cumulative": 0.5342
+      },
+      {
+        "pattern": "NOUN vamod vconj ADJ",
+        "count": 36,
+        "share": 0.0226,
+        "cumulative": 0.5568
+      },
+      {
+        "pattern": "NOUN ^nsubj ADJ",
+        "count": 32,
+        "share": 0.0201,
+        "cumulative": 0.5769
+      },
+      {
+        "pattern": "NOUN vacl VERB",
+        "count": 29,
+        "share": 0.0182,
+        "cumulative": 0.5951
+      },
+      {
+        "pattern": "NOUN vcompound vcompound NOUN",
+        "count": 27,
+        "share": 0.0169,
+        "cumulative": 0.6121
+      },
+      {
+        "pattern": "NOUN vcompound vamod ADJ",
+        "count": 26,
+        "share": 0.0163,
+        "cumulative": 0.6284
+      },
+      {
+        "pattern": "NOUN vnummod NUM",
+        "count": 19,
+        "share": 0.0119,
+        "cumulative": 0.6403
+      },
+      {
+        "pattern": "NOUN ^compound vamod ADJ",
+        "count": 18,
+        "share": 0.0113,
+        "cumulative": 0.6516
+      },
+      {
+        "pattern": "NOUN ^compound NOUN",
+        "count": 16,
+        "share": 0.01,
+        "cumulative": 0.6616
+      },
+      {
+        "pattern": "X vamod ADJ",
+        "count": 15,
+        "share": 0.0094,
+        "cumulative": 0.6711
+      },
+      {
+        "pattern": "VERB vamod ADJ",
+        "count": 13,
+        "share": 0.0082,
+        "cumulative": 0.6792
+      },
+      {
+        "pattern": "NOUN vconj ADJ",
+        "count": 12,
+        "share": 0.0075,
+        "cumulative": 0.6868
+      },
+      {
+        "pattern": "NOUN vadvmod ADV",
+        "count": 12,
+        "share": 0.0075,
+        "cumulative": 0.6943
+      },
+      {
+        "pattern": "NOUN ^conj vamod ADJ",
+        "count": 11,
+        "share": 0.0069,
+        "cumulative": 0.7012
+      },
+      {
+        "pattern": "NOUN ^conj ^nsubj VERB",
+        "count": 10,
+        "share": 0.0063,
+        "cumulative": 0.7075
+      },
+      {
+        "pattern": "X ^advmod ADJ",
+        "count": 10,
+        "share": 0.0063,
+        "cumulative": 0.7137
+      },
+      {
+        "pattern": "NOUN vconj vamod ADJ",
+        "count": 9,
+        "share": 0.0056,
+        "cumulative": 0.7194
+      },
+      {
+        "pattern": "PRON vamod ADJ",
+        "count": 9,
+        "share": 0.0056,
+        "cumulative": 0.725
+      },
+      {
+        "pattern": "NOUN ^nsubj vamod ADJ",
+        "count": 9,
+        "share": 0.0056,
+        "cumulative": 0.7307
+      },
+      {
+        "pattern": "NOUN vconj NOUN",
+        "count": 8,
+        "share": 0.005,
+        "cumulative": 0.7357
+      },
+      {
+        "pattern": "NOUN ^conj vconj vamod ADJ",
+        "count": 8,
+        "share": 0.005,
+        "cumulative": 0.7407
+      }
+    ]
+  },
+  "REVIEWED": {
+    "n_pairs": 1125,
+    "aspect_head_pos": {
+      "NOUN": 1001,
+      "ADJ": 29,
+      "X": 27,
+      "VERB": 26,
+      "PRON": 16,
+      "DET": 9,
+      "PROPN": 6,
+      "ADV": 6,
+      "SCONJ": 4,
+      "NUM": 1
+    },
+    "opinion_head_pos": {
+      "ADJ": 619,
+      "VERB": 230,
+      "NOUN": 213,
+      "ADV": 27,
+      "NUM": 15,
+      "PROPN": 13,
+      "PRON": 8
+    },
+    "distance_distribution": {
+      "1": 781,
+      "2": 259,
+      "3": 68,
+      "4": 12,
+      "5": 4,
+      "6": 1
+    },
+    "recall_upper_bound_by_distance": {
+      "<=1": 0.6942,
+      "<=2": 0.9244,
+      "<=3": 0.9849,
+      "<=4": 0.9956
+    },
+    "top_patterns": [
+      {
+        "pattern": "NOUN vamod ADJ",
+        "count": 361,
+        "share": 0.3209,
+        "cumulative": 0.3209
+      },
+      {
+        "pattern": "NOUN vcompound NOUN",
+        "count": 88,
+        "share": 0.0782,
+        "cumulative": 0.3991
+      },
+      {
+        "pattern": "NOUN ^nsubj VERB",
+        "count": 54,
+        "share": 0.048,
+        "cumulative": 0.4471
+      },
+      {
+        "pattern": "NOUN ^obj VERB",
+        "count": 47,
+        "share": 0.0418,
+        "cumulative": 0.4889
+      },
+      {
+        "pattern": "NOUN vamod vconj ADJ",
+        "count": 36,
+        "share": 0.032,
+        "cumulative": 0.5209
+      },
+      {
+        "pattern": "NOUN vacl VERB",
+        "count": 22,
+        "share": 0.0196,
+        "cumulative": 0.5404
+      },
+      {
+        "pattern": "NOUN ^nsubj ADJ",
+        "count": 21,
+        "share": 0.0187,
+        "cumulative": 0.5591
+      },
+      {
+        "pattern": "NOUN ^nsubj:pass VERB",
+        "count": 20,
+        "share": 0.0178,
+        "cumulative": 0.5769
+      },
+      {
+        "pattern": "NOUN vcompound vcompound NOUN",
+        "count": 19,
+        "share": 0.0169,
+        "cumulative": 0.5938
+      },
+      {
+        "pattern": "NOUN vcompound vamod ADJ",
+        "count": 15,
+        "share": 0.0133,
+        "cumulative": 0.6071
+      },
+      {
+        "pattern": "NOUN ^compound vamod ADJ",
+        "count": 12,
+        "share": 0.0107,
+        "cumulative": 0.6178
+      },
+      {
+        "pattern": "NOUN vconj ADJ",
+        "count": 11,
+        "share": 0.0098,
+        "cumulative": 0.6276
+      },
+      {
+        "pattern": "NOUN ^conj vamod ADJ",
+        "count": 11,
+        "share": 0.0098,
+        "cumulative": 0.6373
+      },
+      {
+        "pattern": "NOUN ^compound NOUN",
+        "count": 10,
+        "share": 0.0089,
+        "cumulative": 0.6462
+      },
+      {
+        "pattern": "VERB vamod ADJ",
+        "count": 10,
+        "share": 0.0089,
+        "cumulative": 0.6551
+      },
+      {
+        "pattern": "NOUN ^conj ^nsubj VERB",
+        "count": 10,
+        "share": 0.0089,
+        "cumulative": 0.664
+      },
+      {
+        "pattern": "NOUN vnummod NUM",
+        "count": 10,
+        "share": 0.0089,
+        "cumulative": 0.6729
+      },
+      {
+        "pattern": "X vamod ADJ",
+        "count": 9,
+        "share": 0.008,
+        "cumulative": 0.6809
+      },
+      {
+        "pattern": "NOUN vconj vamod ADJ",
+        "count": 9,
+        "share": 0.008,
+        "cumulative": 0.6889
+      },
+      {
+        "pattern": "NOUN vconj NOUN",
+        "count": 8,
+        "share": 0.0071,
+        "cumulative": 0.696
+      },
+      {
+        "pattern": "NOUN ^conj vconj vamod ADJ",
+        "count": 8,
+        "share": 0.0071,
+        "cumulative": 0.7031
+      },
+      {
+        "pattern": "NOUN ^nsubj vamod ADJ",
+        "count": 8,
+        "share": 0.0071,
+        "cumulative": 0.7102
+      },
+      {
+        "pattern": "NOUN vadvmod ADV",
+        "count": 7,
+        "share": 0.0062,
+        "cumulative": 0.7164
+      },
+      {
+        "pattern": "NOUN ^compound ^nsubj VERB",
+        "count": 6,
+        "share": 0.0053,
+        "cumulative": 0.7218
+      },
+      {
+        "pattern": "NOUN ^conj ^obj VERB",
+        "count": 6,
+        "share": 0.0053,
+        "cumulative": 0.7271
+      }
+    ]
+  },
+  "AUTO_1A1O": {
+    "n_pairs": 468,
+    "aspect_head_pos": {
+      "NOUN": 412,
+      "X": 17,
+      "ADJ": 10,
+      "VERB": 9,
+      "PRON": 9,
+      "DET": 5,
+      "PROPN": 2,
+      "ADV": 2,
+      "SCONJ": 1,
+      "ADP": 1
+    },
+    "opinion_head_pos": {
+      "ADJ": 246,
+      "VERB": 119,
+      "NOUN": 65,
+      "ADV": 18,
+      "NUM": 13,
+      "PROPN": 4,
+      "PRON": 3
+    },
+    "distance_distribution": {
+      "1": 390,
+      "2": 67,
+      "3": 10,
+      "4": 1
+    },
+    "recall_upper_bound_by_distance": {
+      "<=1": 0.8333,
+      "<=2": 0.9765,
+      "<=3": 0.9979,
+      "<=4": 1.0
+    },
+    "top_patterns": [
+      {
+        "pattern": "NOUN vamod ADJ",
+        "count": 167,
+        "share": 0.3568,
+        "cumulative": 0.3568
+      },
+      {
+        "pattern": "NOUN ^nsubj VERB",
+        "count": 35,
+        "share": 0.0748,
+        "cumulative": 0.4316
+      },
+      {
+        "pattern": "NOUN vcompound NOUN",
+        "count": 30,
+        "share": 0.0641,
+        "cumulative": 0.4957
+      },
+      {
+        "pattern": "NOUN ^obj VERB",
+        "count": 29,
+        "share": 0.062,
+        "cumulative": 0.5577
+      },
+      {
+        "pattern": "NOUN ^nsubj:pass VERB",
+        "count": 20,
+        "share": 0.0427,
+        "cumulative": 0.6004
+      },
+      {
+        "pattern": "NOUN vcompound vamod ADJ",
+        "count": 11,
+        "share": 0.0235,
+        "cumulative": 0.6239
+      },
+      {
+        "pattern": "NOUN ^nsubj ADJ",
+        "count": 11,
+        "share": 0.0235,
+        "cumulative": 0.6474
+      },
+      {
+        "pattern": "NOUN vnummod NUM",
+        "count": 9,
+        "share": 0.0192,
+        "cumulative": 0.6667
+      },
+      {
+        "pattern": "NOUN vcompound vcompound NOUN",
+        "count": 8,
+        "share": 0.0171,
+        "cumulative": 0.6838
+      },
+      {
+        "pattern": "NOUN vacl VERB",
+        "count": 7,
+        "share": 0.015,
+        "cumulative": 0.6987
+      },
+      {
+        "pattern": "NOUN ^compound NOUN",
+        "count": 6,
+        "share": 0.0128,
+        "cumulative": 0.7115
+      },
+      {
+        "pattern": "NOUN ^compound vamod ADJ",
+        "count": 6,
+        "share": 0.0128,
+        "cumulative": 0.7244
+      },
+      {
+        "pattern": "X ^advmod ADJ",
+        "count": 6,
+        "share": 0.0128,
+        "cumulative": 0.7372
+      },
+      {
+        "pattern": "NOUN ^obl VERB",
+        "count": 6,
+        "share": 0.0128,
+        "cumulative": 0.75
+      },
+      {
+        "pattern": "X vamod ADJ",
+        "count": 6,
+        "share": 0.0128,
+        "cumulative": 0.7628
+      },
+      {
+        "pattern": "PRON vamod ADJ",
+        "count": 5,
+        "share": 0.0107,
+        "cumulative": 0.7735
+      },
+      {
+        "pattern": "NOUN vadvmod ADV",
+        "count": 5,
+        "share": 0.0107,
+        "cumulative": 0.7842
+      },
+      {
+        "pattern": "NOUN ^obj ^xcomp VERB",
+        "count": 3,
+        "share": 0.0064,
+        "cumulative": 0.7906
+      },
+      {
+        "pattern": "VERB vamod ADJ",
+        "count": 3,
+        "share": 0.0064,
+        "cumulative": 0.797
+      },
+      {
+        "pattern": "NOUN vdet PRON",
+        "count": 3,
+        "share": 0.0064,
+        "cumulative": 0.8034
+      },
+      {
+        "pattern": "NOUN ^nsubj vadvmod ADV",
+        "count": 3,
+        "share": 0.0064,
+        "cumulative": 0.8098
+      },
+      {
+        "pattern": "VERB vadvmod ADV",
+        "count": 2,
+        "share": 0.0043,
+        "cumulative": 0.8141
+      },
+      {
+        "pattern": "ADJ vadvmod ADV",
+        "count": 2,
+        "share": 0.0043,
+        "cumulative": 0.8184
+      },
+      {
+        "pattern": "NOUN vflat vamod ADJ",
+        "count": 2,
+        "share": 0.0043,
+        "cumulative": 0.8226
+      },
+      {
+        "pattern": "NOUN ^compound ^nsubj ADJ",
+        "count": 2,
+        "share": 0.0043,
+        "cumulative": 0.8269
+      }
+    ]
+  },
+  "current_rules_head_match_recall": {
+    "all": 0.5097,
+    "AUTO_1A1O": 0.5491,
+    "REVIEWED": 0.4933
+  }
+}
