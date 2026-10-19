@@ -45,7 +45,9 @@ def git_info(root: Path) -> dict:
         return subprocess.run(["git", *args], cwd=root, capture_output=True, text=True, check=True).stdout.strip()
 
     try:
-        return {"commit": run("rev-parse", "HEAD"), "dirty": bool(run("status", "--porcelain"))}
+        # results/ diabaikan: folder run yang sedang ditulis tidak boleh membuat repo tampak dirty.
+        dirty = bool(run("status", "--porcelain", "--", ".", ":(exclude)results"))
+        return {"commit": run("rev-parse", "HEAD"), "dirty": dirty}
     except (subprocess.CalledProcessError, FileNotFoundError):
         return {"commit": None, "dirty": None}
 
