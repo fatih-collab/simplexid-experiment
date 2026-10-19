@@ -94,3 +94,44 @@ PASS — 24 tests passing, package imports without legacy modules.
 
 ### H3.2 Status
 PASS (automated parts) — 31 tests passing. Parser audit annotation pending.
+
+
+## H3.3 — Evaluation Harness (2026-10-19)
+
+### Evaluation gold
+- Final (TermA validation): 1,000 sentences, 2,077 pairs, 100% reviewed (822 spanned + 178 empty).
+  Loader fails if any spanned final sentence is unreviewed. Gold version `4a7ac755fa0a90e8`.
+- Development (TermA train): 1,478 sentences / 1,593 pairs = 492 reviewed + 468 AUTO 1A1O
+  + 518 without spans. 1,522 unreviewed complex sentences excluded. Gold version `4f58f591c82b18c7`.
+- AUTO 1A1O decision (user-approved 2026-10-19): dev only, never final. Evidence: 228/228 reviewed
+  1A1O sentences were A1-O1 (rule-of-three upper error bound ≈1.3%). Sheet
+  `data/gold/gold_dev_auto_1a1o.csv` (status AUTO) is being verified by the user; rows set to
+  REVIEWED change the gold source and version hash.
+
+### Harness
+- Matching strict / head (primary) / overlap, one-to-one maximum bipartite.
+- Polarity: end-to-end, conditional, oracle-pair. Implicit: detection + category vs dev-majority baseline.
+- Paired bootstrap (10k, seed 42), exact McNemar, Holm. Final split locked behind
+  `configs/frozen.lock`; final runs logged to `results/final_runs.log`.
+
+### Baseline on dev (`results/20261019-122748_dev_h33-baseline`, commit 549de12, clean tree, placeholder lexicon)
+| | head P | head R | head F1 |
+|---|---|---|---|
+| V0 | 0.295 | 0.471 | 0.363 |
+| V3 | 0.291 | 0.510 | 0.371 |
+| V4–V9 | identical to V3 on extraction |
+
+- Consistency check: V3 head recall 0.510 equals the independent H3.2 oracle preview (51.0%).
+- Precision is the main weakness: 707 FPs on 519 sentences whose gold has no pair; per-rule head
+  precision R2 (obj) 11% on 712 predictions, R3 12%, R1 25%, R0 40%, R4 61%.
+- R3 lowers F1 (V0 0.363 → V1 0.358), R4 raises it (V2 0.376).
+- Polarity oracle-pair accuracy 0.282 for every variant: the 17-word placeholder lexicon leaves most
+  opinions at score 0, so DW scoring (V6 vs V7) and scope consistency (V8 vs V9) cannot show any
+  effect yet. Not reportable.
+- Implicit: R8 recall 3.5% vs majority baseline accuracy 75.5%; V4 ≡ V5 as predicted
+  (no context for disambiguation in sentence-level implicit candidates).
+- Duplicated variants confirmed empirically (V5 ≡ V6, V7 ≡ V8, V8 ≡ V9 on all metrics).
+
+### H3.3 Status
+PASS — 53 tests passing; reproducible baseline recorded. Inputs for H4: precision on no-span sentences,
+R2/R3 precision, lexicon, ablation redesign, R8 redesign.

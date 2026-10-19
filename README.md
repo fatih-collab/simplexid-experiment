@@ -35,8 +35,12 @@ src/simplexid/
   scoring.py            # Neg/Int (statis maupun berbobot-jarak) + scope consistency
   pipeline.py           # orkestrasi: parse -> rules -> expand -> R8 -> scoring
   secondary_tagging.py  # kandidat COORD/IMPLICIT_AMBIG/ASYM_MOD
+  lexicon.py            # pemuat leksikon sentimen (resources/lexicon/)
+  evaluation/           # gold per split, matching, metrik, signifikansi, manifest (H3.3)
 experiments/run_h2.py   # runner gold data (H2)
 experiments/run_parse.py # cache | stats | oracle | audit-sheet (H3.2)
+experiments/run_eval.py # dev | final (butuh freeze) | freeze | gold-summary (H3.3)
+results/<run>/         # summary.md, metrics.json, significance.csv, manifest.json
 data/annotation/       # lembar anotasi manual (audit parser, IAA)
 reports/h32/           # laporan otomatis H3.2 (oracle, statistik parse)
 resources/models/udpipe # model parser + SOURCE.md (provenance, checksum, lisensi)

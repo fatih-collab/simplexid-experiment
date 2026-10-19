@@ -1,0 +1,146 @@
+{
+  "created_at": "2026-10-19T05:28:08+00:00",
+  "git": {
+    "commit": "549de12d966756a273a6d304f97c9a6ee5d030c7",
+    "dirty": false
+  },
+  "code_sha256": "7a204fc3c6e82376273085be6d4fee4725f4222c7d65efdeceaae6e36f077034",
+  "resources_sha256": "5979af91f9e564c22fa9009885d905b1c72977fa30860a994ea5043cd1640c99",
+  "gold_sha256": {
+    "data/processed/terma_processed.csv": "8ed9fd9d15ccb4ca569c4189841b26720327320eea9cd092223ac5f6c5895b1d",
+    "data/gold/gold_review_log.csv": "1f47cc1550ee14a9ac3191cbd24c4a670de7d127be74819c3b26639a696dcd0a",
+    "data/gold/gold_pairs.csv": "64a3a52f6dbbf6229db27bc1b3972a335c6ea824b319aa5370e4fae970430e88",
+    "data/gold/gold_polarity.csv": "cdbf637d67b552ff6e278b9b33d1f186ef4db6c45f39b500c133cce56276b590",
+    "data/gold/gold_implicit.csv": "ab42ea80edf970874b943ea4a7a433ed8a219d2632653bcc1803c29cba11324c",
+    "data/gold/gold_dev_auto_1a1o.csv": "1646f5d298da321e05fa2c405594f38539ebac94e6dccb235925212d24bb23c5"
+  },
+  "parse_cache": "659a65fd370b1b5422b22d1161ef62f922d5f9f33faa3aaef26e7f78d558bf05",
+  "split": "dev",
+  "label": "h33-baseline",
+  "variants": {
+    "V0": {
+      "name": "V0",
+      "use_r3": false,
+      "use_r4": false,
+      "use_r8": false,
+      "r8_contextual_disambiguation": false,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "Baseline murni: R0,R1,R2,R5,R6,R7 saja (setara SimplEx lama diadaptasi)"
+    },
+    "V1": {
+      "name": "V1",
+      "use_r3": true,
+      "use_r4": false,
+      "use_r8": false,
+      "r8_contextual_disambiguation": false,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "V0 + R3 saja (ekspansi sisi aspek)"
+    },
+    "V2": {
+      "name": "V2",
+      "use_r3": false,
+      "use_r4": true,
+      "use_r8": false,
+      "r8_contextual_disambiguation": false,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "V0 + R4 saja (ekspansi sisi opini)"
+    },
+    "V3": {
+      "name": "V3",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": false,
+      "r8_contextual_disambiguation": false,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "V0 + R3 + R4 (dual conjunctive expansion)"
+    },
+    "V4": {
+      "name": "V4",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": false,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "V3 + R8 TANPA disambiguasi kontekstual (setara Liu 2005/Fei 2012)"
+    },
+    "V5": {
+      "name": "V5",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": true,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "V3 + R8 DENGAN disambiguasi kontekstual (revisi)"
+    },
+    "V6": {
+      "name": "V6",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": true,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "V5 + formula skor TANPA bobot jarak (setara SO-CAL/Polanyi-Zaenen)"
+    },
+    "V7": {
+      "name": "V7",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": true,
+      "distance_weighted_formula": true,
+      "scope_consistency": false,
+      "description": "V5 + formula skor DENGAN bobot jarak struktural (revisi)"
+    },
+    "V8": {
+      "name": "V8",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": true,
+      "distance_weighted_formula": true,
+      "scope_consistency": false,
+      "description": "V7 TANPA scope consistency (pasangan R3/R4 mewarisi Neg/Int pasangan asal)"
+    },
+    "V9": {
+      "name": "V9",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": true,
+      "distance_weighted_formula": true,
+      "scope_consistency": true,
+      "description": "SimplEx-ID LENGKAP (versi final yang diklaim di paten)"
+    }
+  },
+  "lexicon": "seed_lexicon_v0.tsv",
+  "lexicon_is_placeholder": true,
+  "gold": {
+    "split": "dev",
+    "version": "4f58f591c82b18c7",
+    "n_sentences": 1478,
+    "n_pairs": 1593,
+    "by_source": {
+      "NO_SPANS": 518,
+      "REVIEWED": 492,
+      "AUTO_1A1O": 468
+    },
+    "by_stratum": {
+      "SIMPLE": 520,
+      "EMPTY": 519,
+      "COMPLEX": 439
+    },
+    "excluded": {
+      "ambiguous": 0,
+      "unreviewed_complex": 1522
+    }
+  },
+  "implicit_majority_baseline": "general",
+  "bootstrap_resamples": 10000
+}
