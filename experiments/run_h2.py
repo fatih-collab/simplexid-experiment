@@ -14,6 +14,7 @@ if str(SRC) not in sys.path:
 
 from simplexid.gold import (  # noqa: E402
     GoldValidationError,
+    build_auto_1a1o_sheet,
     build_gold_pairs,
     build_implicit_template,
     build_polarity_template,
@@ -22,6 +23,7 @@ from simplexid.gold import (  # noqa: E402
     validate_gold_pairs,
     validate_implicit_gold,
     validate_polarity_gold,
+    validate_auto_1a1o,
     validate_review_log,
 )
 
@@ -35,6 +37,7 @@ REVIEW_PATH = DATA_GOLD / "gold_review_log.csv"
 GOLD_PAIRS_PATH = DATA_GOLD / "gold_pairs.csv"
 GOLD_POLARITY_PATH = DATA_GOLD / "gold_polarity.csv"
 GOLD_IMPLICIT_PATH = DATA_GOLD / "gold_implicit.csv"
+AUTO_1A1O_PATH = DATA_GOLD / "gold_dev_auto_1a1o.csv"
 
 
 def _need(path: Path) -> None:
@@ -152,6 +155,18 @@ def cmd_prepare(args: argparse.Namespace) -> None:
     cmd_templates(args)
 
 
+def cmd_auto_1a1o(args: argparse.Namespace) -> None:
+    terma, review = load_core()
+    if AUTO_1A1O_PATH.exists() and not args.overwrite:
+        auto = pd.read_csv(AUTO_1A1O_PATH)
+        print(f"Validate existing (tidak ditimpa): {AUTO_1A1O_PATH}")
+    else:
+        auto = build_auto_1a1o_sheet(terma, review)
+        auto.to_csv(AUTO_1A1O_PATH, index=False, encoding="utf-8-sig")
+        print(f"Created: {AUTO_1A1O_PATH}")
+    print(json.dumps(validate_auto_1a1o(auto, terma, review), indent=2))
+
+
 def cmd_status(_: argparse.Namespace) -> None:
     status = h2_status(PROJECT_ROOT)
     print(f"Project root: {PROJECT_ROOT}\n")
@@ -191,6 +206,16 @@ def build_parser() -> argparse.ArgumentParser:
     p_prepare.add_argument("--dev-polarity-sample", type=int, default=400)
     p_prepare.add_argument("--dev-implicit-sample", type=int, default=250)
 
+    p_auto = sub.add_parser(
+        "auto-1a1o",
+        help="Create/validate the development AUTO 1A1O gold sheet",
+    )
+    p_auto.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Recreate gold_dev_auto_1a1o.csv (ERASES manual verification)",
+    )
+
     sub.add_parser("validate", help="Validate all H2 final files that exist")
     sub.add_parser("status", help="Show file-level H2 progress")
     return parser
@@ -206,6 +231,7 @@ def main() -> int:
         "prepare": cmd_prepare,
         "validate": cmd_validate,
         "status": cmd_status,
+        "auto-1a1o": cmd_auto_1a1o,
     }
     try:
         commands[args.command](args)

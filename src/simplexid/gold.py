@@ -738,3 +738,84 @@ def h2_status(project_root: str | Path) -> dict:
         "split_metadata": root / "data" / "splits" / "split_metadata.json",
     }
     return {name: path.exists() for name, path in files.items()}
+
+
+# ============================================================
+# AUTO 1A1O (development only)
+# ============================================================
+
+AUTO_STATUS = "AUTO"
+VALID_AUTO_STATUSES = {AUTO_STATUS, "REVIEWED"}
+
+
+def build_auto_1a1o_sheet(
+    terma_df: pd.DataFrame,
+    review_df: pd.DataFrame,
+    *,
+    split: str = "train",
+) -> pd.DataFrame:
+    """
+    Development sentences with exactly one aspect and one opinion that are NOT
+    in gold_review_log.csv. Their only possible pairing (A1-O1) is pre-filled
+    with annotation_status=AUTO; a human verifies each row and sets REVIEWED,
+    or changes accepted_pairs to NONE/AMBIGUOUS.
+
+    Only the development split is allowed: final-test gold must be 100% reviewed.
+    """
+    if split != "train":
+        raise GoldValidationError("AUTO 1A1O hanya untuk development (TermA train)")
+
+    reviewed_ids = set(review_df["sentence_id"])
+    pool = terma_df[
+        (terma_df["source_split"] == split)
+        & (terma_df["n_aspects"] == 1)
+        & (terma_df["n_opinions"] == 1)
+        & ~terma_df["sentence_id"].isin(reviewed_ids)
+    ]
+    rows = []
+    for row in pool.itertuples(index=False):
+        aspect = parse_json_list(row.aspects)[0]
+        opinion = parse_json_list(row.opinions)[0]
+        rows.append({
+            "sentence_id": row.sentence_id,
+            "source_split": row.source_split,
+            "sentence": row.sentence,
+            "aspects": f"A1={aspect['text']}",
+            "opinions": f"O1={opinion['text']}",
+            "accepted_pairs": "A1-O1",
+            "review_scope": "DEV_AUTO_1A1O",
+            "annotation_status": AUTO_STATUS,
+            "notes": "",
+        })
+    return pd.DataFrame(rows, columns=[
+        "sentence_id", "source_split", "sentence", "aspects", "opinions",
+        "accepted_pairs", "review_scope", "annotation_status", "notes",
+    ])
+
+
+def validate_auto_1a1o(auto_df: pd.DataFrame, terma_df: pd.DataFrame, review_df: pd.DataFrame) -> dict:
+    """Validate the AUTO 1A1O sheet; it must not overlap the review log or touch the final split."""
+    statuses = set(auto_df["annotation_status"].fillna("").astype(str).str.strip())
+    bad = statuses - VALID_AUTO_STATUSES
+    if bad:
+        raise GoldValidationError(f"annotation_status AUTO 1A1O invalid: {sorted(bad)}")
+    if set(auto_df["source_split"]) - {"train"}:
+        raise GoldValidationError("AUTO 1A1O memuat kalimat di luar development split")
+    overlap = set(auto_df["sentence_id"]) & set(review_df["sentence_id"])
+    if overlap:
+        raise GoldValidationError(f"AUTO 1A1O overlap dengan gold_review_log: {sorted(overlap)[:10]}")
+
+    # Reuse the review-log checks (format A1-O1 / NONE / AMBIGUOUS, index range, split match).
+    summary = validate_review_log(auto_df, terma_df, require_reviewed=False)
+    for value in auto_df["accepted_pairs"].astype(str).str.strip().str.upper():
+        if value not in {"A1-O1", "NONE", "AMBIGUOUS"}:
+            raise GoldValidationError(f"accepted_pairs 1A1O hanya boleh A1-O1/NONE/AMBIGUOUS, ditemukan {value!r}")
+
+    counts = auto_df["annotation_status"].str.strip().value_counts().to_dict()
+    return {
+        "rows": int(len(auto_df)),
+        "auto": int(counts.get(AUTO_STATUS, 0)),
+        "reviewed": int(counts.get("REVIEWED", 0)),
+        "pairs": summary["expected_pair_count"],
+        "status": "PASS",
+    }

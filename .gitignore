@@ -13,3 +13,11 @@ data/cache/
 # OS
 Thumbs.db
 .DS_Store
+
+# evaluation runs: keep summaries in git, regenerate per-item files from the recorded commit
+results/*/predictions_*.jsonl
+results/*/polarity_items_*.csv
+results/*/implicit_items_*.csv
+results/*/sentence_counts_*.csv
+# final-test runs are evidence: keep every file
+!results/*_final_*/**
