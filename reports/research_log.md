@@ -135,3 +135,61 @@ PASS (automated parts) — 31 tests passing. Parser audit annotation pending.
 ### H3.3 Status
 PASS — 53 tests passing; reproducible baseline recorded. Inputs for H4: precision on no-span sentences,
 R2/R3 precision, lexicon, ablation redesign, R8 redesign.
+
+
+## H4.0–H4.3 — Ablation Redesign, Lexicon, Rules (2026-11-05)
+
+All numbers are development-only and provisional: `gold_dev_auto_1a1o.csv` is still 468/468 AUTO in
+the project (the user reports having reviewed it, but the reviewed file is not in the repository), and
+dev gold_polarity/gold_implicit have not been verified. Final test untouched.
+
+### H4.0 Ablation
+- Variants: cumulative A0–A6, leave-one-out L_*, S_R4; unique flags enforced by test (this caught
+  L_SC ≡ A5 during the redesign). Old mapping: V0=A0, V1=A1, V2=S_R4, V3=A2, V4=A3, V5=A4, V7=A5, V9=A6.
+- SC now has a real inheritance baseline. SC can only affect R4 pairs: R3 pairs share the opinion token.
+- DW defect found: modifiers were direct children only, so distance was always 1 and DW could never
+  change a sign. DW now follows modifier (advmod) chains. Wider traversal changed 3 dev labels, all wrongly.
+- Parser-independent gold subsets (auto, to verify in H5): COORD_ASPECT 46, COORD_OPINION 108, ASYM_MOD 33 sentences.
+
+### H4.1 Lexicon (decision D1 applied as recommended; D2 still open)
+- `merged_v1` = SentiStrengthID, then ID-OpinionWords (±0.6). Files not in git: no explicit license.
+- Oracle-pair polarity accuracy on 400 dev items: placeholder 0.29, ss_v1 0.60, ow_v1 0.60, merged_v1 0.68,
+  plus negated-unknown fallback 0.75 (NEGATION stratum 0.53 → 0.81).
+- Remaining errors are mostly domain: 71 uncovered words ("ada", "strategis"), and wrong entries for hotels
+  ("lengkap", "terjangkau", "lancar" negative; "dingin" negative though "ac dingin" is positive). Argues for D2.
+
+### H4.2–H4.3 Rules (`reports/h4/rule_changes.md`)
+- A2 head F1 0.371 → 0.588 (P 0.291 → 0.617, R 0.510 → 0.561); strict F1 0.194 → 0.418; FP on no-pair
+  sentences 739 → 148.
+- Leave-one-out gains: aspect_vocabulary +0.109, lexicon_opinion +0.054, subjective_verbs +0.039,
+  distribution_guard +0.008, extended_aspect_pos +0.007, passive_subject +0.005 (all p<0.05);
+  acl_relative +0.003 and extended_r4 +0.001 not significant; phrase_spans only affects strict.
+- Caveat: the aspect vocabulary comes from TermA train annotations (scored cross-fit on dev), so the full
+  system is not annotation-free. Without it, A2 head F1 = 0.478 (`--no-aspect-vocab`). Claims must say which.
+
+### Ablation on dev (`results/20261105-182511_dev_h43-ablation`, commit 7c835f2, clean tree)
+| Mechanism | Comparison | Result |
+|---|---|---|
+| R3 | A0→A1 overall | +0.001 F1, n.s. |
+| R3 | on COORD_ASPECT | +0.058 F1, CI [0.020, 0.101], p_Holm 0.013 |
+| R4 | A1→A2 overall | +0.017 F1, CI [0.011, 0.024], p_Holm <0.001 |
+| R4 | on COORD_OPINION | +0.093 F1, CI [0.068, 0.120], p_Holm <0.001 |
+| R8 static | A2→A3 implicit category | 0.000 → 0.048, far below majority baseline 0.755 |
+| R8 contextual | A3→A4 | 0 change |
+| DW | A4→A5 polarity | 0 change |
+| SC | A5→A6 polarity | no significant change |
+
+### Reach of the unproven mechanisms (`experiments/diagnose_mechanism_reach.py`, all 3,000 dev sentences, 5,357 pairs, no gold)
+- SC changes 44 labels (0.8%); only a handful fall inside the 400 labelled polarity items, so the
+  current gold cannot test SC. Targeted annotation of those pairs is required to get evidence either way.
+- DW changes 4 labels and 407 magnitudes only. Label-based metrics cannot show a magnitude effect.
+- Contextual R8 differs from static on 7 of 209 pairs. R8 needs a redesign (H4.4).
+
+### Status
+H4.0–H4.3 complete on dev; 85 tests passing. H4.4–H4.6 not started. Commits held locally pending the
+public-repository decision below.
+
+### Open risk: repository is public
+`github.com/fatih-collab/simplexid-experiment` is public, and code implementing all claimed mechanisms has
+been pushed since 2026-09-23 (the code in `src/`, then `src/simplexid/`). This may count as prior public
+disclosure for the patent. Needs an IP consultant's assessment; no pushes made since this was noticed.

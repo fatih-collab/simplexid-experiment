@@ -1,0 +1,187 @@
+{
+  "created_at": "2026-11-05T11:25:17+00:00",
+  "git": {
+    "commit": "7c835f2fb46a32ab4f11d2ff47cc413665efff48",
+    "dirty": false
+  },
+  "code_sha256": "55e3b19b4b7de8890f4bc179e8b92685272bb61c4242793db3f1b7d0f425ad65",
+  "resources_sha256": "b4246de3da6860f1b926a15b1096d4051f897a86a4c482cddbe6473abf57892d",
+  "gold_sha256": {
+    "data/processed/terma_processed.csv": "8ed9fd9d15ccb4ca569c4189841b26720327320eea9cd092223ac5f6c5895b1d",
+    "data/gold/gold_review_log.csv": "1f47cc1550ee14a9ac3191cbd24c4a670de7d127be74819c3b26639a696dcd0a",
+    "data/gold/gold_pairs.csv": "64a3a52f6dbbf6229db27bc1b3972a335c6ea824b319aa5370e4fae970430e88",
+    "data/gold/gold_polarity.csv": "cdbf637d67b552ff6e278b9b33d1f186ef4db6c45f39b500c133cce56276b590",
+    "data/gold/gold_implicit.csv": "ab42ea80edf970874b943ea4a7a433ed8a219d2632653bcc1803c29cba11324c",
+    "data/gold/gold_dev_auto_1a1o.csv": "1646f5d298da321e05fa2c405594f38539ebac94e6dccb235925212d24bb23c5"
+  },
+  "parse_cache": "659a65fd370b1b5422b22d1161ef62f922d5f9f33faa3aaef26e7f78d558bf05",
+  "split": "dev",
+  "label": "h43-ablation",
+  "variants": {
+    "A0": {
+      "name": "A0",
+      "use_r3": false,
+      "use_r4": false,
+      "use_r8": false,
+      "r8_contextual_disambiguation": false,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "Base: R0,R1,R2,R5,R6,R7"
+    },
+    "A1": {
+      "name": "A1",
+      "use_r3": true,
+      "use_r4": false,
+      "use_r8": false,
+      "r8_contextual_disambiguation": false,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "A0 + R3"
+    },
+    "A2": {
+      "name": "A2",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": false,
+      "r8_contextual_disambiguation": false,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "A1 + R4"
+    },
+    "A3": {
+      "name": "A3",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": false,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "A2 + R8 statis"
+    },
+    "A4": {
+      "name": "A4",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": true,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "A2 + R8 kontekstual"
+    },
+    "A5": {
+      "name": "A5",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": true,
+      "distance_weighted_formula": true,
+      "scope_consistency": false,
+      "description": "A4 + DW scoring"
+    },
+    "A6": {
+      "name": "A6",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": true,
+      "distance_weighted_formula": true,
+      "scope_consistency": true,
+      "description": "A5 + scope consistency (LENGKAP)"
+    },
+    "S_R4": {
+      "name": "S_R4",
+      "use_r3": false,
+      "use_r4": true,
+      "use_r8": false,
+      "r8_contextual_disambiguation": false,
+      "distance_weighted_formula": false,
+      "scope_consistency": false,
+      "description": "A0 + R4 saja"
+    },
+    "L_R3": {
+      "name": "L_R3",
+      "use_r3": false,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": true,
+      "distance_weighted_formula": true,
+      "scope_consistency": true,
+      "description": "A6 tanpa R3"
+    },
+    "L_R4": {
+      "name": "L_R4",
+      "use_r3": true,
+      "use_r4": false,
+      "use_r8": true,
+      "r8_contextual_disambiguation": true,
+      "distance_weighted_formula": true,
+      "scope_consistency": true,
+      "description": "A6 tanpa R4"
+    },
+    "L_R8": {
+      "name": "L_R8",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": false,
+      "r8_contextual_disambiguation": false,
+      "distance_weighted_formula": true,
+      "scope_consistency": true,
+      "description": "A6 tanpa R8"
+    },
+    "L_CTX": {
+      "name": "L_CTX",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": false,
+      "distance_weighted_formula": true,
+      "scope_consistency": true,
+      "description": "A6 dengan R8 statis"
+    },
+    "L_DW": {
+      "name": "L_DW",
+      "use_r3": true,
+      "use_r4": true,
+      "use_r8": true,
+      "r8_contextual_disambiguation": true,
+      "distance_weighted_formula": false,
+      "scope_consistency": true,
+      "description": "A6 dengan skor statis"
+    }
+  },
+  "lexicon": "merged_v1",
+  "rules": {
+    "passive_subject": true,
+    "acl_relative": true,
+    "extended_aspect_pos": true,
+    "lexicon_opinion": true,
+    "extended_r4": true,
+    "phrase_spans": true,
+    "distribution_guard": true,
+    "subjective_verbs": true,
+    "aspect_vocabulary": true
+  },
+  "lexicon_is_placeholder": false,
+  "gold": {
+    "split": "dev",
+    "version": "4f58f591c82b18c7",
+    "n_sentences": 1478,
+    "n_pairs": 1593,
+    "by_source": {
+      "NO_SPANS": 518,
+      "REVIEWED": 492,
+      "AUTO_1A1O": 468
+    },
+    "by_stratum": {
+      "SIMPLE": 520,
+      "EMPTY": 519,
+      "COMPLEX": 439
+    },
+    "excluded": {
+      "ambiguous": 0,
+      "unreviewed_complex": 1522
+    }
+  },
+  "implicit_majority_baseline": "general",
+  "bootstrap_resamples": 10000
+}

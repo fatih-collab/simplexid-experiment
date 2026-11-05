@@ -1,0 +1,8 @@
+﻿comparison,description,test,target,metric,delta,ci95,p_value,n_sentences,n_resamples,seed,a_only_correct,b_only_correct,n_items,p_holm
+A0_vs_A6,Perbandingan utama,paired_bootstrap,pair_f1_head,f1,0.0098,"[0.003, 0.0168]",0.0038,1478.0,10000.0,42.0,,,,0.0114
+A0_vs_A6,Perbandingan utama,mcnemar_exact,polarity_end_to_end,accuracy,0.0475,,0.0,,,,0.0,19.0,400.0,0.0
+A0_vs_A6,Perbandingan utama,mcnemar_exact,polarity_oracle_pair,accuracy,0.0,,1.0,,,,0.0,0.0,400.0,1.0
+A0_vs_A1,Kontribusi R3,paired_bootstrap,pair_f1_head,f1,-0.0034,"[-0.0073, 0.0005]",0.0862,1478.0,10000.0,42.0,,,,0.1724
+A0_vs_A1,Kontribusi R3,paired_bootstrap,pair_f1_head_coord_aspect,f1,0.0548,"[0.0192, 0.0968]",0.0016,46.0,10000.0,42.0,,,,0.0064
+A1_vs_A2,Kontribusi R4 di atas R3,paired_bootstrap,pair_f1_head,f1,0.0132,"[0.0078, 0.0189]",0.0,1478.0,10000.0,42.0,,,,0.0
+A1_vs_A2,Kontribusi R4 di atas R3,paired_bootstrap,pair_f1_head_coord_opinion,f1,0.0918,"[0.0679, 0.1185]",0.0,108.0,10000.0,42.0,,,,0.0
