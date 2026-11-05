@@ -50,6 +50,7 @@ from simplexid.evaluation.run_record import (  # noqa: E402
 )
 from simplexid.evaluation.significance import holm, mcnemar_exact, paired_bootstrap_f1  # noqa: E402
 from simplexid.gold import GoldValidationError  # noqa: E402
+from simplexid.dam_builder import build_dam, load_dam, usable_reviews, write_dam  # noqa: E402
 from simplexid.lexicon import DEFAULT_LEXICON, PLACEHOLDER_LEXICON, load_lexicon  # noqa: E402
 from simplexid.oracle import span_head  # noqa: E402
 from simplexid.parse_cache import ParseCacheError, load_parse_cache  # noqa: E402
@@ -80,6 +81,7 @@ def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resampl
     implicit_df = pd.read_csv(IMPLICIT_PATH)
     baseline_category = majority_implicit_category(implicit_df)
 
+    dam = load_dam()
     rules = DEFAULT_RULES if use_aspect_vocab else replace(DEFAULT_RULES, aspect_vocabulary=False)
     if split == "dev":
         # Kosakata berasal dari train, jadi dev dinilai cross-fit agar tidak bocor.
@@ -104,7 +106,7 @@ def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resampl
         preds = {
             sid: from_extraction_results(run_pipeline(
                 gold.tokens[sid], variant, DOMAIN, lexicon, parsed_sentence=parses[sid],
-                rules=rules, aspect_vocabulary=vocab_for(sid)))
+                rules=rules, aspect_vocabulary=vocab_for(sid), dam=dam))
             for sid in gold.sentence_ids
         }
         with (run_dir / f"predictions_{name}.jsonl").open("w", encoding="utf-8") as f:
@@ -251,14 +253,14 @@ def write_summary(run_dir: Path, split: str, metrics: dict, significance: pd.Dat
         lines.append(f"| {name} | " + " | ".join(
             f"{by[t]['f1']:.3f} (n={by[t]['n_sentences']})" for t in (COORD_ASPECT, COORD_OPINION, ASYM_MOD)) + " |")
     lines += ["", "## Polarity (gold_polarity subset) and implicit aspects", "",
-              "| Variant | oracle-pair acc | end-to-end acc | conditional acc (coverage) | implicit detect F1 | implicit cat acc | majority baseline acc |",
-              "|---|---|---|---|---|---|---|"]
+              "| Variant | oracle-pair acc | end-to-end acc | conditional acc (coverage) | implicit detect F1 | implicit cat acc | implicit macro-F1 | majority acc / macro-F1 |",
+              "|---|---|---|---|---|---|---|---|"]
     for name, m in metrics.items():
         p, i = m["polarity"], m["implicit"]
         lines.append(f"| {name} | {p['oracle_pair']['accuracy']:.3f} | {p['end_to_end']['accuracy']:.3f} | "
                      f"{p['conditional']['accuracy']:.3f} ({p['conditional']['coverage']:.0%}) | "
-                     f"{i['detection']['f1']:.3f} | {i['category']['accuracy']:.3f} | "
-                     f"{i['majority_baseline']['accuracy']:.3f} |")
+                     f"{i['detection']['f1']:.3f} | {i['category']['accuracy']:.3f} | {i['category']['macro_f1_present']:.3f} | "
+                     f"{i['majority_baseline']['accuracy']:.3f} / {i['majority_baseline']['macro_f1_present']:.3f} |")
     if not significance.empty:
         lines += ["", "## Key comparisons (B − A)", "",
                   "| Comparison | Target | Δ | 95% CI | p | p (Holm) |", "|---|---|---|---|---|---|"]
@@ -270,6 +272,16 @@ def write_summary(run_dir: Path, split: str, metrics: dict, significance: pd.Dat
 
 def cmd_dev(args):
     evaluate("dev", args.variants, args.lexicon, args.label, args.resamples, not args.no_aspect_vocab)
+
+
+def cmd_build_dam(args):
+    terma = pd.read_csv(PROJECT_ROOT / "data" / "processed" / "terma_processed.csv")
+    hoasa = pd.read_csv(PROJECT_ROOT / "data" / "processed" / "hoasa_processed.csv")
+    reviews = usable_reviews(hoasa, terma)
+    dam = build_dam(reviews, set(load_lexicon()), load_vocabulary(), min_count=args.min_count,
+                    min_lift=args.min_lift, default_category=args.default_category)
+    write_dam(dam)
+    print(f"Ulasan HoASA dipakai: {len(reviews)} | entri DAM: {len(dam.opinion_categories)}")
 
 
 def cmd_build_aspect_vocab(_):
@@ -305,6 +317,10 @@ def build_parser() -> argparse.ArgumentParser:
         p.add_argument("--no-aspect-vocab", action="store_true",
                        help="Matikan kosakata aspek (sistem tanpa data beranotasi)")
     sub.add_parser("build-aspect-vocab", help="Build resources/aspects/aspect_vocab_v1.tsv from TermA train")
+    p = sub.add_parser("build-dam", help="Build resources/dam/dam_hotel_v1.json from HoASA")
+    p.add_argument("--min-count", type=int, default=5)
+    p.add_argument("--min-lift", type=float, default=1.2)
+    p.add_argument("--default-category", default="general")
     p = sub.add_parser("freeze", help="Freeze code/resources/gold hashes before the final run (H6)")
     p.add_argument("--note", required=True, help="Why the configuration is being frozen")
     p = sub.add_parser("gold-summary", help="Show the evaluation gold universe for a split")
@@ -316,7 +332,7 @@ def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     args = build_parser().parse_args()
     commands = {"dev": cmd_dev, "final": cmd_final, "freeze": cmd_freeze, "gold-summary": cmd_gold_summary,
-                "build-aspect-vocab": cmd_build_aspect_vocab}
+                "build-aspect-vocab": cmd_build_aspect_vocab, "build-dam": cmd_build_dam}
     try:
         commands[args.command](args)
     except (FrozenConfigError, ParseCacheError, GoldValidationError, FileNotFoundError, ValueError) as exc:

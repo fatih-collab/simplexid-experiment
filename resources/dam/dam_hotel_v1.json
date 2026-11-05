@@ -1,0 +1,1244 @@
+{
+ "aspect_association": {
+  "ac": {
+   "ac": 4.7638
+  },
+  "acnya": {
+   "ac": 4.8289
+  },
+  "air": {
+   "air_panas": 3.9452
+  },
+  "airnya": {
+   "air_panas": 1.5238
+  },
+  "airy": {
+   "linen": 1.9849
+  },
+  "akses": {
+   "service": 1.6062,
+   "wifi": 3.4487
+  },
+  "alat": {
+   "linen": 2.9651
+  },
+  "aliran": {
+   "kebersihan": 2.4343
+  },
+  "aroma": {
+   "bau": 6.2891
+  },
+  "bangunan": {
+   "ac": 1.9316,
+   "kebersihan": 1.704
+  },
+  "bantal": {
+   "linen": 3.0824
+  },
+  "bantalnya": {
+   "linen": 3.2347
+  },
+  "bau": {
+   "bau": 5.0241
+  },
+  "bed": {
+   "bau": 1.5723,
+   "linen": 2.5158,
+   "service": 1.6686,
+   "wifi": 1.9319
+  },
+  "breakfast": {
+   "general": 1.6875,
+   "sunrise_meal": 11.7043,
+   "wifi": 2.8904
+  },
+  "breakfastnya": {
+   "ac": 2.6827,
+   "sunrise_meal": 12.4136
+  },
+  "cat": {
+   "linen": 1.797
+  },
+  "cek": {
+   "general": 1.6226,
+   "service": 1.9027
+  },
+  "cemilan": {
+   "linen": 3.2347
+  },
+  "chanel": {
+   "tv": 10.3991,
+   "wifi": 1.9966
+  },
+  "channel": {
+   "tv": 10.3991
+  },
+  "check": {
+   "service": 2.3771
+  },
+  "closet": {
+   "kebersihan": 2.1638
+  },
+  "colokan": {
+   "linen": 3.2347
+  },
+  "cs": {
+   "service": 3.2391
+  },
+  "deposit": {
+   "service": 2.2716
+  },
+  "fasilitas": {
+   "sunrise_meal": 1.7157,
+   "tv": 1.86
+  },
+  "fasilitasnya": {
+   "service": 1.7668
+  },
+  "free": {
+   "linen": 2.3834,
+   "service": 1.6738,
+   "wifi": 1.9966
+  },
+  "gantungan": {
+   "linen": 2.9858
+  },
+  "handuk": {
+   "linen": 3.0741
+  },
+  "handuknya": {
+   "linen": 3.2347
+  },
+  "hangat": {
+   "air_panas": 5.9566
+  },
+  "harga": {
+   "bau": 1.6486,
+   "general": 1.8022,
+   "sunrise_meal": 2.0488,
+   "tv": 1.6154
+  },
+  "harganya": {
+   "ac": 1.6096,
+   "linen": 1.5095
+  },
+  "hot": {
+   "air_panas": 5.8919,
+   "wifi": 1.8968
+  },
+  "hotel": {
+   "service": 1.6164,
+   "sunrise_meal": 1.9149
+  },
+  "internet": {
+   "wifi": 5.9012
+  },
+  "itu": {
+   "general": 1.7338,
+   "service": 1.5974
+  },
+  "jaga": {
+   "service": 2.7483
+  },
+  "jaringan": {
+   "wifi": 5.4194
+  },
+  "jendela": {
+   "bau": 2.2316,
+   "linen": 1.8782,
+   "wifi": 1.6317
+  },
+  "kaca": {
+   "linen": 2.1564
+  },
+  "kamarnya": {
+   "bau": 1.7781
+  },
+  "karyawan": {
+   "service": 3.2391
+  },
+  "kasur": {
+   "linen": 2.3026,
+   "tv": 1.5863
+  },
+  "kasurnya": {
+   "air_panas": 1.9047,
+   "bau": 1.9654,
+   "linen": 2.6282
+  },
+  "kebersihan": {
+   "kebersihan": 2.3261
+  },
+  "kebersihannya": {
+   "bau": 1.5723,
+   "kebersihan": 2.4343
+  },
+  "kelengkapan": {
+   "linen": 2.8303
+  },
+  "keseluruhan": {
+   "general": 6.6034
+  },
+  "keset": {
+   "kebersihan": 1.5491,
+   "linen": 2.5485
+  },
+  "kipas": {
+   "ac": 4.8289
+  },
+  "kloset": {
+   "kebersihan": 1.7388
+  },
+  "kolam": {
+   "linen": 1.5711
+  },
+  "koneksi": {
+   "wifi": 6.3227
+  },
+  "kualitas": {
+   "wifi": 2.6344
+  },
+  "kulkas": {
+   "linen": 2.0584
+  },
+  "lain": {
+   "general": 2.2717,
+   "linen": 1.8039
+  },
+  "lainnya": {
+   "general": 6.1365
+  },
+  "lampu": {
+   "air_panas": 1.5963,
+   "general": 1.6072
+  },
+  "lantai": {
+   "kebersihan": 1.8979
+  },
+  "lantainya": {
+   "kebersihan": 1.8933,
+   "linen": 1.797
+  },
+  "layanan": {
+   "service": 2.524
+  },
+  "lemari": {
+   "bau": 2.0964,
+   "general": 1.6875,
+   "kebersihan": 1.704,
+   "linen": 1.5095,
+   "tv": 3.1197
+  },
+  "lemarinya": {
+   "kebersihan": 2.0286
+  },
+  "lift": {
+   "air_panas": 1.9662,
+   "service": 1.5958,
+   "sunrise_meal": 2.0022,
+   "tv": 1.6773
+  },
+  "lingkungan": {
+   "kebersihan": 1.8257
+  },
+  "listrik": {
+   "ac": 1.9316
+  },
+  "lokasi": {
+   "sunrise_meal": 1.5517,
+   "tv": 1.7332
+  },
+  "makan": {
+   "ac": 1.509,
+   "general": 1.8458,
+   "sunrise_meal": 5.043,
+   "tv": 1.6249,
+   "wifi": 1.9758
+  },
+  "makanan": {
+   "service": 1.5459,
+   "sunrise_meal": 6.2068
+  },
+  "makanannya": {
+   "sunrise_meal": 10.8619
+  },
+  "mandi": {
+   "bau": 1.877
+  },
+  "mandinya": {
+   "bau": 2.2517,
+   "kebersihan": 1.5928
+  },
+  "meja": {
+   "kebersihan": 1.5751
+  },
+  "menu": {
+   "sunrise_meal": 10.7944,
+   "wifi": 2.749
+  },
+  "minum": {
+   "linen": 3.1517
+  },
+  "minuman": {
+   "linen": 3.2347
+  },
+  "orang": {
+   "bau": 1.5181,
+   "linen": 1.6731,
+   "service": 2.1932
+  },
+  "over": {
+   "bau": 1.9466,
+   "general": 6.0269,
+   "sunrise_meal": 1.7734
+  },
+  "overall": {
+   "general": 7.062,
+   "sunrise_meal": 2.024
+  },
+  "parkir": {
+   "air_panas": 1.7143,
+   "service": 1.7668,
+   "tv": 1.6249
+  },
+  "parkiran": {
+   "service": 1.7668
+  },
+  "pegawai": {
+   "service": 2.8911
+  },
+  "pegawainya": {
+   "service": 3.1802
+  },
+  "pelayan": {
+   "service": 3.2123
+  },
+  "pelayanan": {
+   "service": 3.4191
+  },
+  "pelayanannya": {
+   "service": 3.4823
+  },
+  "pelayannya": {
+   "service": 3.2123
+  },
+  "pemilik": {
+   "service": 2.9446
+  },
+  "penginapan": {
+   "service": 1.9631
+  },
+  "penjaga": {
+   "ac": 1.509,
+   "service": 3.5335
+  },
+  "penjaganya": {
+   "service": 2.7483
+  },
+  "peralatan": {
+   "ac": 1.509,
+   "linen": 3.0325
+  },
+  "perlengkapan": {
+   "linen": 3.1422,
+   "tv": 2.0798
+  },
+  "petugas": {
+   "service": 3.3056
+  },
+  "petugasnya": {
+   "linen": 1.6173,
+   "service": 3.1802
+  },
+  "properti": {
+   "kebersihan": 2.4343
+  },
+  "proses": {
+   "service": 3.2617
+  },
+  "remote": {
+   "ac": 2.8535,
+   "tv": 6.6176
+  },
+  "renang": {
+   "bau": 1.6305,
+   "linen": 1.797,
+   "tv": 1.9258,
+   "wifi": 1.6392
+  },
+  "resepsionis": {
+   "service": 2.7896,
+   "sunrise_meal": 1.96
+  },
+  "resepsionisnya": {
+   "service": 3.5335
+  },
+  "room": {
+   "bau": 1.5507,
+   "general": 1.5026,
+   "linen": 1.6395,
+   "service": 1.5974
+  },
+  "ruangan": {
+   "bau": 2.4108,
+   "general": 1.5469
+  },
+  "ruangannya": {
+   "bau": 2.6953
+  },
+  "sabun": {
+   "linen": 3.1191
+  },
+  "saluran": {
+   "bau": 1.6406,
+   "tv": 5.8778
+  },
+  "sandal": {
+   "linen": 2.6955
+  },
+  "sarapan": {
+   "sunrise_meal": 11.1992
+  },
+  "sarapannya": {
+   "ac": 1.6096,
+   "sunrise_meal": 11.8225
+  },
+  "sarung": {
+   "linen": 3.1303
+  },
+  "selebihnya": {
+   "air_panas": 1.5238,
+   "general": 6.1365
+  },
+  "selimut": {
+   "linen": 3.1177,
+   "tv": 1.6288
+  },
+  "selimutnya": {
+   "linen": 3.2347
+  },
+  "semua": {
+   "general": 3.9279,
+   "sunrise_meal": 1.7122,
+   "tv": 2.5101
+  },
+  "semuanya": {
+   "ac": 1.8396,
+   "air_panas": 2.6122,
+   "general": 4.8216,
+   "tv": 2.476
+  },
+  "seprai": {
+   "kebersihan": 1.6229,
+   "linen": 3.2347
+  },
+  "servicenya": {
+   "service": 3.5335
+  },
+  "shower": {
+   "air_panas": 3.3185,
+   "sunrise_meal": 1.5172
+  },
+  "showernya": {
+   "air_panas": 3.6017
+  },
+  "siaran": {
+   "tv": 10.3991,
+   "wifi": 1.8596
+  },
+  "sikat": {
+   "ac": 2.195,
+   "bau": 3.4304,
+   "linen": 2.6465
+  },
+  "sinyal": {
+   "general": 1.5145,
+   "tv": 2.9331,
+   "wifi": 5.3499
+  },
+  "snack": {
+   "linen": 3.1894,
+   "tv": 1.5271
+  },
+  "snacknya": {
+   "linen": 3.2347
+  },
+  "staf": {
+   "kebersihan": 1.6229,
+   "service": 3.5335
+  },
+  "stafnya": {
+   "service": 3.5335
+  },
+  "tangga": {
+   "kebersihan": 1.7704
+  },
+  "tempatnya": {
+   "air_panas": 1.5238,
+   "general": 1.6226
+  },
+  "tidur": {
+   "linen": 1.5822
+  },
+  "tisu": {
+   "kebersihan": 2.13,
+   "linen": 2.8303
+  },
+  "toilet": {
+   "bau": 1.866,
+   "kebersihan": 1.5515,
+   "tv": 1.9427
+  },
+  "toiletnya": {
+   "bau": 2.5896,
+   "kebersihan": 1.5751
+  },
+  "toiletries": {
+   "linen": 3.2347
+  },
+  "tv": {
+   "tv": 9.7732
+  },
+  "tvnya": {
+   "tv": 10.3991
+  },
+  "ventilasi": {
+   "bau": 6.2891
+  },
+  "water": {
+   "air_panas": 5.47
+  },
+  "wc": {
+   "bau": 2.0964,
+   "kebersihan": 1.6229
+  },
+  "welcome": {
+   "linen": 2.5877,
+   "service": 1.7668
+  },
+  "wifi": {
+   "wifi": 6.218
+  },
+  "wifinya": {
+   "sunrise_meal": 2.0208,
+   "wifi": 6.1756
+  }
+ },
+ "default_category": "general",
+ "opinion_categories": {
+  "alasan": [
+   "service",
+   "linen"
+  ],
+  "apek": [
+   "bau",
+   "linen",
+   "kebersihan"
+  ],
+  "asap": [
+   "bau",
+   "kebersihan"
+  ],
+  "bagus": [
+   "general",
+   "tv",
+   "sunrise_meal"
+  ],
+  "baik": [
+   "service",
+   "general",
+   "sunrise_meal"
+  ],
+  "banjir": [
+   "kebersihan"
+  ],
+  "banyak": [
+   "kebersihan",
+   "linen",
+   "tv",
+   "sunrise_meal"
+  ],
+  "bau": [
+   "bau",
+   "linen"
+  ],
+  "bawah": [
+   "kebersihan",
+   "linen",
+   "service"
+  ],
+  "bekas": [
+   "kebersihan",
+   "linen",
+   "bau",
+   "sunrise_meal"
+  ],
+  "berantakan": [
+   "kebersihan"
+  ],
+  "berbau": [
+   "bau",
+   "sunrise_meal"
+  ],
+  "berbeda": [
+   "linen"
+  ],
+  "berdebu": [
+   "kebersihan",
+   "linen"
+  ],
+  "bermasalah": [
+   "wifi"
+  ],
+  "berserakan": [
+   "kebersihan"
+  ],
+  "bersih": [
+   "kebersihan",
+   "sunrise_meal"
+  ],
+  "besar": [
+   "ac",
+   "service",
+   "wifi",
+   "bau",
+   "air_panas",
+   "tv",
+   "general",
+   "sunrise_meal"
+  ],
+  "betah": [
+   "kebersihan"
+  ],
+  "biasa": [
+   "linen",
+   "wifi"
+  ],
+  "bocor": [
+   "ac",
+   "kebersihan",
+   "air_panas",
+   "sunrise_meal"
+  ],
+  "buruk": [
+   "service",
+   "wifi"
+  ],
+  "cepat": [
+   "service",
+   "kebersihan",
+   "wifi",
+   "air_panas"
+  ],
+  "cocok": [
+   "kebersihan",
+   "bau",
+   "air_panas"
+  ],
+  "cukup": [
+   "kebersihan",
+   "service",
+   "ac",
+   "bau",
+   "tv",
+   "sunrise_meal"
+  ],
+  "cuma": [
+   "ac",
+   "air_panas",
+   "wifi",
+   "general",
+   "sunrise_meal"
+  ],
+  "debu": [
+   "kebersihan",
+   "general"
+  ],
+  "diberikan": [
+   "linen",
+   "ac"
+  ],
+  "dibersihkan": [
+   "kebersihan",
+   "linen",
+   "service"
+  ],
+  "dicuci": [
+   "linen"
+  ],
+  "digunakan": [
+   "wifi",
+   "service",
+   "tv"
+  ],
+  "dingin": [
+   "ac",
+   "air_panas",
+   "general"
+  ],
+  "ditingkatkan": [
+   "kebersihan",
+   "service",
+   "sunrise_meal"
+  ],
+  "doang": [
+   "ac",
+   "linen"
+  ],
+  "enak": [
+   "sunrise_meal",
+   "service",
+   "bau",
+   "ac",
+   "general",
+   "tv"
+  ],
+  "gatal": [
+   "linen",
+   "kebersihan"
+  ],
+  "gelap": [
+   "kebersihan",
+   "linen",
+   "bau",
+   "ac",
+   "air_panas"
+  ],
+  "gerah": [
+   "ac"
+  ],
+  "goreng": [
+   "sunrise_meal",
+   "service",
+   "kebersihan"
+  ],
+  "gratis": [
+   "linen",
+   "tv",
+   "wifi"
+  ],
+  "habis": [
+   "linen",
+   "service",
+   "wifi"
+  ],
+  "hampir": [
+   "kebersihan",
+   "service",
+   "linen"
+  ],
+  "hangat": [
+   "air_panas",
+   "wifi",
+   "tv"
+  ],
+  "hilang": [
+   "service",
+   "wifi"
+  ],
+  "jarang": [
+   "kebersihan",
+   "linen"
+  ],
+  "jauh": [
+   "kebersihan",
+   "service",
+   "ac",
+   "bau",
+   "wifi"
+  ],
+  "jelas": [
+   "tv"
+  ],
+  "jelek": [
+   "wifi",
+   "tv"
+  ],
+  "kaya": [
+   "kebersihan",
+   "linen",
+   "service",
+   "ac",
+   "bau"
+  ],
+  "kebersihan": [
+   "kebersihan"
+  ],
+  "kecewa": [
+   "linen",
+   "service",
+   "general",
+   "sunrise_meal"
+  ],
+  "kecil": [
+   "linen",
+   "ac",
+   "tv",
+   "sunrise_meal"
+  ],
+  "kekurangan": [
+   "linen",
+   "kebersihan"
+  ],
+  "keluar": [
+   "air_panas",
+   "ac",
+   "tv"
+  ],
+  "kembali": [
+   "service"
+  ],
+  "kenyamanan": [
+   "service"
+  ],
+  "keras": [
+   "air_panas",
+   "linen",
+   "ac"
+  ],
+  "keren": [
+   "linen",
+   "kebersihan"
+  ],
+  "kesan": [
+   "kebersihan"
+  ],
+  "khas": [
+   "linen"
+  ],
+  "kok": [
+   "linen",
+   "bau"
+  ],
+  "kotor": [
+   "kebersihan",
+   "linen"
+  ],
+  "kotoran": [
+   "kebersihan"
+  ],
+  "kuning": [
+   "linen",
+   "kebersihan"
+  ],
+  "kurang": [
+   "service",
+   "ac"
+  ],
+  "kusam": [
+   "linen",
+   "kebersihan"
+  ],
+  "lama": [
+   "service",
+   "linen",
+   "ac",
+   "air_panas",
+   "tv"
+  ],
+  "lambat": [
+   "wifi",
+   "service",
+   "ac"
+  ],
+  "lancar": [
+   "kebersihan",
+   "linen",
+   "wifi",
+   "ac",
+   "air_panas",
+   "tv"
+  ],
+  "layak": [
+   "linen",
+   "ac",
+   "service"
+  ],
+  "lembab": [
+   "bau",
+   "kebersihan"
+  ],
+  "lemot": [
+   "wifi",
+   "sunrise_meal"
+  ],
+  "lengkap": [
+   "linen",
+   "kebersihan",
+   "bau",
+   "tv",
+   "sunrise_meal"
+  ],
+  "lengket": [
+   "kebersihan"
+  ],
+  "licin": [
+   "kebersihan",
+   "linen"
+  ],
+  "luas": [
+   "kebersihan",
+   "service",
+   "wifi",
+   "bau",
+   "sunrise_meal"
+  ],
+  "lumayan": [
+   "kebersihan",
+   "linen",
+   "air_panas",
+   "wifi",
+   "general",
+   "sunrise_meal"
+  ],
+  "lusuh": [
+   "linen"
+  ],
+  "maaf": [
+   "service"
+  ],
+  "makanan": [
+   "sunrise_meal",
+   "service",
+   "linen",
+   "bau"
+  ],
+  "mana": [
+   "linen",
+   "service"
+  ],
+  "mantap": [
+   "service",
+   "general"
+  ],
+  "masalah": [
+   "kebersihan",
+   "ac"
+  ],
+  "mati": [
+   "ac",
+   "air_panas",
+   "wifi",
+   "tv"
+  ],
+  "membantu": [
+   "service"
+  ],
+  "membuat": [
+   "kebersihan",
+   "service",
+   "wifi"
+  ],
+  "memuaskan": [
+   "service",
+   "general",
+   "tv",
+   "sunrise_meal"
+  ],
+  "mengalir": [
+   "air_panas"
+  ],
+  "mengecewakan": [
+   "service",
+   "ac",
+   "general"
+  ],
+  "menunggu": [
+   "service"
+  ],
+  "menyala": [
+   "air_panas",
+   "ac"
+  ],
+  "menyenangkan": [
+   "service"
+  ],
+  "mohon": [
+   "tv"
+  ],
+  "mudah": [
+   "ac",
+   "tv",
+   "air_panas",
+   "wifi"
+  ],
+  "mungkin": [
+   "bau",
+   "general",
+   "sunrise_meal"
+  ],
+  "murah": [
+   "kebersihan",
+   "linen",
+   "ac",
+   "general",
+   "sunrise_meal",
+   "tv"
+  ],
+  "naik": [
+   "linen",
+   "ac"
+  ],
+  "noda": [
+   "linen",
+   "kebersihan"
+  ],
+  "nyaman": [
+   "general",
+   "tv"
+  ],
+  "ok": [
+   "general",
+   "air_panas",
+   "tv",
+   "sunrise_meal"
+  ],
+  "oke": [
+   "general",
+   "linen",
+   "wifi",
+   "sunrise_meal"
+  ],
+  "panas": [
+   "air_panas",
+   "ac"
+  ],
+  "parah": [
+   "wifi",
+   "ac"
+  ],
+  "pasti": [
+   "linen"
+  ],
+  "pembuangan": [
+   "kebersihan"
+  ],
+  "pengap": [
+   "bau",
+   "kebersihan",
+   "ac"
+  ],
+  "penuh": [
+   "kebersihan",
+   "linen",
+   "service"
+  ],
+  "perbaikan": [
+   "wifi",
+   "sunrise_meal"
+  ],
+  "perlu": [
+   "kebersihan",
+   "wifi",
+   "sunrise_meal"
+  ],
+  "plus": [
+   "linen",
+   "service"
+  ],
+  "puas": [
+   "service",
+   "ac",
+   "bau"
+  ],
+  "putus": [
+   "wifi",
+   "kebersihan"
+  ],
+  "ramah": [
+   "service",
+   "sunrise_meal"
+  ],
+  "rapi": [
+   "kebersihan",
+   "service",
+   "ac",
+   "bau"
+  ],
+  "ringan": [
+   "linen"
+  ],
+  "rusak": [
+   "ac",
+   "wifi",
+   "tv",
+   "general"
+  ],
+  "salah": [
+   "ac",
+   "service"
+  ],
+  "sampah": [
+   "kebersihan",
+   "linen"
+  ],
+  "sangat": [
+   "service",
+   "bau",
+   "sunrise_meal"
+  ],
+  "sayang": [
+   "wifi",
+   "bau",
+   "general",
+   "sunrise_meal"
+  ],
+  "sayangnya": [
+   "air_panas",
+   "service",
+   "general",
+   "wifi"
+  ],
+  "sebaiknya": [
+   "linen",
+   "service",
+   "bau"
+  ],
+  "sebenarnya": [
+   "kebersihan"
+  ],
+  "sedikit": [
+   "linen",
+   "service",
+   "bau",
+   "tv",
+   "general",
+   "sunrise_meal"
+  ],
+  "segera": [
+   "kebersihan",
+   "linen",
+   "air_panas"
+  ],
+  "sempit": [
+   "bau"
+  ],
+  "semuanya": [
+   "general",
+   "air_panas",
+   "ac",
+   "tv"
+  ],
+  "senyum": [
+   "service"
+  ],
+  "seperti": [
+   "linen",
+   "kebersihan",
+   "service",
+   "bau"
+  ],
+  "sesuai": [
+   "linen",
+   "air_panas",
+   "general",
+   "sunrise_meal"
+  ],
+  "siap": [
+   "service",
+   "linen"
+  ],
+  "sigap": [
+   "service"
+  ],
+  "sopan": [
+   "service"
+  ],
+  "stabil": [
+   "wifi"
+  ],
+  "suka": [
+   "service",
+   "wifi",
+   "general"
+  ],
+  "sulit": [
+   "service"
+  ],
+  "susah": [
+   "wifi",
+   "service",
+   "air_panas"
+  ],
+  "tanpa": [
+   "service"
+  ],
+  "tenang": [
+   "linen",
+   "wifi"
+  ],
+  "terang": [
+   "kebersihan",
+   "ac"
+  ],
+  "terima": [
+   "linen",
+   "service",
+   "ac",
+   "sunrise_meal"
+  ],
+  "terjangkau": [
+   "kebersihan",
+   "bau",
+   "service",
+   "wifi"
+  ],
+  "terkesan": [
+   "kebersihan",
+   "service"
+  ],
+  "terlalu": [
+   "wifi",
+   "air_panas",
+   "sunrise_meal",
+   "tv"
+  ],
+  "terlihat": [
+   "kebersihan",
+   "linen"
+  ],
+  "tersedia": [
+   "linen",
+   "air_panas",
+   "wifi",
+   "tv",
+   "sunrise_meal"
+  ],
+  "terutama": [
+   "kebersihan",
+   "linen",
+   "service"
+  ],
+  "tetap": [
+   "kebersihan",
+   "general",
+   "ac",
+   "air_panas",
+   "bau"
+  ],
+  "tidak": [
+   "linen",
+   "air_panas"
+  ],
+  "tipis": [
+   "linen",
+   "ac"
+  ],
+  "tua": [
+   "kebersihan",
+   "service",
+   "ac",
+   "bau",
+   "wifi"
+  ],
+  "turun": [
+   "kebersihan",
+   "linen",
+   "service"
+  ],
+  "wastafel": [
+   "kebersihan",
+   "bau"
+  ]
+ }
+}

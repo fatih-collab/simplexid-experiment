@@ -75,3 +75,22 @@ def test_read_sheet_accepts_semicolon_from_excel(tmp_path):
     path = tmp_path / "s.csv"
     path.write_text("item_id;is_valid_pair\na;YES\n", encoding="utf-8-sig")
     assert read_sheet(path).to_dict("records") == [{"item_id": "a", "is_valid_pair": "YES"}]
+
+
+def test_ctx_targeted_evaluate_hand_computed():
+    import importlib.util, pathlib
+    path = pathlib.Path(__file__).resolve().parents[1] / "experiments" / "run_ctx_targeted.py"
+    spec = importlib.util.spec_from_file_location("run_ctx_targeted", path)
+    mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+    sheet = pd.DataFrame([
+        {"item_id": "a", "decision": "IMPLICIT", "gold_aspect_category": "general", "annotation_status": "REVIEWED"},
+        {"item_id": "b", "decision": "IMPLICIT", "gold_aspect_category": "wifi", "annotation_status": "REVIEWED"},
+        {"item_id": "c", "decision": "NOT_IMPLICIT", "gold_aspect_category": "", "annotation_status": "REVIEWED"},
+        {"item_id": "d", "decision": "", "gold_aspect_category": "", "annotation_status": ""},
+    ])
+    system = pd.DataFrame([{"item_id": i, "pred_static": "general", "pred_contextual": "wifi"} for i in "abcd"])
+    r = mod.evaluate(sheet, system)
+    assert (r["reviewed"], r["evaluated"], r["only_static_correct"], r["only_contextual_correct"]) == (3, 2, 1, 1)
+    sheet.loc[0, "gold_aspect_category"] = "harga"
+    with pytest.raises(ValueError, match="ontologi"):
+        mod.evaluate(sheet, system)

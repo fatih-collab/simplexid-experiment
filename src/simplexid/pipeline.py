@@ -11,8 +11,8 @@ from dataclasses import dataclass
 
 from .parser import ParsedSentence, parse_tokens
 from .rules import DEFAULT_RULES, RuleOptions, extract_explicit_pairs, expand_r3, expand_r4, find_orphan_opinions, Pair
-from .dam import disambiguate, lookup
-from .scoring import compute_factors, SentimentFactors
+from .dam import choose_candidate, disambiguate, lookup
+from .scoring import compute_factors, SentimentFactors, token_score
 from .config import VariantConfig
 
 
@@ -28,7 +28,8 @@ def run_pipeline(tokens: List[str], variant: VariantConfig, domain: str,
                   document_context_aspects: List[str] = None,
                   parsed_sentence: ParsedSentence = None,
                   rules: RuleOptions = DEFAULT_RULES,
-                  aspect_vocabulary=None) -> List[ExtractionResult]:
+                  aspect_vocabulary=None,
+                  dam=None) -> List[ExtractionResult]:
     """
     Jalankan pipeline lengkap pada satu kalimat (sudah ditokenisasi, selaras
     dengan tokenisasi ground truth TermA) sesuai flag pada `variant`.
@@ -74,15 +75,21 @@ def run_pipeline(tokens: List[str], variant: VariantConfig, domain: str,
     if variant.use_r8:
         local_aspects = _current_documented_aspects(sent, results, domain)
         documented_aspects = local_aspects + (document_context_aspects or [])
-        orphans = find_orphan_opinions(sent, [r.pair for r in results.values()])
+        orphans = find_orphan_opinions(sent, [r.pair for r in results.values()], rules, swn_lexicon)
         for o in orphans:
-            candidates = lookup(o.lemma, domain)
+            if dam is None:
+                candidates = lookup(o.lemma, domain)
+                chosen = disambiguate(o.lemma, domain, documented_aspects).chosen \
+                    if candidates and variant.r8_contextual_disambiguation else None
+            else:
+                candidates = dam.candidates((o.text.lower(), o.lemma.lower()))
+                if not candidates and dam.default_category and token_score(o, swn_lexicon) != 0.0:
+                    candidates = [dam.default_category]
+                chosen = choose_candidate(candidates, documented_aspects, dam.similarity) \
+                    if candidates and variant.r8_contextual_disambiguation else None
             if not candidates:
                 continue
-            if variant.r8_contextual_disambiguation:
-                dam_result = disambiguate(o.lemma, domain, documented_aspects)
-                chosen = dam_result.chosen
-            else:
+            if not variant.r8_contextual_disambiguation:
                 chosen = candidates[0]   # pemetaan statis: selalu kandidat pertama
             if chosen is None:
                 continue

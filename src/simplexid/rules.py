@@ -42,6 +42,8 @@ class RuleOptions:
     distribution_guard: bool = False   # R3/R4 tidak memakai konjungtor yang punya pasangan sendiri
     subjective_verbs: bool = False     # VERB opini R1/R2/R5/R7 harus di leksikon atau dinegasi
     aspect_vocabulary: bool = False    # head aspek harus ada di kosakata aspek
+    # H4.4
+    lexicon_orphans: bool = False      # kandidat R8 mencakup kata leksikon ber-POS salah
 
 
 BASE_RULES = RuleOptions()
@@ -49,7 +51,7 @@ BASE_RULES = RuleOptions()
 DEFAULT_RULES = RuleOptions(
     passive_subject=True, acl_relative=True, extended_aspect_pos=True, lexicon_opinion=True,
     extended_r4=True, phrase_spans=True, distribution_guard=True, subjective_verbs=True,
-    aspect_vocabulary=True,
+    aspect_vocabulary=True, lexicon_orphans=True,
 )
 
 
@@ -257,8 +259,16 @@ def conj_source_opinion(sent: ParsedSentence, opinion_idx: int, options: RuleOpt
     return None
 
 
-def find_orphan_opinions(sent: ParsedSentence, pairs: List[Pair]) -> List[Token]:
-    """Token ber-POS ADJ/VERB yang belum jadi opini di `pairs` manapun (kandidat R8)."""
+def find_orphan_opinions(sent: ParsedSentence, pairs: List[Pair], options: RuleOptions = BASE_RULES,
+                         lexicon: Optional[dict] = None) -> List[Token]:
+    """Token opini yang belum jadi opini di `pairs` manapun (kandidat R8)."""
     paired_opinion_idx = {p.opinion_idx for p in pairs}
-    return [t for t in sent.tokens
-            if t.pos in OPINION_POS and t.idx not in paired_opinion_idx]
+    def candidate(t: Token) -> bool:
+        if options.lexicon_orphans and (t.text.lower() in ALL_CUES or t.lemma.lower() in ALL_CUES or _dep(t) == "advmod"):
+            return False  # "terlalu", "cuma": modifier, bukan opini
+        return t.pos in OPINION_POS or (options.lexicon_orphans and _is_mistagged_opinion_any(t, lexicon))
+    return [t for t in sent.tokens if candidate(t) and t.idx not in paired_opinion_idx]
+
+
+def _is_mistagged_opinion_any(tok: Token, lexicon: Optional[dict]) -> bool:
+    return tok.pos in MISTAGGED_OPINION_POS and _in_lexicon(tok, lexicon)

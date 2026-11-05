@@ -157,3 +157,12 @@ def test_aspect_vocabulary_excludes_held_out_fold():
 def test_fold_of_is_stable():
     assert fold_of("terma_train_00000") == fold_of("terma_train_00000")
     assert 0 <= fold_of("terma_train_00000") < 5
+
+
+def test_orphans_exclude_cues_and_modifiers():
+    # "terlalu mahal": "terlalu" isyarat, "mahal" kandidat
+    sent = mock([("terlalu", "ADV", "advmod", 1), ("mahal", "ADJ", "root", 1)])
+    from simplexid.rules import find_orphan_opinions
+    lex = {"terlalu": -0.2, "mahal": -0.6}
+    found = find_orphan_opinions(sent, [], RuleOptions(lexicon_orphans=True), lex)
+    assert [t.text for t in found] == ["mahal"]

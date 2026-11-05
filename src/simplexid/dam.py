@@ -38,6 +38,18 @@ class DAMResult:
     disambiguated: bool          # True jika dipilih via disambiguasi (>1 kandidat)
 
 
+def choose_candidate(candidates: List[str], documented_aspects: List[str], similarity_fn) -> Optional[str]:
+    """Kandidat paling sesuai aspek terdokumentasi; tanpa konteks/kemiripan -> kandidat pertama."""
+    if not candidates:
+        return None
+    if len(candidates) == 1 or not documented_aspects:
+        return candidates[0]
+    best = max(candidates, key=lambda c: max(similarity_fn(c, a) for a in documented_aspects))
+    if max(similarity_fn(best, a) for a in documented_aspects) == 0.0:
+        return candidates[0]
+    return best
+
+
 def lookup(opinion_lemma: str, domain: str) -> List[str]:
     """Kembalikan daftar kandidat kategori aspek implisit untuk kata opini pada domain tsb."""
     entry = DAM_DICT.get(opinion_lemma.lower())
