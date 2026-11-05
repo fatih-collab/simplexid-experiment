@@ -242,7 +242,7 @@ def write_summary(run_dir: Path, split: str, metrics: dict, significance: pd.Dat
         lines += ["", "## Key comparisons (B − A)", "",
                   "| Comparison | Target | Δ | 95% CI | p | p (Holm) |", "|---|---|---|---|---|---|"]
         for r in significance.itertuples(index=False):
-            ci = r.ci95 if isinstance(r.ci95, list) else "-"
+            ci = getattr(r, "ci95", "-") if isinstance(getattr(r, "ci95", None), list) else "-"
             lines.append(f"| {r.comparison} | {r.target} | {r.delta:+.4f} | {ci} | {r.p_value:.4f} | {r.p_holm:.4f} |")
     (run_dir / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 

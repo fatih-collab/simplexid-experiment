@@ -73,5 +73,8 @@ KEY_COMPARISONS = [
 NEG_DISTANCE_THRESHOLD = 3   # edge; perlu di-tuning empiris (lihat catatan ablasi di draf paten)
 INT_DECAY_LAMBDA = 0.4       # konstanta peluruhan intensifier; perlu di-tuning empiris
 
+# Skor |predikat dinegasi yang tidak ada di leksikon| (dikalikan Neg menjadi negatif lemah).
+NEGATED_UNKNOWN_SCORE = 0.3
+
 RANDOM_SEED = 42
 K_FOLDS = 5

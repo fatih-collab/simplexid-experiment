@@ -5,8 +5,8 @@ Dua dimensi yang diuji ablation:
 - distance_weighted=False (statis): hanya modifier yang menempel LANGSUNG pada
   opini, efeknya tetap (setara SO-CAL/Polanyi-Zaenen).
 - distance_weighted=True (DW): modifier dicari sampai jarak dependensi
-  NEG_DISTANCE_THRESHOLD tanpa menyeberangi batas klausa/konjungsi, dan efek
-  intensifier meluruh terhadap jarak.
+  NEG_DISTANCE_THRESHOLD lewat rantai modifier, dan efek intensifier meluruh
+  terhadap jarak.
 
 - Scope consistency: pasangan hasil R4 berbagi aspek tetapi punya token opini
   sendiri. Dengan SC faktor dihitung dari opininya sendiri; tanpa SC faktor
@@ -25,9 +25,9 @@ from . import config
 from .cues import ALL_CUES, AMPLIFIER_WORDS, INTENSITY_WORDS, NEGATION_WORDS
 from .parser import ParsedSentence, Token
 
-# Relasi yang TIDAK boleh diseberangi saat mencari modifier: modifier di
-# seberangnya milik konjungtor/klausa lain (fungsi itu diuji terpisah oleh SC).
-BLOCKED_RELATIONS = {"conj", "parataxis", "advcl", "punct", "appos", "dep", "cc", "root"}
+# DW hanya menelusuri rantai modifier ("tidak terlalu bersih"). Relasi lain (amod, compound,
+# obj, conj, ...) terbukti di dev menyeberang ke frasa lain ("bau tidak sedap" -> negasi keliru).
+TRAVERSED_RELATIONS = {"advmod"}
 # Naik ke head hanya lewat komplemen verbal ("tidak bisa dikunci").
 UPWARD_RELATIONS = {"xcomp"}
 
@@ -82,7 +82,7 @@ def reachable_modifiers(sent: ParsedSentence, idx: int, max_distance: int) -> Li
         cur, d = queue.popleft()
         if d == max_distance:
             continue
-        neighbours = [c for c in children[cur] if c.dep not in BLOCKED_RELATIONS]
+        neighbours = [c for c in children[cur] if c.dep in TRAVERSED_RELATIONS]
         tok = sent.tokens[cur]
         if tok.dep in UPWARD_RELATIONS and tok.head_idx != cur:
             neighbours.append(sent.tokens[tok.head_idx])
@@ -123,5 +123,8 @@ def compute_factors(sent: ParsedSentence, opinion_idx: int, swn_lexicon: dict,
             int_val = 1.0 + (base - 1.0) * math.exp(-config.INT_DECAY_LAMBDA * d) if distance_weighted else base
 
     swn = token_score(sent.tokens[opinion_idx], swn_lexicon)
+    if swn == 0.0 and neg_val < 0:
+        # Predikat dinegasi di luar leksikon ("tidak berfungsi") -> negatif lemah, bukan netral.
+        swn = config.NEGATED_UNKNOWN_SCORE
     return SentimentFactors(neg=neg_val, intensifier=int_val, swn_score=swn,
                             distance_neg=d_neg, distance_int=d_int)

@@ -21,3 +21,6 @@ results/*/implicit_items_*.csv
 results/*/sentence_counts_*.csv
 # final-test runs are evidence: keep every file
 !results/*_final_*/**
+
+# third-party lexicons have no explicit license: not redistributed (see resources/lexicon/README.md)
+resources/lexicon/third_party/

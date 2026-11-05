@@ -98,3 +98,14 @@ def test_gold_subset_needs_only_connector_between_spans():
     tokens = ["kamar", "bersih", "tapi", "ac", "nya", "rusak"]
     pairs = [GoldPairSpan("p1", (0, 0), (1, 1)), GoldPairSpan("p2", (0, 0), (5, 5))]
     assert pair_tags(tokens, pairs)["p1"] == set()
+
+
+def test_negated_word_outside_lexicon_is_weakly_negative():
+    sent = mock([("wifi", "NOUN", "root", 0), ("tidak", "PART", "advmod", 2), ("berfungsi", "VERB", "amod", 0)])
+    assert compute_factors(sent, 2, LEX, distance_weighted=False).score_final == -config.NEGATED_UNKNOWN_SCORE
+
+
+def test_distance_weighting_only_follows_modifier_chain():
+    # "bau tidak sedap": negasi milik "sedap", bukan milik "bau"
+    sent = mock([("bau", "NOUN", "root", 0), ("tidak", "PART", "advmod", 2), ("sedap", "ADJ", "amod", 0)])
+    assert compute_factors(sent, 0, {"bau": -0.8}, distance_weighted=True).neg == 1.0
