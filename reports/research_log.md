@@ -204,3 +204,20 @@ disclosure for the patent. Needs an IP consultant's assessment; no pushes made s
   design), and only 4 contain an ambiguous DAM word, so gold_implicit cannot test contextual disambiguation.
 - Leakage check: 225 TermA train and 82 TermA validation rows are text-identical to a HoASA row (dedupe check,
   labels not read). Any HoASA-derived resource must exclude rows identical to final-split rows.
+
+## H4.4 — R8 Rebuilt from HoASA (2026-11-05)
+
+Decisions: merged_v1 stays the lexicon; domain adaptation deferred (user, 2026-11-05). 468 dev 1A1O rows set to
+REVIEWED on the user's statement that they were reviewed; no pair changed. Dev gold version `ee6000ff47fdad69`.
+Dev gold_polarity (14 MEDIUM) and gold_implicit (195 MEDIUM/LOW) remain unverified, so numbers are provisional.
+
+- DAM from HoASA reviews: 2,371 usable after removing rows text-identical to labelled TermA. 153 words;
+  other lexicon words default to `general`. min_count 5, lift 1.2 chosen on DEV_IMPLICIT.
+- Results (`results/20261105-184806_dev_h44-ablation`, commit 6eb86ab, clean tree): A3 implicit detection P 0.94 / R 0.81 (was recall 0.035);
+  category accuracy 0.533 and macro-F1 0.569, vs majority baseline accuracy 0.755 and macro-F1 0.215.
+  R8 beats the baseline on macro-F1 but not on accuracy; 'general' recall is only 0.44.
+- Precision outside candidate sentences is weak: over all dev sentences R8 emits 3,815 pairs, 59.2% on tokens
+  inside a TermA opinion span. gold_implicit does not measure this.
+- Contextual disambiguation: changes 702 pairs (430 inside opinion spans); A3→A4 on gold_implicit −0.009, n.s.,
+  on sentences that have little context. Blind sheet of 60 sampled cases: `data/annotation/ctx_targeted/`. Awaiting annotation.
+- H4.4 status: step 1–3 done; R8 contextual and SC claims await human annotation.

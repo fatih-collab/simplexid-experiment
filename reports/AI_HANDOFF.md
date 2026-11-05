@@ -32,8 +32,10 @@
 - **Bukti per mekanisme di dev:** R4 signifikan (+0,017; +0,093 di COORD_OPINION). R3 hanya di COORD_ASPECT (+0,058). **R8, R8 kontekstual, DW, SC belum punya bukti.**
 - **Jangkauan di 3.000 kalimat dev:** SC mengubah 44 label (0,8%), DW 4 label + 407 magnitudo, R8 kontekstual 7 dari 209. Gold polaritas 400 item tidak bisa menguji SC; perlu anotasi tertarget.
 - **Lembar SC tertarget:** `data/annotation/sc_targeted/` (44 pasangan, menunggu anotasi).
-- **Review:** `gold_dev_auto_1a1o.csv` di repo masih 468 AUTO. Gold dev polaritas (14) dan implisit (195) belum diverifikasi.
-- **Belum dikerjakan:** H4.4 (R8), H4.5 (tuning), H4.6 (baseline eksternal).
+- **Belum diverifikasi:** gold dev polaritas (14) dan implisit (195).
+- **H4.4:** DAM dibangun dari HoASA. R8 deteksi P 0,94 / R 0,81, akurasi kategori 0,53, macro-F1 0,57 (baseline mayoritas 0,755 / 0,215). Lembar konteks: `data/annotation/ctx_targeted/` (60 baris, menunggu anotasi).
+- **Review:** 1A1O sudah 468 REVIEWED (pernyataan pengguna, tanpa perubahan pasangan). Keputusan: `merged_v1` tetap dipakai, adaptasi domain ditunda.
+- **Belum dikerjakan:** H4.5 (tuning), H4.6 (baseline eksternal).
 
 ---
 

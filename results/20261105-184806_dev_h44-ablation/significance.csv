@@ -1,0 +1,22 @@
+﻿comparison,description,test,target,metric,delta,ci95,p_value,n_sentences,n_resamples,seed,a_only_correct,b_only_correct,n_items,p_holm
+A0_vs_A6,Perbandingan utama,paired_bootstrap,pair_f1_head,f1,0.0182,"[0.0109, 0.0256]",0.0,1478.0,10000.0,42.0,,,,0.0
+A0_vs_A6,Perbandingan utama,mcnemar_exact,polarity_end_to_end,accuracy,0.0475,,0.0,,,,0.0,19.0,400.0,0.0
+A0_vs_A6,Perbandingan utama,mcnemar_exact,polarity_oracle_pair,accuracy,0.0,,1.0,,,,0.0,0.0,400.0,1.0
+A0_vs_A1,Kontribusi R3,paired_bootstrap,pair_f1_head,f1,0.0012,"[-0.0021, 0.0048]",0.5002,1478.0,10000.0,42.0,,,,1.0
+A0_vs_A1,Kontribusi R3,paired_bootstrap,pair_f1_head_coord_aspect,f1,0.0575,"[0.0201, 0.1009]",0.0008,46.0,10000.0,42.0,,,,0.0112
+A1_vs_A2,Kontribusi R4 di atas R3,paired_bootstrap,pair_f1_head,f1,0.017,"[0.0106, 0.0236]",0.0,1478.0,10000.0,42.0,,,,0.0
+A1_vs_A2,Kontribusi R4 di atas R3,paired_bootstrap,pair_f1_head_coord_opinion,f1,0.0932,"[0.0683, 0.1203]",0.0,108.0,10000.0,42.0,,,,0.0
+S_R4_vs_A2,Kontribusi R3 di atas R4,paired_bootstrap,pair_f1_head,f1,0.001,"[-0.0022, 0.0045]",0.5672,1478.0,10000.0,42.0,,,,1.0
+A2_vs_A3,Kontribusi R8 statis,mcnemar_exact,implicit_category,accuracy,0.5328,,0.0,,,,0.0,122.0,229.0,0.0
+A3_vs_A4,Kontribusi disambiguasi kontekstual R8,mcnemar_exact,implicit_category,accuracy,-0.0087,,0.5,,,,2.0,0.0,229.0,1.0
+A4_vs_A5,Kontribusi DW scoring,mcnemar_exact,polarity_oracle_pair,accuracy,0.0,,1.0,,,,0.0,0.0,400.0,1.0
+A4_vs_A5,Kontribusi DW scoring,mcnemar_exact,polarity_end_to_end,accuracy,0.0,,1.0,,,,0.0,0.0,400.0,1.0
+A5_vs_A6,Kontribusi scope consistency,mcnemar_exact,polarity_oracle_pair,accuracy,0.0025,,1.0,,,,0.0,1.0,400.0,1.0
+A5_vs_A6,Kontribusi scope consistency,mcnemar_exact,polarity_oracle_pair_asym_mod,accuracy,0.0,,1.0,,,,0.0,0.0,23.0,1.0
+A5_vs_A6,Kontribusi scope consistency,mcnemar_exact,polarity_end_to_end,accuracy,0.0,,1.0,,,,0.0,0.0,400.0,1.0
+L_R3_vs_A6,Leave-one-out R3,paired_bootstrap,pair_f1_head,f1,0.001,"[-0.0022, 0.0045]",0.5672,1478.0,10000.0,42.0,,,,1.0
+L_R4_vs_A6,Leave-one-out R4,paired_bootstrap,pair_f1_head,f1,0.017,"[0.0106, 0.0236]",0.0,1478.0,10000.0,42.0,,,,0.0
+L_R8_vs_A6,Leave-one-out R8,mcnemar_exact,implicit_category,accuracy,0.524,,0.0,,,,0.0,120.0,229.0,0.0
+L_CTX_vs_A6,Leave-one-out disambiguasi,mcnemar_exact,implicit_category,accuracy,-0.0087,,0.5,,,,2.0,0.0,229.0,1.0
+L_DW_vs_A6,Leave-one-out DW,mcnemar_exact,polarity_oracle_pair,accuracy,0.0,,1.0,,,,0.0,0.0,400.0,1.0
+L_DW_vs_A6,Leave-one-out DW,mcnemar_exact,polarity_end_to_end,accuracy,0.0,,1.0,,,,0.0,0.0,400.0,1.0
