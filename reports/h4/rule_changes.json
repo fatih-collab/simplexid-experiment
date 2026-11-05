@@ -1,0 +1,641 @@
+{
+  "split": "dev",
+  "variant": "A2",
+  "lexicon": "merged_v1",
+  "gold": {
+    "split": "dev",
+    "version": "4f58f591c82b18c7",
+    "n_sentences": 1478,
+    "n_pairs": 1593,
+    "by_source": {
+      "NO_SPANS": 518,
+      "REVIEWED": 492,
+      "AUTO_1A1O": 468
+    },
+    "by_stratum": {
+      "SIMPLE": 520,
+      "EMPTY": 519,
+      "COMPLEX": 439
+    },
+    "excluded": {
+      "ambiguous": 0,
+      "unreviewed_complex": 1522
+    }
+  },
+  "final_options": {
+    "passive_subject": true,
+    "acl_relative": true,
+    "extended_aspect_pos": true,
+    "lexicon_opinion": true,
+    "extended_r4": true,
+    "phrase_spans": true,
+    "distribution_guard": true,
+    "subjective_verbs": true,
+    "aspect_vocabulary": true
+  },
+  "steps": [
+    {
+      "option": "base",
+      "phase": null,
+      "description": "Perilaku awal",
+      "head_p": 0.2915,
+      "head_r": 0.5097,
+      "head_f1": 0.3709,
+      "strict_f1": 0.1937,
+      "fp_empty": 739,
+      "complex_f1": 0.45,
+      "simple_f1": 0.4394,
+      "per_rule": {
+        "R0": {
+          "predicted": 1376,
+          "correct": 556,
+          "precision": 0.4041
+        },
+        "R1": {
+          "predicted": 461,
+          "correct": 116,
+          "precision": 0.2516
+        },
+        "R2": {
+          "predicted": 712,
+          "correct": 79,
+          "precision": 0.111
+        },
+        "R3": {
+          "predicted": 171,
+          "correct": 21,
+          "precision": 0.1228
+        },
+        "R4": {
+          "predicted": 66,
+          "correct": 40,
+          "precision": 0.6061
+        }
+      }
+    },
+    {
+      "option": "passive_subject",
+      "phase": "H4.2",
+      "description": "R1 menerima nsubj:pass",
+      "head_p": 0.2904,
+      "head_r": 0.5323,
+      "head_f1": 0.3758,
+      "strict_f1": 0.1901,
+      "fp_empty": 773,
+      "complex_f1": 0.4554,
+      "simple_f1": 0.4503,
+      "per_rule": {
+        "R0": {
+          "predicted": 1376,
+          "correct": 556,
+          "precision": 0.4041
+        },
+        "R1": {
+          "predicted": 582,
+          "correct": 151,
+          "precision": 0.2595
+        },
+        "R2": {
+          "predicted": 712,
+          "correct": 79,
+          "precision": 0.111
+        },
+        "R3": {
+          "predicted": 184,
+          "correct": 22,
+          "precision": 0.1196
+        },
+        "R4": {
+          "predicted": 66,
+          "correct": 40,
+          "precision": 0.6061
+        }
+      },
+      "delta_f1": 0.0049,
+      "ci95": [
+        0.0004,
+        0.0096
+      ],
+      "p_value": 0.028
+    },
+    {
+      "option": "acl_relative",
+      "phase": "H4.2",
+      "description": "R7 memakai acl",
+      "head_p": 0.2745,
+      "head_r": 0.553,
+      "head_f1": 0.3669,
+      "strict_f1": 0.1812,
+      "fp_empty": 882,
+      "complex_f1": 0.4571,
+      "simple_f1": 0.4367,
+      "per_rule": {
+        "R0": {
+          "predicted": 1376,
+          "correct": 556,
+          "precision": 0.4041
+        },
+        "R1": {
+          "predicted": 582,
+          "correct": 151,
+          "precision": 0.2595
+        },
+        "R2": {
+          "predicted": 712,
+          "correct": 79,
+          "precision": 0.111
+        },
+        "R3": {
+          "predicted": 198,
+          "correct": 25,
+          "precision": 0.1263
+        },
+        "R4": {
+          "predicted": 69,
+          "correct": 41,
+          "precision": 0.5942
+        },
+        "R7": {
+          "predicted": 272,
+          "correct": 29,
+          "precision": 0.1066
+        }
+      },
+      "delta_f1": -0.0089,
+      "ci95": [
+        -0.0137,
+        -0.0038
+      ],
+      "p_value": 0.002
+    },
+    {
+      "option": "extended_aspect_pos",
+      "phase": "H4.2",
+      "description": "Aspek boleh PROPN/X",
+      "head_p": 0.2767,
+      "head_r": 0.5675,
+      "head_f1": 0.372,
+      "strict_f1": 0.1807,
+      "fp_empty": 897,
+      "complex_f1": 0.463,
+      "simple_f1": 0.4449,
+      "per_rule": {
+        "R0": {
+          "predicted": 1400,
+          "correct": 575,
+          "precision": 0.4107
+        },
+        "R1": {
+          "predicted": 599,
+          "correct": 152,
+          "precision": 0.2538
+        },
+        "R2": {
+          "predicted": 716,
+          "correct": 80,
+          "precision": 0.1117
+        },
+        "R3": {
+          "predicted": 209,
+          "correct": 27,
+          "precision": 0.1292
+        },
+        "R4": {
+          "predicted": 69,
+          "correct": 41,
+          "precision": 0.5942
+        },
+        "R7": {
+          "predicted": 274,
+          "correct": 29,
+          "precision": 0.1058
+        }
+      },
+      "delta_f1": 0.0051,
+      "ci95": [
+        0.0024,
+        0.0083
+      ],
+      "p_value": 0.0
+    },
+    {
+      "option": "lexicon_opinion",
+      "phase": "H4.2",
+      "description": "Kata leksikon ber-POS NOUN/NUM boleh jadi opini",
+      "head_p": 0.2919,
+      "head_r": 0.6497,
+      "head_f1": 0.4028,
+      "strict_f1": 0.1996,
+      "fp_empty": 938,
+      "complex_f1": 0.507,
+      "simple_f1": 0.4686,
+      "per_rule": {
+        "R0": {
+          "predicted": 1668,
+          "correct": 706,
+          "precision": 0.4233
+        },
+        "R1": {
+          "predicted": 599,
+          "correct": 152,
+          "precision": 0.2538
+        },
+        "R2": {
+          "predicted": 716,
+          "correct": 80,
+          "precision": 0.1117
+        },
+        "R3": {
+          "predicted": 219,
+          "correct": 27,
+          "precision": 0.1233
+        },
+        "R4": {
+          "predicted": 70,
+          "correct": 41,
+          "precision": 0.5857
+        },
+        "R7": {
+          "predicted": 274,
+          "correct": 29,
+          "precision": 0.1058
+        }
+      },
+      "delta_f1": 0.0308,
+      "ci95": [
+        0.0233,
+        0.0384
+      ],
+      "p_value": 0.0
+    },
+    {
+      "option": "extended_r4",
+      "phase": "H4.2",
+      "description": "R4 menerima VERB & kata leksikon",
+      "head_p": 0.2876,
+      "head_r": 0.6573,
+      "head_f1": 0.4002,
+      "strict_f1": 0.198,
+      "fp_empty": 964,
+      "complex_f1": 0.5073,
+      "simple_f1": 0.4622,
+      "per_rule": {
+        "R0": {
+          "predicted": 1668,
+          "correct": 706,
+          "precision": 0.4233
+        },
+        "R1": {
+          "predicted": 599,
+          "correct": 152,
+          "precision": 0.2538
+        },
+        "R2": {
+          "predicted": 716,
+          "correct": 80,
+          "precision": 0.1117
+        },
+        "R3": {
+          "predicted": 219,
+          "correct": 27,
+          "precision": 0.1233
+        },
+        "R4": {
+          "predicted": 164,
+          "correct": 53,
+          "precision": 0.3232
+        },
+        "R7": {
+          "predicted": 274,
+          "correct": 29,
+          "precision": 0.1058
+        }
+      },
+      "delta_f1": -0.0026,
+      "ci95": [
+        -0.0051,
+        0.0
+      ],
+      "p_value": 0.053
+    },
+    {
+      "option": "phrase_spans",
+      "phase": "H4.2",
+      "description": "Span aspek/opini mencakup compound & modifier",
+      "head_p": 0.2876,
+      "head_r": 0.6573,
+      "head_f1": 0.4002,
+      "strict_f1": 0.2721,
+      "fp_empty": 964,
+      "complex_f1": 0.5073,
+      "simple_f1": 0.4622,
+      "per_rule": {
+        "R0": {
+          "predicted": 1668,
+          "correct": 706,
+          "precision": 0.4233
+        },
+        "R1": {
+          "predicted": 599,
+          "correct": 152,
+          "precision": 0.2538
+        },
+        "R2": {
+          "predicted": 716,
+          "correct": 80,
+          "precision": 0.1117
+        },
+        "R3": {
+          "predicted": 219,
+          "correct": 27,
+          "precision": 0.1233
+        },
+        "R4": {
+          "predicted": 164,
+          "correct": 53,
+          "precision": 0.3232
+        },
+        "R7": {
+          "predicted": 274,
+          "correct": 29,
+          "precision": 0.1058
+        }
+      },
+      "delta_f1": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "p_value": 1.0
+    },
+    {
+      "option": "subjective_verbs",
+      "phase": "H4.3",
+      "description": "VERB opini R1/R2/R5/R7 harus di leksikon atau dimodifikasi",
+      "head_p": 0.3827,
+      "head_r": 0.6146,
+      "head_f1": 0.4717,
+      "strict_f1": 0.3315,
+      "fp_empty": 556,
+      "complex_f1": 0.5443,
+      "simple_f1": 0.5453,
+      "per_rule": {
+        "R0": {
+          "predicted": 1668,
+          "correct": 706,
+          "precision": 0.4233
+        },
+        "R1": {
+          "predicted": 288,
+          "correct": 122,
+          "precision": 0.4236
+        },
+        "R2": {
+          "predicted": 250,
+          "correct": 65,
+          "precision": 0.26
+        },
+        "R3": {
+          "predicted": 162,
+          "correct": 19,
+          "precision": 0.1173
+        },
+        "R4": {
+          "predicted": 106,
+          "correct": 50,
+          "precision": 0.4717
+        },
+        "R7": {
+          "predicted": 84,
+          "correct": 17,
+          "precision": 0.2024
+        }
+      },
+      "delta_f1": 0.0715,
+      "ci95": [
+        0.0621,
+        0.0811
+      ],
+      "p_value": 0.0
+    },
+    {
+      "option": "distribution_guard",
+      "phase": "H4.3",
+      "description": "R3/R4 melewati konjungtor yang punya pasangan sendiri",
+      "head_p": 0.3928,
+      "head_r": 0.6121,
+      "head_f1": 0.4785,
+      "strict_f1": 0.3377,
+      "fp_empty": 553,
+      "complex_f1": 0.5576,
+      "simple_f1": 0.5466,
+      "per_rule": {
+        "R0": {
+          "predicted": 1668,
+          "correct": 706,
+          "precision": 0.4233
+        },
+        "R1": {
+          "predicted": 288,
+          "correct": 122,
+          "precision": 0.4236
+        },
+        "R2": {
+          "predicted": 250,
+          "correct": 65,
+          "precision": 0.26
+        },
+        "R3": {
+          "predicted": 93,
+          "correct": 15,
+          "precision": 0.1613
+        },
+        "R4": {
+          "predicted": 99,
+          "correct": 50,
+          "precision": 0.5051
+        },
+        "R7": {
+          "predicted": 84,
+          "correct": 17,
+          "precision": 0.2024
+        }
+      },
+      "delta_f1": 0.0068,
+      "ci95": [
+        0.0043,
+        0.0095
+      ],
+      "p_value": 0.0
+    },
+    {
+      "option": "aspect_vocabulary",
+      "phase": "H4.3",
+      "description": "Head aspek harus di kosakata train (cross-fit)",
+      "head_p": 0.6171,
+      "head_r": 0.5606,
+      "head_f1": 0.5875,
+      "strict_f1": 0.4178,
+      "fp_empty": 148,
+      "complex_f1": 0.6066,
+      "simple_f1": 0.6385,
+      "per_rule": {
+        "R0": {
+          "predicted": 1011,
+          "correct": 660,
+          "precision": 0.6528
+        },
+        "R1": {
+          "predicted": 182,
+          "correct": 108,
+          "precision": 0.5934
+        },
+        "R2": {
+          "predicted": 112,
+          "correct": 54,
+          "precision": 0.4821
+        },
+        "R3": {
+          "predicted": 29,
+          "correct": 10,
+          "precision": 0.3448
+        },
+        "R4": {
+          "predicted": 67,
+          "correct": 45,
+          "precision": 0.6716
+        },
+        "R7": {
+          "predicted": 46,
+          "correct": 16,
+          "precision": 0.3478
+        }
+      },
+      "delta_f1": 0.109,
+      "ci95": [
+        0.0954,
+        0.1221
+      ],
+      "p_value": 0.0
+    }
+  ],
+  "leave_one_out": [
+    {
+      "option": "passive_subject",
+      "description": "R1 menerima nsubj:pass",
+      "f1_without": 0.5824,
+      "p_without": 0.6214,
+      "r_without": 0.548,
+      "gain_from_option": 0.0051,
+      "ci95": [
+        0.0007,
+        0.0097
+      ],
+      "p_value": 0.029
+    },
+    {
+      "option": "acl_relative",
+      "description": "R7 memakai acl",
+      "f1_without": 0.5849,
+      "p_without": 0.6254,
+      "r_without": 0.5493,
+      "gain_from_option": 0.0026,
+      "ci95": [
+        -0.002,
+        0.0073
+      ],
+      "p_value": 0.296
+    },
+    {
+      "option": "extended_aspect_pos",
+      "description": "Aspek boleh PROPN/X",
+      "f1_without": 0.5802,
+      "p_without": 0.6155,
+      "r_without": 0.5487,
+      "gain_from_option": 0.0073,
+      "ci95": [
+        0.0037,
+        0.0118
+      ],
+      "p_value": 0.0
+    },
+    {
+      "option": "lexicon_opinion",
+      "description": "Kata leksikon ber-POS NOUN/NUM boleh jadi opini",
+      "f1_without": 0.5338,
+      "p_without": 0.5988,
+      "r_without": 0.4815,
+      "gain_from_option": 0.0537,
+      "ci95": [
+        0.0426,
+        0.0652
+      ],
+      "p_value": 0.0
+    },
+    {
+      "option": "extended_r4",
+      "description": "R4 menerima VERB & kata leksikon",
+      "f1_without": 0.5863,
+      "p_without": 0.6206,
+      "r_without": 0.5556,
+      "gain_from_option": 0.0012,
+      "ci95": [
+        -0.0018,
+        0.0044
+      ],
+      "p_value": 0.449
+    },
+    {
+      "option": "phrase_spans",
+      "description": "Span aspek/opini mencakup compound & modifier",
+      "f1_without": 0.5875,
+      "p_without": 0.6171,
+      "r_without": 0.5606,
+      "gain_from_option": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "p_value": 1.0
+    },
+    {
+      "option": "subjective_verbs",
+      "description": "VERB opini R1/R2/R5/R7 harus di leksikon atau dimodifikasi",
+      "f1_without": 0.5481,
+      "p_without": 0.5067,
+      "r_without": 0.597,
+      "gain_from_option": 0.0394,
+      "ci95": [
+        0.0293,
+        0.0497
+      ],
+      "p_value": 0.0
+    },
+    {
+      "option": "distribution_guard",
+      "description": "R3/R4 melewati konjungtor yang punya pasangan sendiri",
+      "f1_without": 0.5791,
+      "p_without": 0.5975,
+      "r_without": 0.5618,
+      "gain_from_option": 0.0084,
+      "ci95": [
+        0.0049,
+        0.0123
+      ],
+      "p_value": 0.0
+    },
+    {
+      "option": "aspect_vocabulary",
+      "description": "Head aspek harus di kosakata train (cross-fit)",
+      "f1_without": 0.4785,
+      "p_without": 0.3928,
+      "r_without": 0.6121,
+      "gain_from_option": 0.109,
+      "ci95": [
+        0.0954,
+        0.1221
+      ],
+      "p_value": 0.0
+    }
+  ]
+}

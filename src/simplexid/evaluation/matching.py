@@ -60,15 +60,15 @@ class PredPair:
 
 
 def from_extraction_results(results) -> List[PredPair]:
-    """Konversi pipeline.ExtractionResult -> PredPair (span = head token saja untuk saat ini)."""
+    """Konversi pipeline.ExtractionResult -> PredPair."""
     out = []
     for r in results:
         p = r.pair
         explicit = p.aspect_idx >= 0
         out.append(PredPair(
-            aspect_span=(p.aspect_idx, p.aspect_idx) if explicit else None,
+            aspect_span=(p.aspect_span or (p.aspect_idx, p.aspect_idx)) if explicit else None,
             aspect_head=p.aspect_idx if explicit else None,
-            opinion_span=(p.opinion_idx, p.opinion_idx),
+            opinion_span=p.opinion_span or (p.opinion_idx, p.opinion_idx),
             opinion_head=p.opinion_idx,
             rule=p.rule,
             score=r.factors.score_final,

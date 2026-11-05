@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from dataclasses import asdict, replace
 from pathlib import Path
 
 import pandas as pd
@@ -12,6 +13,13 @@ SRC = PROJECT_ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
+from simplexid.aspect_vocab import (  # noqa: E402
+    count_aspect_heads,
+    crossfit_vocabularies,
+    fold_of,
+    load_vocabulary,
+    write_vocabulary,
+)
 from simplexid.config import KEY_COMPARISONS, VARIANTS  # noqa: E402
 from simplexid.evaluation.gold_loader import load_eval_gold  # noqa: E402
 from simplexid.evaluation.subsets import (  # noqa: E402
@@ -46,7 +54,7 @@ from simplexid.lexicon import DEFAULT_LEXICON, PLACEHOLDER_LEXICON, load_lexicon
 from simplexid.oracle import span_head  # noqa: E402
 from simplexid.parse_cache import ParseCacheError, load_parse_cache  # noqa: E402
 from simplexid.pipeline import run_pipeline  # noqa: E402
-from simplexid.rules import conj_source_opinion  # noqa: E402
+from simplexid.rules import DEFAULT_RULES, conj_source_opinion  # noqa: E402
 from simplexid.scoring import compute_factors  # noqa: E402
 
 DOMAIN = "hotel"
@@ -62,7 +70,8 @@ def majority_implicit_category(implicit_df: pd.DataFrame) -> str:
     return dev["gold_aspect_category"].value_counts().idxmax()
 
 
-def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resamples: int) -> Path:
+def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resamples: int,
+             use_aspect_vocab: bool = True) -> Path:
     gold = load_eval_gold(split, PROJECT_ROOT)
     terma = pd.read_csv(PROJECT_ROOT / "data" / "processed" / "terma_processed.csv")
     parses = load_parse_cache(CACHE_DIR, terma_df=terma)
@@ -70,6 +79,15 @@ def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resampl
     polarity_df = pd.read_csv(POLARITY_PATH)
     implicit_df = pd.read_csv(IMPLICIT_PATH)
     baseline_category = majority_implicit_category(implicit_df)
+
+    rules = DEFAULT_RULES if use_aspect_vocab else replace(DEFAULT_RULES, aspect_vocabulary=False)
+    if split == "dev":
+        # Kosakata berasal dari train, jadi dev dinilai cross-fit agar tidak bocor.
+        folds = crossfit_vocabularies(terma, parses)
+        vocab_for = lambda sid: folds[fold_of(sid)]  # noqa: E731
+    else:
+        full_vocabulary = load_vocabulary()
+        vocab_for = lambda sid: full_vocabulary  # noqa: E731
 
     run_dir = new_run_dir(PROJECT_ROOT, split, label)
     print(f"Run dir: {run_dir}")
@@ -85,7 +103,8 @@ def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resampl
         variant = VARIANTS[name]
         preds = {
             sid: from_extraction_results(run_pipeline(
-                gold.tokens[sid], variant, DOMAIN, lexicon, parsed_sentence=parses[sid]))
+                gold.tokens[sid], variant, DOMAIN, lexicon, parsed_sentence=parses[sid],
+                rules=rules, aspect_vocabulary=vocab_for(sid)))
             for sid in gold.sentence_ids
         }
         with (run_dir / f"predictions_{name}.jsonl").open("w", encoding="utf-8") as f:
@@ -96,7 +115,8 @@ def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resampl
         def oracle_score(sid, aspect_span, opinion_span, _v=variant):
             sent = parses[sid]
             head = span_head(sent, *opinion_span)
-            source = conj_source_opinion(sent, head) if _v.use_r4 and not _v.scope_consistency else None
+            source = (conj_source_opinion(sent, head, rules, lexicon)
+                      if _v.use_r4 and not _v.scope_consistency else None)
             return compute_factors(sent, head, lexicon, distance_weighted=_v.distance_weighted_formula,
                                    modifier_source_idx=source).score_final
 
@@ -139,6 +159,7 @@ def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resampl
         "label": label,
         "variants": {n: vars(VARIANTS[n]) for n in variant_names},
         "lexicon": lexicon_name,
+        "rules": asdict(rules),
         "lexicon_is_placeholder": lexicon_name == PLACEHOLDER_LEXICON,
         "gold": gold.summary(),
         "implicit_majority_baseline": baseline_category,
@@ -248,12 +269,18 @@ def write_summary(run_dir: Path, split: str, metrics: dict, significance: pd.Dat
 
 
 def cmd_dev(args):
-    evaluate("dev", args.variants, args.lexicon, args.label, args.resamples)
+    evaluate("dev", args.variants, args.lexicon, args.label, args.resamples, not args.no_aspect_vocab)
+
+
+def cmd_build_aspect_vocab(_):
+    terma = pd.read_csv(PROJECT_ROOT / "data" / "processed" / "terma_processed.csv")
+    parses = load_parse_cache(CACHE_DIR, terma_df=terma)
+    print(f"Kata: {write_vocabulary(count_aspect_heads(terma, parses))}")
 
 
 def cmd_final(args):
     check_frozen(PROJECT_ROOT)
-    run_dir = evaluate("final", args.variants, args.lexicon, args.label, args.resamples)
+    run_dir = evaluate("final", args.variants, args.lexicon, args.label, args.resamples, not args.no_aspect_vocab)
     log_final_run(PROJECT_ROOT, run_dir, args.variants)
 
 
@@ -275,6 +302,9 @@ def build_parser() -> argparse.ArgumentParser:
         p.add_argument("--lexicon", default=DEFAULT_LEXICON)
         p.add_argument("--label", default="eval")
         p.add_argument("--resamples", type=int, default=10_000)
+        p.add_argument("--no-aspect-vocab", action="store_true",
+                       help="Matikan kosakata aspek (sistem tanpa data beranotasi)")
+    sub.add_parser("build-aspect-vocab", help="Build resources/aspects/aspect_vocab_v1.tsv from TermA train")
     p = sub.add_parser("freeze", help="Freeze code/resources/gold hashes before the final run (H6)")
     p.add_argument("--note", required=True, help="Why the configuration is being frozen")
     p = sub.add_parser("gold-summary", help="Show the evaluation gold universe for a split")
@@ -285,7 +315,8 @@ def build_parser() -> argparse.ArgumentParser:
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     args = build_parser().parse_args()
-    commands = {"dev": cmd_dev, "final": cmd_final, "freeze": cmd_freeze, "gold-summary": cmd_gold_summary}
+    commands = {"dev": cmd_dev, "final": cmd_final, "freeze": cmd_freeze, "gold-summary": cmd_gold_summary,
+                "build-aspect-vocab": cmd_build_aspect_vocab}
     try:
         commands[args.command](args)
     except (FrozenConfigError, ParseCacheError, GoldValidationError, FileNotFoundError, ValueError) as exc:

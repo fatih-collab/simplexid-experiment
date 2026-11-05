@@ -10,7 +10,7 @@ from simplexid import config
 from simplexid.dam import disambiguate
 from simplexid.parser import ParsedSentence, Token
 from simplexid.pipeline import run_pipeline
-from simplexid.rules import extract_explicit_pairs, expand_r3, expand_r4, find_orphan_opinions
+from simplexid.rules import BASE_RULES, extract_explicit_pairs, expand_r3, expand_r4, find_orphan_opinions
 from simplexid.scoring import compute_factors
 
 
@@ -126,7 +126,7 @@ def test_pipeline_no_dict_collision():
     swn = {"baik": 0.6}
     variant = config.VARIANTS["A2"]  # R3+R4 aktif
     results = run_pipeline(tokens=None, variant=variant, domain="hotel",
-                            swn_lexicon=swn, parsed_sentence=sent)
+                            swn_lexicon=swn, parsed_sentence=sent, rules=BASE_RULES)
     pairs_found = {(r.pair.aspect_text, r.pair.opinion_text) for r in results}
     assert ("Kecepatan", "baik") in pairs_found, \
         f"BUG: pasangan asal (Kecepatan,baik) hilang/tertimpa! Hasil: {pairs_found}"

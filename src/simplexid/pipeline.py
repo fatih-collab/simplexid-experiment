@@ -10,7 +10,7 @@ from typing import List, Dict, Tuple
 from dataclasses import dataclass
 
 from .parser import ParsedSentence, parse_tokens
-from .rules import extract_explicit_pairs, expand_r3, expand_r4, find_orphan_opinions, Pair
+from .rules import DEFAULT_RULES, RuleOptions, extract_explicit_pairs, expand_r3, expand_r4, find_orphan_opinions, Pair
 from .dam import disambiguate, lookup
 from .scoring import compute_factors, SentimentFactors
 from .config import VariantConfig
@@ -26,7 +26,9 @@ class ExtractionResult:
 def run_pipeline(tokens: List[str], variant: VariantConfig, domain: str,
                   swn_lexicon: dict,
                   document_context_aspects: List[str] = None,
-                  parsed_sentence: ParsedSentence = None) -> List[ExtractionResult]:
+                  parsed_sentence: ParsedSentence = None,
+                  rules: RuleOptions = DEFAULT_RULES,
+                  aspect_vocabulary=None) -> List[ExtractionResult]:
     """
     Jalankan pipeline lengkap pada satu kalimat (sudah ditokenisasi, selaras
     dengan tokenisasi ground truth TermA) sesuai flag pada `variant`.
@@ -48,13 +50,13 @@ def run_pipeline(tokens: List[str], variant: VariantConfig, domain: str,
     sent = parsed_sentence if parsed_sentence is not None else parse_tokens(tokens)
 
     # --- Kelompok Aturan Pertama (selalu aktif di semua varian) ---
-    pairs = extract_explicit_pairs(sent)
+    pairs = extract_explicit_pairs(sent, rules, swn_lexicon, aspect_vocabulary)
 
     # --- R3/R4: ekspansi konjungtif ---
     if variant.use_r3:
-        pairs += expand_r3(sent, pairs)
+        pairs += expand_r3(sent, pairs, rules, aspect_vocabulary)
     if variant.use_r4:
-        pairs += expand_r4(sent, pairs)
+        pairs += expand_r4(sent, pairs, rules, swn_lexicon)
 
     results: Dict[Tuple[int, int], ExtractionResult] = {}
     for p in pairs:
