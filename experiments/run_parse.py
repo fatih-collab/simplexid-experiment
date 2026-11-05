@@ -13,6 +13,7 @@ SRC = PROJECT_ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
+from simplexid.cues import NEGATION_WORDS as NEGATION_CUES  # noqa: E402
 from simplexid.oracle import (  # noqa: E402
     SOURCE_AUTO_1A1O,
     SOURCE_REVIEWED,
@@ -33,7 +34,6 @@ REPORT_DIR = PROJECT_ROOT / "reports" / "h32"
 AUDIT_DIR = PROJECT_ROOT / "data" / "annotation" / "parser_audit"
 AUDIT_SHEET = AUDIT_DIR / "parser_audit_sheet.csv"
 
-NEGATION_CUES = {"tidak", "tak", "bukan", "belum", "kurang", "gak", "ga", "nggak", "enggak", "tanpa"}
 
 
 def load_terma() -> pd.DataFrame:

@@ -9,7 +9,7 @@ from typing import List
 from .parser import ParsedSentence, parse_tokens
 from .rules import extract_explicit_pairs, find_orphan_opinions
 from .dam import lookup
-from .scoring import NEGATION_WORDS, AMPLIFIER_WORDS, DOWNTONER_WORDS
+from .cues import NEGATION_WORDS, AMPLIFIER_WORDS, DOWNTONER_WORDS
 
 
 @dataclass

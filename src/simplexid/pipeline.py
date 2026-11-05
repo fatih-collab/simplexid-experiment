@@ -2,7 +2,7 @@
 Orkestrasi pipeline SimplEx-ID lengkap, dikontrol oleh VariantConfig (config.py).
 
 Ini adalah satu-satunya tempat yang perlu diubah untuk menjalankan varian
-V0-V9 -- logika tiap mekanisme sendiri (rules.py, dam.py, scoring.py)
+ablation -- logika tiap mekanisme sendiri (rules.py, dam.py, scoring.py)
 TIDAK perlu diduplikasi/diedit per varian.
 """
 
@@ -12,7 +12,7 @@ from dataclasses import dataclass
 from .parser import ParsedSentence, parse_tokens
 from .rules import extract_explicit_pairs, expand_r3, expand_r4, find_orphan_opinions, Pair
 from .dam import disambiguate, lookup
-from .scoring import compute_factors, apply_scope_consistency, SentimentFactors
+from .scoring import compute_factors, SentimentFactors
 from .config import VariantConfig
 
 
@@ -58,9 +58,15 @@ def run_pipeline(tokens: List[str], variant: VariantConfig, domain: str,
 
     results: Dict[Tuple[int, int], ExtractionResult] = {}
     for p in pairs:
+        key = (p.aspect_idx, p.opinion_idx)
+        if key in results:   # pasangan asal menang atas hasil ekspansi yang sama
+            continue
+        # Tanpa scope consistency, pasangan R4 mewarisi Neg/Int opini sumbernya.
+        source = None if variant.scope_consistency else p.source_opinion_idx
         factors = compute_factors(sent, p.opinion_idx, swn_lexicon,
-                                   distance_weighted=variant.distance_weighted_formula)
-        results[(p.aspect_idx, p.opinion_idx)] = ExtractionResult(pair=p, factors=factors)
+                                   distance_weighted=variant.distance_weighted_formula,
+                                   modifier_source_idx=source)
+        results[key] = ExtractionResult(pair=p, factors=factors)
 
     # --- R8: resolusi aspek implisit (dengan/tanpa disambiguasi kontekstual) ---
     if variant.use_r8:
@@ -84,17 +90,6 @@ def run_pipeline(tokens: List[str], variant: VariantConfig, domain: str,
                                 aspect_text=chosen, opinion_text=o.text)
             results[(-1, o.idx)] = ExtractionResult(pair=pseudo_pair, factors=factors,
                                                      domain_aspect=True)
-
-    # --- Scope consistency untuk pasangan hasil R3/R4 ---
-    entries = [{"pair": r.pair, "factors": r.factors} for r in results.values()]
-    entries = apply_scope_consistency(
-        sent, entries, swn_lexicon,
-        distance_weighted=variant.distance_weighted_formula,
-        enabled=variant.scope_consistency,
-    )
-    for e in entries:
-        key = (e["pair"].aspect_idx, e["pair"].opinion_idx)
-        results[key].factors = e["factors"]
 
     return list(results.values())
 

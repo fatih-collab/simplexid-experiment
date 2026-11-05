@@ -426,6 +426,8 @@ def save_split_files(terma_df: pd.DataFrame, split_dir: str | Path) -> dict:
     return metadata
 
 
+# Daftar berikut hanya mendefinisikan strata sampling template gold_polarity yang SUDAH dibuat;
+# jangan diubah. Daftar yang dipakai sistem ada di cues.py.
 _NEGATION_CUES = {
     "tidak",
     "tak",

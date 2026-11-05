@@ -27,6 +27,7 @@ class Pair:
     rule: str                 # "R0".."R8" -- untuk traceability/explainability
     aspect_text: str = ""
     opinion_text: str = ""
+    source_opinion_idx: Optional[int] = None  # opini sumber untuk pasangan hasil R4
 
 
 def _dep(tok: Token) -> str:
@@ -140,8 +141,18 @@ def expand_r4(sent: ParsedSentence, pairs: List[Pair]) -> List[Pair]:
                          if c.head_idx == o1.idx and _dep(c) == "conj" and c.pos == "ADJ"]
         for o2 in conj_targets:
             new_pairs.append(Pair(p.aspect_idx, o2.idx, "R4",
-                                   aspect_text=p.aspect_text, opinion_text=o2.text))
+                                   aspect_text=p.aspect_text, opinion_text=o2.text,
+                                   source_opinion_idx=p.opinion_idx))
     return new_pairs
+
+
+def conj_source_opinion(sent: ParsedSentence, opinion_idx: int) -> Optional[int]:
+    """Opini sumber bila token ini akan dihasilkan R4 (konjungtor ADJ dari sebuah opini)."""
+    t = sent.tokens[opinion_idx]
+    if _dep(t) == "conj" and t.pos == "ADJ" and t.head_idx != t.idx:
+        if sent.tokens[t.head_idx].pos in ("ADJ", "VERB"):
+            return t.head_idx
+    return None
 
 
 def find_orphan_opinions(sent: ParsedSentence, pairs: List[Pair]) -> List[Token]:

@@ -1,5 +1,5 @@
 """
-Definisi varian ablation V0-V9 sebagai kombinasi flag.
+Definisi varian ablation (kumulatif A0-A6 dan leave-one-out L_*) sebagai kombinasi flag.
 
 Setiap varian adalah dict flag yang dikonsumsi oleh pipeline.py.
 Menambah/mengubah varian cukup dengan mengedit dict VARIANTS di bawah --
@@ -21,65 +21,52 @@ class VariantConfig:
     description: str = ""
 
 
+def _variant(name, description, **flags) -> VariantConfig:
+    return VariantConfig(name=name, description=description, **flags)
+
+
+_R34 = dict(use_r3=True, use_r4=True)
+_R8S = dict(use_r8=True)
+_R8C = dict(use_r8=True, r8_contextual_disambiguation=True)
+_DW = dict(distance_weighted_formula=True)
+_SC = dict(scope_consistency=True)
+
+# Kumulatif A0..A6 (A6 = sistem lengkap) + leave-one-out L_* dari A6 + S_R4 untuk cek interaksi R3/R4.
+# Leave-one-out SC sama dengan A5 (A5 vs A6), jadi tidak punya varian tersendiri.
+# Setiap varian wajib punya kombinasi flag yang unik (diuji di tests/test_h4_ablation.py).
 VARIANTS = {
-    "V0": VariantConfig(
-        name="V0",
-        description="Baseline murni: R0,R1,R2,R5,R6,R7 saja (setara SimplEx lama diadaptasi)",
-    ),
-    "V1": VariantConfig(
-        name="V1", use_r3=True,
-        description="V0 + R3 saja (ekspansi sisi aspek)",
-    ),
-    "V2": VariantConfig(
-        name="V2", use_r4=True,
-        description="V0 + R4 saja (ekspansi sisi opini)",
-    ),
-    "V3": VariantConfig(
-        name="V3", use_r3=True, use_r4=True,
-        description="V0 + R3 + R4 (dual conjunctive expansion)",
-    ),
-    "V4": VariantConfig(
-        name="V4", use_r3=True, use_r4=True, use_r8=True,
-        r8_contextual_disambiguation=False,
-        description="V3 + R8 TANPA disambiguasi kontekstual (setara Liu 2005/Fei 2012)",
-    ),
-    "V5": VariantConfig(
-        name="V5", use_r3=True, use_r4=True, use_r8=True,
-        r8_contextual_disambiguation=True,
-        description="V3 + R8 DENGAN disambiguasi kontekstual (revisi)",
-    ),
-    "V6": VariantConfig(
-        name="V6", use_r3=True, use_r4=True, use_r8=True,
-        r8_contextual_disambiguation=True, distance_weighted_formula=False,
-        description="V5 + formula skor TANPA bobot jarak (setara SO-CAL/Polanyi-Zaenen)",
-    ),
-    "V7": VariantConfig(
-        name="V7", use_r3=True, use_r4=True, use_r8=True,
-        r8_contextual_disambiguation=True, distance_weighted_formula=True,
-        description="V5 + formula skor DENGAN bobot jarak struktural (revisi)",
-    ),
-    "V8": VariantConfig(
-        name="V8", use_r3=True, use_r4=True, use_r8=True,
-        r8_contextual_disambiguation=True, distance_weighted_formula=True,
-        scope_consistency=False,
-        description="V7 TANPA scope consistency (pasangan R3/R4 mewarisi Neg/Int pasangan asal)",
-    ),
-    "V9": VariantConfig(
-        name="V9", use_r3=True, use_r4=True, use_r8=True,
-        r8_contextual_disambiguation=True, distance_weighted_formula=True,
-        scope_consistency=True,
-        description="SimplEx-ID LENGKAP (versi final yang diklaim di paten)",
-    ),
+    "A0": _variant("A0", "Base: R0,R1,R2,R5,R6,R7"),
+    "A1": _variant("A1", "A0 + R3", use_r3=True),
+    "A2": _variant("A2", "A1 + R4", **_R34),
+    "A3": _variant("A3", "A2 + R8 statis", **_R34, **_R8S),
+    "A4": _variant("A4", "A2 + R8 kontekstual", **_R34, **_R8C),
+    "A5": _variant("A5", "A4 + DW scoring", **_R34, **_R8C, **_DW),
+    "A6": _variant("A6", "A5 + scope consistency (LENGKAP)", **_R34, **_R8C, **_DW, **_SC),
+    "S_R4": _variant("S_R4", "A0 + R4 saja", use_r4=True),
+    "L_R3": _variant("L_R3", "A6 tanpa R3", use_r4=True, **_R8C, **_DW, **_SC),
+    "L_R4": _variant("L_R4", "A6 tanpa R4", use_r3=True, **_R8C, **_DW, **_SC),
+    "L_R8": _variant("L_R8", "A6 tanpa R8", **_R34, **_DW, **_SC),
+    "L_CTX": _variant("L_CTX", "A6 dengan R8 statis", **_R34, **_R8S, **_DW, **_SC),
+    "L_DW": _variant("L_DW", "A6 dengan skor statis", **_R34, **_R8C, **_SC),
 }
 
-# Perbandingan kunci yang wajib dilaporkan (lihat Bagian 6 rancangan eksperimen)
+# (A, B, deskripsi, target). Tiap perbandingan hanya diuji pada target yang memang
+# bisa dipengaruhi mekanismenya, agar koreksi Holm tidak terbebani uji yang pasti nol.
 KEY_COMPARISONS = [
-    ("V0", "V9", "Perbandingan utama (Eksperimen A)"),
-    ("V1", "V3", "Kontribusi R4 di atas R3 (cek superadditive R3+R4)"),
-    ("V2", "V3", "Kontribusi R3 di atas R4 (cek superadditive R3+R4)"),
-    ("V4", "V5", "Kontribusi disambiguasi kontekstual R8 (uji khusus subset IMPLICIT_AMBIG)"),
-    ("V6", "V7", "Kontribusi structure-weighted scoring"),
-    ("V8", "V9", "Kontribusi scope consistency (uji khusus subset ASYM_MOD)"),
+    ("A0", "A6", "Perbandingan utama", ("pair_f1_head", "polarity_end_to_end", "polarity_oracle_pair")),
+    ("A0", "A1", "Kontribusi R3", ("pair_f1_head", "pair_f1_head_coord_aspect")),
+    ("A1", "A2", "Kontribusi R4 di atas R3", ("pair_f1_head", "pair_f1_head_coord_opinion")),
+    ("S_R4", "A2", "Kontribusi R3 di atas R4", ("pair_f1_head",)),
+    ("A2", "A3", "Kontribusi R8 statis", ("implicit_category",)),
+    ("A3", "A4", "Kontribusi disambiguasi kontekstual R8", ("implicit_category",)),
+    ("A4", "A5", "Kontribusi DW scoring", ("polarity_oracle_pair", "polarity_end_to_end")),
+    ("A5", "A6", "Kontribusi scope consistency",
+     ("polarity_oracle_pair", "polarity_oracle_pair_asym_mod", "polarity_end_to_end")),
+    ("L_R3", "A6", "Leave-one-out R3", ("pair_f1_head",)),
+    ("L_R4", "A6", "Leave-one-out R4", ("pair_f1_head",)),
+    ("L_R8", "A6", "Leave-one-out R8", ("implicit_category",)),
+    ("L_CTX", "A6", "Leave-one-out disambiguasi", ("implicit_category",)),
+    ("L_DW", "A6", "Leave-one-out DW", ("polarity_oracle_pair", "polarity_end_to_end")),
 ]
 
 # Ambang batas jarak dependensi untuk faktor negasi (lihat scoring.py)

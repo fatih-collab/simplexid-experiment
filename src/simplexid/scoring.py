@@ -1,18 +1,35 @@
 """
-Perhitungan skor sentimen: formula statis (baseline) dan berbobot-jarak
-(distance-weighted, revisi), plus scope consistency untuk pasangan R3/R4.
+Perhitungan skor sentimen: Neg x Int x Lexicon.
+
+Dua dimensi yang diuji ablation:
+- distance_weighted=False (statis): hanya modifier yang menempel LANGSUNG pada
+  opini, efeknya tetap (setara SO-CAL/Polanyi-Zaenen).
+- distance_weighted=True (DW): modifier dicari sampai jarak dependensi
+  NEG_DISTANCE_THRESHOLD tanpa menyeberangi batas klausa/konjungsi, dan efek
+  intensifier meluruh terhadap jarak.
+
+- Scope consistency: pasangan hasil R4 berbagi aspek tetapi punya token opini
+  sendiri. Dengan SC faktor dihitung dari opininya sendiri; tanpa SC faktor
+  DIWARISI dari opini sumber (modifier_source_idx). Pasangan R3 berbagi token
+  opini yang sama dengan sumbernya, jadi SC hanya berpengaruh pada R4.
 """
 
+from __future__ import annotations
+
 import math
+from collections import deque
 from dataclasses import dataclass
-from typing import Optional
+from typing import List, Optional, Tuple
 
-from .parser import ParsedSentence, dependency_distance, find_dependents
 from . import config
+from .cues import ALL_CUES, AMPLIFIER_WORDS, INTENSITY_WORDS, NEGATION_WORDS
+from .parser import ParsedSentence, Token
 
-NEGATION_WORDS = {"tidak", "bukan", "belum", "tak", "jangan"}
-AMPLIFIER_WORDS = {"sangat", "sekali", "banget", "amat", "super"}
-DOWNTONER_WORDS = {"agak", "cukup", "lumayan", "sedikit"}
+# Relasi yang TIDAK boleh diseberangi saat mencari modifier: modifier di
+# seberangnya milik konjungtor/klausa lain (fungsi itu diuji terpisah oleh SC).
+BLOCKED_RELATIONS = {"conj", "parataxis", "advcl", "punct", "appos", "dep", "cc", "root"}
+# Naik ke head hanya lewat komplemen verbal ("tidak bisa dikunci").
+UPWARD_RELATIONS = {"xcomp"}
 
 
 @dataclass
@@ -29,78 +46,82 @@ class SentimentFactors:
 
 
 def get_swn_score(opinion_lemma: str, swn_lexicon: dict) -> float:
-    """
-    Ambil skor sentimen dasar dari leksikon (mis. SentiWordNet Bahasa Indonesia
-    hasil terjemahan/adaptasi, atau leksikon lain yang Anda pakai).
-    swn_lexicon: dict kata -> skor real (-1..+1). Default 0.0 jika tidak ada.
-    """
+    """Skor leksikon sebuah kata (-1..+1); 0.0 jika tidak ada."""
     return swn_lexicon.get(opinion_lemma.lower(), 0.0)
 
 
+def token_score(token: Token, swn_lexicon: dict) -> float:
+    """Cari bentuk permukaan dulu (lemma UDPipe kadang keliru), lalu lemma."""
+    for form in (token.text.lower(), token.lemma.lower()):
+        if form in swn_lexicon:
+            return swn_lexicon[form]
+    return 0.0
+
+
+def _cue_form(token: Token) -> Optional[str]:
+    for form in (token.text.lower(), token.lemma.lower()):
+        if form in ALL_CUES:
+            return form
+    return None
+
+
+def direct_modifiers(sent: ParsedSentence, idx: int) -> List[Tuple[Token, int]]:
+    return [(t, 1) for t in sent.tokens if t.head_idx == idx and t.idx != idx and t.dep == "advmod"]
+
+
+def reachable_modifiers(sent: ParsedSentence, idx: int, max_distance: int) -> List[Tuple[Token, int]]:
+    """Token kata-isyarat dalam jarak <= max_distance dari idx, dengan jaraknya."""
+    children = {t.idx: [] for t in sent.tokens}
+    for t in sent.tokens:
+        if t.head_idx != t.idx:
+            children[t.head_idx].append(t)
+
+    found, seen = [], {idx}
+    queue = deque([(idx, 0)])
+    while queue:
+        cur, d = queue.popleft()
+        if d == max_distance:
+            continue
+        neighbours = [c for c in children[cur] if c.dep not in BLOCKED_RELATIONS]
+        tok = sent.tokens[cur]
+        if tok.dep in UPWARD_RELATIONS and tok.head_idx != cur:
+            neighbours.append(sent.tokens[tok.head_idx])
+        for n in neighbours:
+            if n.idx in seen:
+                continue
+            seen.add(n.idx)
+            queue.append((n.idx, d + 1))
+            if _cue_form(n):
+                found.append((n, d + 1))
+    return found
+
+
 def compute_factors(sent: ParsedSentence, opinion_idx: int, swn_lexicon: dict,
-                     distance_weighted: bool) -> SentimentFactors:
+                    distance_weighted: bool,
+                    modifier_source_idx: Optional[int] = None) -> SentimentFactors:
     """
-    Hitung Neg dan Int untuk SATU token opini, berdasarkan token yang
-    terhubung padanya via relasi advmod/neg pada pohon dependensi.
+    Hitung Neg, Int, dan skor leksikon untuk satu token opini.
 
-    Jika distance_weighted=False: perilaku setara varian V6 (statis, presence-based).
-    Jika distance_weighted=True: perilaku varian V7/V9 (fungsi jarak, lihat
-    Bagian "Perhitungan Skor Sentimen" pada draf paten).
+    modifier_source_idx: jika diberikan, Neg/Int diambil dari token tsb (mode
+    pewarisan tanpa scope consistency); skor leksikon tetap milik opini sendiri.
     """
-    opinion_tok = sent.tokens[opinion_idx]
-    modifiers = find_dependents(sent, opinion_idx, "advmod") + \
-                find_dependents(sent, opinion_idx, "neg")
+    source = opinion_idx if modifier_source_idx is None else modifier_source_idx
+    if distance_weighted:
+        modifiers = reachable_modifiers(sent, source, config.NEG_DISTANCE_THRESHOLD)
+    else:
+        modifiers = direct_modifiers(sent, source)
 
-    neg_val = 1.0
-    d_neg = None
-    int_val = 1.0
-    d_int = None
-
-    for m in modifiers:
-        lemma = m.lemma.lower()
-        d = dependency_distance(sent, opinion_idx, m.idx) or 1
-
-        if lemma in NEGATION_WORDS:
-            if distance_weighted:
-                if d <= config.NEG_DISTANCE_THRESHOLD:
-                    neg_val = -1.0
-                    d_neg = d
-            else:
-                neg_val = -1.0
-                d_neg = d
-
-        elif lemma in AMPLIFIER_WORDS or lemma in DOWNTONER_WORDS:
-            base = 1.8 if lemma in AMPLIFIER_WORDS else 0.6
+    neg_val, int_val = 1.0, 1.0
+    d_neg, d_int = None, None
+    for m, d in sorted(modifiers, key=lambda x: x[1]):
+        form = _cue_form(m)
+        if form in NEGATION_WORDS and d_neg is None:
+            neg_val, d_neg = -1.0, d
+        elif form in INTENSITY_WORDS and d_int is None:
+            base = 1.8 if form in AMPLIFIER_WORDS else 0.6
             d_int = d
-            if distance_weighted:
-                int_val = 1.0 + (base - 1.0) * math.exp(-config.INT_DECAY_LAMBDA * d)
-            else:
-                int_val = base
+            int_val = 1.0 + (base - 1.0) * math.exp(-config.INT_DECAY_LAMBDA * d) if distance_weighted else base
 
-    swn = get_swn_score(opinion_tok.lemma, swn_lexicon)
+    swn = token_score(sent.tokens[opinion_idx], swn_lexicon)
     return SentimentFactors(neg=neg_val, intensifier=int_val, swn_score=swn,
-                             distance_neg=d_neg, distance_int=d_int)
-
-
-def apply_scope_consistency(sent: ParsedSentence, pairs_with_factors: list,
-                             swn_lexicon: dict, distance_weighted: bool,
-                             enabled: bool):
-    """
-    Untuk pasangan yang berasal dari R3/R4 (ekspansi konjungtif), hitung ULANG
-    Neg/Int secara independen dari jalur dependensi pasangan tsb sendiri --
-    BUKAN mewarisi dari pasangan asal.
-
-    Jika enabled=False (varian V8): sengaja BIARKAN pewarisan (bug lama)
-    utuh untuk keperluan perbandingan ablation -- lihat catatan di
-    run_experiment.py soal cara memanggil fungsi ini dua kali (enabled=False
-    vs True) pada pipeline yang sama.
-    """
-    if not enabled:
-        return pairs_with_factors  # sengaja tidak mengubah apapun (mewarisi pasangan asal)
-
-    for entry in pairs_with_factors:
-        pair = entry["pair"]
-        if pair.rule in ("R3", "R4"):
-            factors = compute_factors(sent, pair.opinion_idx, swn_lexicon, distance_weighted)
-            entry["factors"] = factors
-    return pairs_with_factors
+                            distance_neg=d_neg, distance_int=d_int)

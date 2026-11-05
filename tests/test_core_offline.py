@@ -124,7 +124,7 @@ def test_pipeline_no_dict_collision():
         ("baik", "baik", "ADJ", "amod", 0),
     ])
     swn = {"baik": 0.6}
-    variant = config.VARIANTS["V3"]  # R3+R4 aktif
+    variant = config.VARIANTS["A2"]  # R3+R4 aktif
     results = run_pipeline(tokens=None, variant=variant, domain="hotel",
                             swn_lexicon=swn, parsed_sentence=sent)
     pairs_found = {(r.pair.aspect_text, r.pair.opinion_text) for r in results}

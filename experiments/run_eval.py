@@ -14,8 +14,16 @@ if str(SRC) not in sys.path:
 
 from simplexid.config import KEY_COMPARISONS, VARIANTS  # noqa: E402
 from simplexid.evaluation.gold_loader import load_eval_gold  # noqa: E402
+from simplexid.evaluation.subsets import (  # noqa: E402
+    ASYM_MOD,
+    COORD_ASPECT,
+    COORD_OPINION,
+    gold_tags,
+    sentences_with_tag,
+)
 from simplexid.evaluation.matching import LEVELS, from_extraction_results  # noqa: E402
 from simplexid.evaluation.metrics import (  # noqa: E402
+    Counts,
     extraction_counts,
     implicit_items,
     per_rule_precision,
@@ -34,10 +42,11 @@ from simplexid.evaluation.run_record import (  # noqa: E402
 )
 from simplexid.evaluation.significance import holm, mcnemar_exact, paired_bootstrap_f1  # noqa: E402
 from simplexid.gold import GoldValidationError  # noqa: E402
-from simplexid.lexicon import DEFAULT_LEXICON, load_lexicon  # noqa: E402
+from simplexid.lexicon import DEFAULT_LEXICON, PLACEHOLDER_LEXICON, load_lexicon  # noqa: E402
 from simplexid.oracle import span_head  # noqa: E402
 from simplexid.parse_cache import ParseCacheError, load_parse_cache  # noqa: E402
 from simplexid.pipeline import run_pipeline  # noqa: E402
+from simplexid.rules import conj_source_opinion  # noqa: E402
 from simplexid.scoring import compute_factors  # noqa: E402
 
 DOMAIN = "hotel"
@@ -66,6 +75,11 @@ def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resampl
     print(f"Run dir: {run_dir}")
     print(json.dumps(gold.summary(), indent=2))
 
+    tags = gold_tags(gold)
+    subset_sentences = {tag: sentences_with_tag(gold, tags, tag) for tag in (COORD_ASPECT, COORD_OPINION, ASYM_MOD)}
+    asym_pair_ids = {pid for pid, t in tags.items() if ASYM_MOD in t}
+    print("Subset (kalimat):", {k: len(v) for k, v in subset_sentences.items()})
+
     metrics, counts_head, pol_items, imp_items = {}, {}, {}, {}
     for name in variant_names:
         variant = VARIANTS[name]
@@ -82,7 +96,9 @@ def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resampl
         def oracle_score(sid, aspect_span, opinion_span, _v=variant):
             sent = parses[sid]
             head = span_head(sent, *opinion_span)
-            return compute_factors(sent, head, lexicon, distance_weighted=_v.distance_weighted_formula).score_final
+            source = conj_source_opinion(sent, head) if _v.use_r4 and not _v.scope_consistency else None
+            return compute_factors(sent, head, lexicon, distance_weighted=_v.distance_weighted_formula,
+                                   modifier_source_idx=source).score_final
 
         extraction = {}
         for level in LEVELS:
@@ -91,10 +107,14 @@ def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resampl
             if level == "head":
                 counts_head[name] = per_sentence
         pol_items[name] = polarity_items(gold, preds, polarity_df, oracle_score)
+        pol_items[name]["asym_mod"] = pol_items[name]["pair_id"].isin(asym_pair_ids)
         imp_items[name] = implicit_items(gold, preds, implicit_df)
         metrics[name] = {
             "description": variant.description,
             "extraction": extraction,
+            "extraction_head_by_subset": {
+                tag: summarize_subset(counts_head[name], ids) for tag, ids in subset_sentences.items()
+            },
             "per_rule_precision_head": per_rule_precision(gold, preds, "head"),
             "polarity": summarize_polarity(pol_items[name]),
             "implicit": summarize_implicit(imp_items[name], baseline_category),
@@ -104,7 +124,7 @@ def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resampl
               f"polarity oracle acc={metrics[name]['polarity']['oracle_pair']['accuracy']:.3f} | "
               f"implicit cat acc={metrics[name]['implicit']['category']['accuracy']:.3f}")
 
-    significance = compare(variant_names, counts_head, pol_items, imp_items, n_resamples)
+    significance = compare(variant_names, counts_head, pol_items, imp_items, subset_sentences, n_resamples)
 
     (run_dir / "metrics.json").write_text(json.dumps(metrics, indent=2, ensure_ascii=False), encoding="utf-8")
     significance.to_csv(run_dir / "significance.csv", index=False, encoding="utf-8-sig")
@@ -119,7 +139,7 @@ def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resampl
         "label": label,
         "variants": {n: vars(VARIANTS[n]) for n in variant_names},
         "lexicon": lexicon_name,
-        "lexicon_is_placeholder": lexicon_name == DEFAULT_LEXICON,
+        "lexicon_is_placeholder": lexicon_name == PLACEHOLDER_LEXICON,
         "gold": gold.summary(),
         "implicit_majority_baseline": baseline_category,
         "bootstrap_resamples": n_resamples,
@@ -129,25 +149,47 @@ def evaluate(split: str, variant_names, lexicon_name: str, label: str, n_resampl
     return run_dir
 
 
-def compare(variant_names, counts_head, pol_items, imp_items, n_resamples) -> pd.DataFrame:
-    rows = []
-    for a, b, desc in KEY_COMPARISONS:
-        if a not in variant_names or b not in variant_names:
-            continue
-        rows.append({"comparison": f"{a}_vs_{b}", "description": desc, "test": "paired_bootstrap",
-                     "target": "pair_f1_head",
-                     **paired_bootstrap_f1(counts_head[a], counts_head[b], n_resamples=n_resamples)})
-        for mode in ("pred_oracle_pair", "pred_end_to_end"):
-            pa, pb = pol_items[a], pol_items[b]
-            rows.append({"comparison": f"{a}_vs_{b}", "description": desc, "test": "mcnemar_exact",
-                         "target": f"polarity_{mode.removeprefix('pred_')}",
-                         **mcnemar_exact((pa[mode] == pa["gold"]).tolist(), (pb[mode] == pb["gold"]).tolist())})
+def summarize_subset(per_sentence, sentence_ids) -> dict:
+    total = sum((per_sentence[s] for s in sentence_ids), Counts())
+    return {**total.prf(), "n_sentences": len(sentence_ids)}
+
+
+def compare(variant_names, counts_head, pol_items, imp_items, subset_sentences, n_resamples) -> pd.DataFrame:
+    def bootstrap(a, b, ids=None):
+        ca, cb = counts_head[a], counts_head[b]
+        if ids is not None:
+            ca, cb = {s: ca[s] for s in ids}, {s: cb[s] for s in ids}
+        return paired_bootstrap_f1(ca, cb, n_resamples=n_resamples)
+
+    def polarity(a, b, mode, only_asym=False):
+        pa, pb = pol_items[a], pol_items[b]
+        if only_asym:
+            pa, pb = pa[pa["asym_mod"]], pb[pb["asym_mod"]]
+        return mcnemar_exact((pa[mode] == pa["gold"]).tolist(), (pb[mode] == pb["gold"]).tolist())
+
+    def implicit(a, b):
         ia = imp_items[a][imp_items[a]["decision"] == "IMPLICIT"]
         ib = imp_items[b][imp_items[b]["decision"] == "IMPLICIT"]
-        rows.append({"comparison": f"{a}_vs_{b}", "description": desc, "test": "mcnemar_exact",
-                     "target": "implicit_category",
-                     **mcnemar_exact((ia["pred_category"] == ia["gold_category"]).tolist(),
-                                     (ib["pred_category"] == ib["gold_category"]).tolist())})
+        return mcnemar_exact((ia["pred_category"] == ia["gold_category"]).tolist(),
+                             (ib["pred_category"] == ib["gold_category"]).tolist())
+
+    tests = {
+        "pair_f1_head": lambda a, b: ("paired_bootstrap", bootstrap(a, b)),
+        "pair_f1_head_coord_aspect": lambda a, b: ("paired_bootstrap", bootstrap(a, b, subset_sentences[COORD_ASPECT])),
+        "pair_f1_head_coord_opinion": lambda a, b: ("paired_bootstrap", bootstrap(a, b, subset_sentences[COORD_OPINION])),
+        "polarity_oracle_pair": lambda a, b: ("mcnemar_exact", polarity(a, b, "pred_oracle_pair")),
+        "polarity_end_to_end": lambda a, b: ("mcnemar_exact", polarity(a, b, "pred_end_to_end")),
+        "polarity_oracle_pair_asym_mod": lambda a, b: ("mcnemar_exact", polarity(a, b, "pred_oracle_pair", True)),
+        "implicit_category": lambda a, b: ("mcnemar_exact", implicit(a, b)),
+    }
+    rows = []
+    for a, b, desc, targets in KEY_COMPARISONS:
+        if a not in variant_names or b not in variant_names:
+            continue
+        for target in targets:
+            test, result = tests[target](a, b)
+            rows.append({"comparison": f"{a}_vs_{b}", "description": desc, "test": test,
+                         "target": target, **result})
     df = pd.DataFrame(rows)
     if not df.empty:
         df["p_holm"] = holm(df["p_value"].tolist())
@@ -157,7 +199,7 @@ def compare(variant_names, counts_head, pol_items, imp_items, n_resamples) -> pd
 def write_summary(run_dir: Path, split: str, metrics: dict, significance: pd.DataFrame, lexicon: str) -> None:
     lines = [f"# Evaluation summary — `{split}`", "",
              f"Run: `{run_dir.name}` · lexicon: `{lexicon}`", ""]
-    if lexicon == DEFAULT_LEXICON:
+    if lexicon == PLACEHOLDER_LEXICON:
         lines += ["> **Polarity numbers use the PLACEHOLDER lexicon and are not reportable.**", ""]
     lines += ["## Pair extraction (micro)", "",
               "| Variant | strict F1 | head P | head R | **head F1** | overlap F1 |",
@@ -181,6 +223,12 @@ def write_summary(run_dir: Path, split: str, metrics: dict, significance: pd.Dat
             else:
                 cells.append(f"P={by[s]['precision']:.2f} R={by[s]['recall']:.2f} F1={by[s]['f1']:.2f}")
         lines.append(f"| {name} | " + " | ".join(cells) + " |")
+    lines += ["", "## Head F1 on coordination subsets", "",
+              "| Variant | COORD_ASPECT | COORD_OPINION | ASYM_MOD |", "|---|---|---|---|"]
+    for name, m in metrics.items():
+        by = m["extraction_head_by_subset"]
+        lines.append(f"| {name} | " + " | ".join(
+            f"{by[t]['f1']:.3f} (n={by[t]['n_sentences']})" for t in (COORD_ASPECT, COORD_OPINION, ASYM_MOD)) + " |")
     lines += ["", "## Polarity (gold_polarity subset) and implicit aspects", "",
               "| Variant | oracle-pair acc | end-to-end acc | conditional acc (coverage) | implicit detect F1 | implicit cat acc | majority baseline acc |",
               "|---|---|---|---|---|---|---|"]

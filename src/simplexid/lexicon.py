@@ -8,7 +8,8 @@ from typing import Dict
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 LEXICON_DIR = PROJECT_ROOT / "resources" / "lexicon"
-DEFAULT_LEXICON = "seed_lexicon_v0.tsv"
+PLACEHOLDER_LEXICON = "seed_lexicon_v0.tsv"
+DEFAULT_LEXICON = PLACEHOLDER_LEXICON
 
 
 def load_lexicon(name: str = DEFAULT_LEXICON) -> Dict[str, float]:
