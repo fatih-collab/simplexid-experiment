@@ -193,3 +193,14 @@ public-repository decision below.
 `github.com/fatih-collab/simplexid-experiment` is public, and code implementing all claimed mechanisms has
 been pushed since 2026-09-23 (the code in `src/`, then `src/simplexid/`). This may count as prior public
 disclosure for the patent. Needs an IP consultant's assessment; no pushes made since this was noticed.
+
+### Decisions and follow-ups (2026-11-05, after H4.3)
+- Repository visibility: the user decided to keep the repository public and resume pushing. The disclosure
+  risk above remains recorded.
+- SC targeted annotation created: `data/annotation/sc_targeted/` (44 dev pairs where SC and inheritance
+  disagree, blind sheet, `experiments/run_sc_targeted.py`). Awaiting human annotation. Exact McNemar needs
+  at least 29 of 44 discordant items favouring one side for p<0.05 (more if invalid pairs are removed).
+- R8 evaluation note: all 250 DEV_IMPLICIT rows come from sentences with no explicit aspect (by template
+  design), and only 4 contain an ambiguous DAM word, so gold_implicit cannot test contextual disambiguation.
+- Leakage check: 225 TermA train and 82 TermA validation rows are text-identical to a HoASA row (dedupe check,
+  labels not read). Any HoASA-derived resource must exclude rows identical to final-split rows.

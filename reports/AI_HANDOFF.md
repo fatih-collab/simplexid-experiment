@@ -24,13 +24,14 @@
 
 ## 0A. Pembaruan 2026-11-05 (baca dulu)
 
-- **Risiko paten: repo GitHub ini publik.** Kode semua mekanisme sudah terbuka sejak 2026-09-23. Perlu penilaian konsultan HKI; push ditahan sejak ini diketahui.
+- **Risiko paten: repo GitHub ini publik**, dan kode semua mekanisme sudah terbuka sejak 2026-09-23. Pengguna memutuskan repo tetap publik dan push dilanjutkan; perlu penilaian konsultan HKI.
 - **Varian kini A0–A6, L_*, S_R4** (`config.py`), menggantikan V0–V9 di §2.4. Pemetaan: V0=A0, V1=A1, V2=S_R4, V3=A2, V4=A3, V5=A4, V7=A5, V9=A6.
 - **Leksikon: `merged_v1`** (SentiStrengthID + ID-OpinionWords), file tidak ada di git. D2 (leksikon domain) belum diputuskan.
 - **Head F1 dev A2: 0,371 → 0,588** (P 0,617, R 0,561). Tanpa kosakata aspek dari anotasi train: 0,478. Sistem penuh **tidak** bebas data beranotasi.
 - **Polaritas oracle-pair dev: 0,75.**
 - **Bukti per mekanisme di dev:** R4 signifikan (+0,017; +0,093 di COORD_OPINION). R3 hanya di COORD_ASPECT (+0,058). **R8, R8 kontekstual, DW, SC belum punya bukti.**
 - **Jangkauan di 3.000 kalimat dev:** SC mengubah 44 label (0,8%), DW 4 label + 407 magnitudo, R8 kontekstual 7 dari 209. Gold polaritas 400 item tidak bisa menguji SC; perlu anotasi tertarget.
+- **Lembar SC tertarget:** `data/annotation/sc_targeted/` (44 pasangan, menunggu anotasi).
 - **Review:** `gold_dev_auto_1a1o.csv` di repo masih 468 AUTO. Gold dev polaritas (14) dan implisit (195) belum diverifikasi.
 - **Belum dikerjakan:** H4.4 (R8), H4.5 (tuning), H4.6 (baseline eksternal).
 
